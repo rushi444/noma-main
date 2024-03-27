@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .heading {
+    @apply text-carbon-Black text-center font-sergio-trendy px-4 text-[32px] sm:text-[38px] md:text-5xl not-italic font-normal capitalize leading-9 sm:leading-normal;
+  }
+}
+
+@font-face {
+  font-family: "sergio-trendy";
+  src: url("/font/Sergio-Trendy.ttf");
+  font-weight: 400;
+}
+
+body {
+  background-color: #f4f1e6;
+}
+
+.sidebar-open {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.swiper-pagination-bullet {
+  background-color: #f7f7f7 !important;
+  opacity: 0.5 !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+
+@layer components {
+  .para {
+    @apply text-carbon-Black font-Montserrat text-sm sm:text-base font-normal leading-normal list-disc ml-8;
+  }
+
+  .blogopencelebrationlifepara {
+    @apply text-carbon-Black font-Montserrat text-sm sm:text-base font-medium leading-normal;
+  }
+
+  .blogopenincrediblepara {
+    @apply text-carbon-Black font-Montserrat text-base font-normal leading-normal;
+  }
+
+  .imageswiperheading {
+    @apply text-carbon-Black font-Montserrat text-2xl font-extrabold leading-normal;
+  }
+}
+.mySwiper5 .swiper-pagination-bullet {
+  background-color: #000 !important;
+  opacity: 0.5 !important;
+  width: 12px !important;
+  height: 12px !important;
+  cursor: pointer !important;
+  display: none !important;
+  border-radius: 50%;
+}
+.mySwiper5 .swiper-pagination {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.mySwiper5 .swiper-pagination-bullet-active {
+  opacity: 1 !important;
+}
+
+@media (max-width: 639.98px) {
+  .mySwiper5 .swiper-pagination-bullet {
+    display: inline-block !important;
+  }
+}

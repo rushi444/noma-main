@@ -1,0 +1,42 @@
+import React from "react";
+import Image from "next/image";
+import AccomodationCardBtns from "./AccomodationCardBtns";
+
+const AccomodationCard = ({ item }) => {
+  return (
+    <div className="mx-auto w-[328px] cursor-pointer hover:scale-[1.02] transition duration-300 ease-in-out flex flex-col gap-2 max-sm:px-2 max-sm:py-4">
+      <div className="flex gap-2">
+        {item.btn.map((items, index) => (
+          <AccomodationCardBtns item={items} value={index} key={index} />
+        ))}
+      </div>
+      <Image
+        src={item.img}
+        width={328}
+        height={328}
+        alt="img"
+        className="rounded-2xl w-[328px] h-[328px]"
+      />
+      <h1 className="text-[#313131] font-Montserrat text-2xl sm:text-[32px] font-extrabold leading-normal">
+        {item.title}
+      </h1>
+      <p className="text-[#313131] font-Montserrat text-sm sm:text-base font-normal leading-normal">
+        {item.text}
+      </p>
+      <div className="bg-[#ADADAD] w-full h-px"></div>
+      <div className="flex items-center justify-between gap-2 5">
+        <p className="text-[#313131] text-sm sm:text-base font-Montserrat font-bold leading-normal max-sm:order-2">
+          {item.price}
+        </p>
+        <button
+          type="submit"
+          className="w-[153px] sm:w-[183px] h-[33px] bg-[#ff9500] rounded-2xl text-[#F4F1E6] text-center font-Montserrat text-sm sm:text-base font-extrabold leading-normal hover:text-[#ff9500] border border-[#ff9500] hover:bg-transparent transition duration-300 ease-in-out  max-sm:order-1"
+        >
+          {item.btn1}
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default AccomodationCard;
