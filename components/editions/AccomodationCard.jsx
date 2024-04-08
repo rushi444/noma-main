@@ -16,10 +16,10 @@ const AccomodationCard = ({ item }) => {
         alt="img"
         className="rounded-2xl w-[328px] h-[328px]"
       />
-      <h1 className="text-[#313131] font-Montserrat text-2xl sm:text-[32px] font-extrabold leading-normal">
+      <h1 className="text-[#313131] font-Montserrat text-xl sm:text-[24px] font-extrabold leading-normal">
         {item.title}
       </h1>
-      <p className="text-[#313131] font-Montserrat text-sm sm:text-base font-normal leading-normal">
+      <p className="text-[#313131] font-Montserrat text-sm sm:text-sm font-normal leading-normal min-h-[100px]">
         {item.description}
       </p>
       <div className="bg-[#ADADAD] w-full h-px"></div>
