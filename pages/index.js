@@ -11,19 +11,21 @@ import ReadOurReviews from "@/components/home/ReadOurReviews";
 import Waves from "@/components/home/Waves";
 import WhatWeOffer from "@/components/home/WhatWeOffer";
 import Steps from "@/components/how-it-work/Steps";
-import { getAllEditions } from "@/lib/api";
+import { getAllBlogs, getAllEditions } from "@/lib/api";
 
 export const getServerSideProps = async () => {
   const locations = await getAllEditions();
+  const blogs = await getAllBlogs();
   return {
     props: {
       title: "Locations",
       locations: locations || [],
+      blogs: blogs || [],
     },
   };
 };
 
-export default function Home({ locations }) {
+export default function Home({ locations, blogs }) {
   const locationItems = locations.contentTypeLocationCollection.items;
   return (
     <Layout>
@@ -50,10 +52,10 @@ export default function Home({ locations }) {
       <div className="max-sm:mt-[7px]">
         <Steps />
       </div>
-      <FeaturedEditionSection locations={locationItems}/>
+      <FeaturedEditionSection locations={locationItems} />
       <WhatWeOffer />
       <ReadOurReviews />
-      <NewsSection />
+      <NewsSection blogs={blogs} />
     </Layout>
   );
 }

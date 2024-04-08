@@ -3,7 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Scrollbar } from "swiper/modules";
 import NewsCard from "../common/NewsCard";
 import { newsCardsData } from "../common/Helper";
-export default function NewsCards() {
+export default function NewsCards({ blogs }) {
+  const b = blogs?.blogCollection?.items || [];
   return (
     <div className="max-w-[1120px] w-full mx-auto lg:pt-8 pb-8">
       <Swiper
@@ -45,7 +46,7 @@ export default function NewsCards() {
         modules={[Scrollbar, Autoplay]}
         className="mySwiper3 w-full"
       >
-        {newsCardsData.map((item, index) => (
+        {b?.map((item, index) => (
           <SwiperSlide key={index}>
             <NewsCard item={item} />
           </SwiperSlide>

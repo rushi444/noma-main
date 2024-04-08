@@ -3,7 +3,7 @@ import Heading from "../common/Heading";
 import NewsCard from "../common/NewsCard";
 import NewsCards from "./NewsCards";
 
-const NewsSection = () => {
+const NewsSection = ({ blogs }) => {
   return (
     <div className="bg-romance pb-[100px] w-full px-4 ">
       <div className="w-full  py-8 px-1 sm:px-2.5">
@@ -16,7 +16,7 @@ const NewsSection = () => {
           </p>
         </div>
       </div>
-      <NewsCards />
+      <NewsCards blogs={blogs} />
     </div>
   );
 };
