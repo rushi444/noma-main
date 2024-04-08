@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import HighLightsCard from "./HighLightsCard";
-import { highLightCardsData } from "../common/Helper";
 import {
   FaciltiesIcons,
   SliderLeftArrowIcon,
@@ -11,7 +10,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
 SwiperCore.use([Navigation]);
 
-const HighLights = () => {
+const HighLights = ({ highlights }) => {
+  console.log({ highlights });
   const swiperRef = useRef(null);
 
   const goNext = () => {
@@ -83,12 +83,12 @@ const HighLights = () => {
             paginationType="bullets"
             paginationClickable={true}
             modules={[Pagination]}
-            className="mySwiper5 py-10"
+            className="mySwiper5 py-10  w-[328px]"
             ref={swiperRef}
           >
-            {highLightCardsData.map((item, index) => (
-              <SwiperSlide key={index}>
-                <HighLightsCard item={item} value={item.btn} />
+            {highlights.map((item, index) => (
+              <SwiperSlide key={index + "highlist"}>
+                <HighLightsCard item={item} />
               </SwiperSlide>
             ))}
           </Swiper>

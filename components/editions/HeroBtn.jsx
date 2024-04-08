@@ -1,4 +1,3 @@
-import React from "react";
 import { HeroBtnBg } from "../utils/Functions";
 
 const HeroBtn = ({ item, value }) => {

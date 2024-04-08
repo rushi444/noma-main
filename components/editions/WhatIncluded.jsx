@@ -1,23 +1,26 @@
 import React from "react";
 import { IncludedCardData } from "../common/Helper";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 // import { FaciltiesIcons } from "../common/Icons";
 import Image from "next/image";
 
-const WhatIncluded = () => {
+const WhatIncluded = ({ d, items }) => {
+  // console.log([whasw])
   return (
     <>
       <div className="bg-[#FFDA7F]">
         <div className="xl:px-0 sm:px-4 sm:pt-4 pb-8 mx-auto max-w-[950px] w-full flex max-md:flex-col gap-4 md:gap-6 lg:gap-9 xl:gap-[76px]">
           <div className="sm:max-w-[457px] max-sm:bg-[#F4F1E6] flex flex-col justify-between w-full mx-auto pt-4 sm:pt-8">
-            <div className="sm:mb-0 mb-5">
-              <p className="text-[#313131] text-center font-Montserrat text-sm md:text-base font-normal !leading-5 ">
-                Our explosive Edition in Antigua, Guatemala, has you
+            <div className="sm:mb-0 mb-5 text-[#313131] text-center font-Montserrat text-sm md:text-base font-normal !leading-5 pt-4">
+              {/* <p className="text-[#313131] text-center font-Montserrat text-sm md:text-base font-normal !leading-5 "> */}
+                {/* Our explosive Edition in Antigua, Guatemala, has you
                 experiencing everything this hidden beauty has to offer. From
                 the sacred Lake Atitlan to hiking the unbelievable Volcan
                 Acatenango to discovering hidden bars and artisan markets, every
-                moment is an opportunity for exploration.{" "}
-              </p>
-              <p className="text-[#313131] text-center font-Montserrat text-sm md:text-base font-normal !leading-5 pt-4">
+                moment is an opportunity for exploration.{" "} */}
+                {documentToReactComponents(d)}
+              {/* </p> */}
+              {/* <p className="text-[#313131] text-center font-Montserrat text-sm md:text-base font-normal !leading-5 pt-4">
                 Antigua's rich volcanic soils produce some of the best quality
                 coffee in the world, perfect for coffee enthusiasts. Whether
                 you're an adventurous wanderer or a more chilled-out traveler,
@@ -25,7 +28,7 @@ const WhatIncluded = () => {
                 tasty cuisine, cobbled streets to explore, opportunities to
                 refine your Spanish skills at a language school and vibrant
                 nightlife.
-              </p>
+              </p> */}
             </div>
             <div className="flex justify-center max-sm:hidden">
               <button
@@ -47,13 +50,13 @@ const WhatIncluded = () => {
               </p>
             </div>
             <div className="flex flex-col gap-4 sm:gap-5 mt-[30px] sm:mt-9">
-              {IncludedCardData.map((item, index) => (
+              {items.map((item, index) => (
                 <div
                   key={index}
                   className="max-w-[417px] w-full mx-auto rounded-[57px] bg-[#F4F1E6] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.10)] flex items-center gap-1 h-[55px]"
                 >
                   <Image
-                    src={item.img}
+                    src={IncludedCardData?.[index]?.img || IncludedCardData?.[0]?.img }
                     width={56}
                     height={56}
                     alt="img"

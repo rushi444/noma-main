@@ -5,9 +5,20 @@ import PageSEO from "@/components/common/PageSEO";
 import Subheading from "@/components/common/Subheading";
 import TimeZoneSwiper from "@/components/common/TimeZoneSwiper";
 import SearchInput from "@/components/locationl/SearchInput";
-import React from "react";
+import { getAllEditions } from "@/lib/api";
 
-const locations = () => {
+export const getServerSideProps = async () => {
+  const locations = await getAllEditions();
+  return {
+    props: {
+      title: "Locations",
+      locations: locations || [],
+    },
+  };
+};
+
+const locations = ({ locations }) => {
+  const locationItems = locations.contentTypeLocationCollection.items
   return (
     <Layout>
       <PageSEO title="Locations" />
@@ -24,7 +35,7 @@ const locations = () => {
       <div className="px-4 xl:px-0 lg:pt-4 pb-8">
         <SearchInput />
       </div>
-      <TimeZoneSwiper />
+      <TimeZoneSwiper locations={locationItems}/>
     </Layout>
   );
 };

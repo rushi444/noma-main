@@ -28,17 +28,17 @@ const FeaturedEditionCard = ({ item, value }) => {
       >
         <ImageSwiper item={item} />
         <article className="px-4 py-1">
-          <h1 className="imageswiperheading">{item.title}</h1>
+          <h1 className="imageswiperheading">{item.title},</h1>
           <h1 className="imageswiperheading -mt-2">{item.description}</h1>
           <p className="text-carbon-Black font-Montserrat text-sm font-normal ">
             {item.date}
           </p>
           <article className="flex gap-4 justify-between">
             <p className="text-carbon-Black font-Montserrat text-sm font-normal leading-normal">
-              {item.days}
+              {item.days} days
             </p>
             <p className="text-carbon-Black font-Montserrat text-sm font-extrabold leading-normal">
-              {item.price}
+              From ${item.price}
             </p>
           </article>
         </article>

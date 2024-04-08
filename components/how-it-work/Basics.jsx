@@ -2,7 +2,7 @@ import React from "react";
 import BasicsCard from "../common/BasicsCard";
 import { basics } from "../common/Helper";
 
-const Basics = () => {
+const Basics = ({ faqs = [] }) => {
   return (
     <div>
       <div className="sm:bg-pastel-yellow pb-[100px] bg-light-green ">
@@ -10,7 +10,7 @@ const Basics = () => {
           FAQS
         </h1>
         <div className="  gap-x-1  max-w-[890px]  w-full mx-auto grid grid-cols-1 sm:grid-cols-2 ">
-          {basics.map((item, index) => (
+          {faqs?.map((item, index) => (
             <BasicsCard item={item} key={index} />
           ))}
         </div>

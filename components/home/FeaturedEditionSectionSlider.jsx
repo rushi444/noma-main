@@ -4,10 +4,26 @@ import SwiperCore, { Navigation } from "swiper";
 SwiperCore.use([Navigation]);
 import { Scrollbar } from "swiper/modules";
 import { SliderLeftArrowIcon, SliderRightArrowIcon } from "../common/Icons";
-import { featuredSliderCardsData } from "../common/Helper";
 import FeaturedEditionCard from "../common/FeaturedEditionCard";
+import { format, differenceInDays } from "date-fns";
 
-export default function FeaturedEditionSectionSlider() {
+export default function FeaturedEditionSectionSlider({locations}) {
+  const locationsMapped = locations?.map((l) => ({
+    id: l?.sys?.id,
+    firstbtn: l?.timeZone,
+    secondbtn: l?.temperature,
+    title: l?.city,
+    description: l?.country,
+    date: `${format(new Date(l.startDate), "MMM d")} - ${format(
+      new Date(l.endDate),
+      "MMM d, yyyy"
+    )}`,
+    days: Math.abs(
+      differenceInDays(new Date(l.endDate), new Date(l.startDate))
+    ),
+    price: l.accomodationsCollection.items[0].price,
+    img: [{ src: l?.heroImage?.url }],
+  }));
   const swiperRef = useRef(null);
 
   const goNext = () => {
@@ -71,7 +87,7 @@ export default function FeaturedEditionSectionSlider() {
         className="mySwiper h-[552px] w-full"
         ref={swiperRef}
       >
-        {featuredSliderCardsData.map((item, index) => (
+        {locationsMapped.map((item, index) => (
           <SwiperSlide key={index}>
             <FeaturedEditionCard item={item} value={index} key={index} />
           </SwiperSlide>

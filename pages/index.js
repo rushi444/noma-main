@@ -11,8 +11,20 @@ import ReadOurReviews from "@/components/home/ReadOurReviews";
 import Waves from "@/components/home/Waves";
 import WhatWeOffer from "@/components/home/WhatWeOffer";
 import Steps from "@/components/how-it-work/Steps";
+import { getAllEditions } from "@/lib/api";
 
-export default function Home() {
+export const getServerSideProps = async () => {
+  const locations = await getAllEditions();
+  return {
+    props: {
+      title: "Locations",
+      locations: locations || [],
+    },
+  };
+};
+
+export default function Home({ locations }) {
+  const locationItems = locations.contentTypeLocationCollection.items;
   return (
     <Layout>
       <PageSEO title="Home" />
@@ -38,7 +50,7 @@ export default function Home() {
       <div className="max-sm:mt-[7px]">
         <Steps />
       </div>
-      <FeaturedEditionSection />
+      <FeaturedEditionSection locations={locationItems}/>
       <WhatWeOffer />
       <ReadOurReviews />
       <NewsSection />

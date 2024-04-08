@@ -6,9 +6,22 @@ import Subheading from "@/components/common/Subheading";
 import VideoComponent from "@/components/common/Videocomponent";
 import Basics from "@/components/how-it-work/Basics";
 import Steps from "@/components/how-it-work/Steps";
+import { getFaqs } from "@/lib/api";
 import React from "react";
 
-const HowItWork = () => {
+export const getServerSideProps = async () => {
+  const faqs = await getFaqs();
+  return {
+    props: {
+      title: "How it works",
+      faqs: faqs || [],
+    },
+  };
+};
+
+const HowItWork = ({ faqs }) => {
+  console.log({ faqs });
+  const faq = faqs.faqCollection.items;
   return (
     <Layout>
       <PageSEO title="How it works" />
@@ -32,7 +45,7 @@ const HowItWork = () => {
           paragraph="Something here about key community values and the vetting process (dont use this terinology) t make sure our community is super open minded and compassionate and here for the same thing basically. Not sure if we have some kind of charter for how we like to do this but maybe we make one"
         />
       </div>
-      <Basics />
+      <Basics faqs={faq} />
     </Layout>
   );
 };

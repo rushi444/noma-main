@@ -11,39 +11,66 @@ import HighLights from "@/components/editions/HighLights";
 import ProfileMeet from "@/components/editions/ProfileMeet";
 import ProgressCircle from "@/components/editions/ProgressCircle";
 import WhatIncluded from "@/components/editions/WhatIncluded";
-import React from "react";
+import { getLocationById } from "@/lib/api";
 
-const Editions = () => {
+export const getServerSideProps = async ({ params }) => {
+  const location = await getLocationById({ locationId: params.id });
+  return {
+    props: {
+      location,
+    },
+  };
+};
+
+const Editions = ({ location }) => {
+  console.log({ location });
+  const locationMapped = {
+    timeZone: location?.contentTypeLocation?.timeZone,
+    temperature: location?.contentTypeLocation?.temperature,
+    heading: `${location.contentTypeLocation.city}, ${location.contentTypeLocation.country}`,
+    description: location.contentTypeLocation.description,
+    description2: location.contentTypeLocation.description2.json,
+    hero: location.contentTypeLocation.heroImage.url,
+    whatsIncluded: location.contentTypeLocation.facilitiesCollection.items,
+    manager: location.contentTypeLocation.managerCollection.items[0],
+    highlights: location.contentTypeLocation.highlightsCollection.items,
+    accomodation: location.contentTypeLocation.accomodationsCollection.items
+  };
   return (
     <Layout>
       <PageSEO title="Location" />
-      <div className="w-full bg-center bg-cover bg-[url('/img/news-bg-2.png')] sm:bg-[url('/img/news-bg.png')] h-[382px] sm:h-[800px] max-sm:mt-[7px] max-sm:px-4">
+      <div
+        style={{
+          background: `url(${locationMapped?.hero})`,
+          backgroundPosition: "center",
+        }}
+        // bg-[url('/img/news-bg-2.png')] sm:bg-[url('/img/news-bg.png')] orignally in classname below
+        className="w-full bg-center bg-cover h-[382px] sm:h-[800px] max-sm:mt-[7px] max-sm:px-4"
+      >
         <div className="flex gap-2 items-center py-2 px-1 sm:hidden">
-          {heroBtnData.map((item, index) => (
-            <HeroBtn item={item} value={index} key={index} />
-          ))}
+          <HeroBtn item={{ btn: locationMapped.timeZone }} value={0} />
+          <HeroBtn item={{ btn: locationMapped.temperature }} value={1} />
         </div>
       </div>
       <div className="px-2.5 py-8 hidden sm:block">
-        <Heading heading="Antigua, Guatemala" />
+        <Heading heading={locationMapped?.heading} />
       </div>
       <div className="sm:max-w-[710px] w-full mx-auto max-xl:px-4 hidden sm:block">
-        <Subheading
-          paragraph="Really lean into how we plan everything and curate this amazing experience with them. 
-Maybe something about trusted by 700+ alumni?"
-        />
+        <Subheading paragraph={locationMapped?.description} />
       </div>
       <div className="block sm:hidden px-2.5 pt-2 pb-4">
         <p className="text-center text-[#313131] font-Montserrat text-base font-extrabold leading-normal">
-          Nestled by four volcanoes lies Antigua, Guatemala - a city erupting
-          with vibrant culture, tasty cuisine and endless adventure.
+          {locationMapped?.description}
         </p>
       </div>
       <ProgressCircle />
-      <WhatIncluded />
-      <ProfileMeet />
-      <HighLights />
-      <Accomodation />
+      <WhatIncluded
+        d={locationMapped?.description2}
+        items={locationMapped?.whatsIncluded}
+      />
+      <ProfileMeet manager={locationMapped?.manager} />
+      <HighLights highlights={locationMapped?.highlights} />
+      <Accomodation accomodation={locationMapped?.accomodation || []}/>
       <div className="mt-[85px]">
         <GuestGallery />
       </div>

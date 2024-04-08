@@ -6,23 +6,23 @@ const HighLightsCard = ({ item, value }) => {
   const { BgColor } = highLightsBg({ value });
 
   return (
-    <div className="max-w-[328px] my-5 w-full max-xl:mx-auto">
+    <div className={`w-[328px] my-5 max-xl:mx-auto  ${item?.image?.url ? '' : 'invisible'}`}>
       <span
         style={{ backgroundColor: BgColor }}
         className="px-3 py-[7px] rounded-[31px] text-[#313131] text-[16px] font-Montserrat font-normal"
       >
-        {item.btn}
+        {item?.tag}
       </span>
       <div className="mt-1.5">
-        <div>
-          <Image src={item.img} width={328} height={328} alt="hike img" />
+        <div className={`w-[328px] ${item?.image?.url ? '' : 'invisible'}`}>
+          <Image src={item?.image?.url || ''} width={328} height={328} alt={item?.title} />
         </div>
-        <div className="max-w-[308px] mt-2">
+        <div className="w-[308px] mt-2">
           <h2 className="text-[32px] leading-9 font-Montserrat font-extrabold text-[#313131]">
-            {item.title}
+            {item?.title || ''}
           </h2>
           <p className="text-[16px] mt-2 font-Montserrat font-normal leading-5 text-[#313131]">
-            {item.desc}
+            {item?.description || ''}
           </p>
         </div>
       </div>
