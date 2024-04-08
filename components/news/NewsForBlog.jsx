@@ -5,7 +5,8 @@ import FeatureBlog from "./FeatureBlog";
 import { SearchIcon } from "../common/Icons";
 import Fourbotton from "./Fourbtns";
 
-const NewsForBlog = () => {
+const NewsForBlog = ({ blogs }) => {
+  const b = blogs?.blogCollection?.items || [];
   return (
     <>
       <div className="max-w-[1120px] w-full mx-auto pb-8 px-4">
@@ -26,7 +27,7 @@ const NewsForBlog = () => {
           ))}
         </div>
       </div>
-      <FeatureBlog />
+      <FeatureBlog blogs={b} />
     </>
   );
 };

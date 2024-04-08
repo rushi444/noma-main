@@ -30,6 +30,12 @@ const AccomodationCard = ({ item }) => {
         <button
           type="submit"
           className="w-[153px] sm:w-[183px] h-[33px] bg-[#ff9500] rounded-2xl text-[#F4F1E6] text-center font-Montserrat text-sm sm:text-base font-extrabold leading-normal hover:text-[#ff9500] border border-[#ff9500] hover:bg-transparent transition duration-300 ease-in-out  max-sm:order-1"
+          onClick={() =>
+            window.open(
+              "https://lp.noma-collective.com/schedule-your-meeting-page",
+              "_blank"
+            )
+          }
         >
           BOOK YOUR TRIP
         </button>

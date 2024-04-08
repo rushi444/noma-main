@@ -126,10 +126,10 @@ export const navLinksData = [
     link: "/how-it-works",
     name: "How it works",
   },
-  {
-    link: "",
-    name: "Bespoke",
-  },
+  // {
+  //   link: "",
+  //   name: "Bespoke",
+  // },
   {
     link: "/news",
     name: "News",

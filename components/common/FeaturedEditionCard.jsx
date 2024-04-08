@@ -1,6 +1,7 @@
 import React from "react";
 import ImageSwiper from "./Imageswiper";
 import { featuredEditionCardBgs } from "../utils/Functions";
+import Link from "next/link";
 
 const FeaturedEditionCard = ({ item, value }) => {
   const { BgColor1, BgColor2 } = featuredEditionCardBgs({ value });

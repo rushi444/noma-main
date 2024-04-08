@@ -6,6 +6,7 @@ import Subheading from "@/components/common/Subheading";
 import TimeZoneSwiper from "@/components/common/TimeZoneSwiper";
 import SearchInput from "@/components/locationl/SearchInput";
 import { getAllEditions } from "@/lib/api";
+import { useMemo, useState } from "react";
 
 export const getServerSideProps = async () => {
   const locations = await getAllEditions();
@@ -18,7 +19,17 @@ export const getServerSideProps = async () => {
 };
 
 const locations = ({ locations }) => {
-  const locationItems = locations.contentTypeLocationCollection.items
+  const [searchInput, setSearchInput] = useState("");
+  const locationItems = locations.contentTypeLocationCollection.items;
+
+  const filteredItems = useMemo(() => {
+    return locationItems?.filter((item) => {
+      return (
+        item.city.toLowerCase().includes(searchInput.toLowerCase()) ||
+        item.country.toLowerCase().includes(searchInput.toLowerCase())
+      );
+    }) || []
+  }, [searchInput, locationItems]);
   return (
     <Layout>
       <PageSEO title="Locations" />
@@ -33,9 +44,12 @@ const locations = ({ locations }) => {
         />
       </div>
       <div className="px-4 xl:px-0 lg:pt-4 pb-8">
-        <SearchInput />
+        <SearchInput
+          searchInput={searchInput}
+          setSearchInput={setSearchInput}
+        />
       </div>
-      <TimeZoneSwiper locations={locationItems}/>
+      <TimeZoneSwiper locations={filteredItems} />
     </Layout>
   );
 };

@@ -84,6 +84,9 @@ const GET_ALL_BLOGSS = `
 {
     blogCollection {
       items {
+        sys {
+          id
+        }
         title
         category
         cardImage {
@@ -94,6 +97,21 @@ const GET_ALL_BLOGSS = `
     }
   }
 `;
+
+const GET_BLOG_BY_ID = (blogId: string) => `
+{
+  blog(id: "${blogId}") {
+    title
+    category
+    cardImage {
+      url
+    }
+    content {
+      json
+    }
+  }
+}`;
+
 const GET_LOCATION_BY_ID = (locationId: string) => `
 {
     contentTypeLocation(id: "${locationId}") {
@@ -203,5 +221,10 @@ export const getLocationById = async ({
   locationId: string;
 }) => {
   const data = await fetchGraphQL(GET_LOCATION_BY_ID(locationId));
+  return data?.data;
+};
+
+export const getBlogById = async ({ blogId }: { blogId: string }) => {
+  const data = await fetchGraphQL(GET_BLOG_BY_ID(blogId));
   return data?.data;
 };

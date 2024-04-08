@@ -30,8 +30,14 @@ const Navbar = () => {
         </div>
         <div>
           <button
-            type="submit"
+            // type="submit"
             className="p-2 w-[158px] h-[33px] flex items-center justify-center bg-main-orange rounded-[28px] text-white text-sm font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
+            onClick={() =>
+              window.open(
+                "https://lp.noma-collective.com/schedule-your-meeting-page",
+                "_blank"
+              )
+            }
           >
             BOOK YOUR CALL
           </button>
@@ -52,6 +58,12 @@ const Navbar = () => {
             <button
               type="submit"
               className="p-2 w-[182px] h-[42px] flex items-center justify-center bg-main-orange rounded-[28px] text-white text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
+              onClick={() =>
+                window.open(
+                  "https://lp.noma-collective.com/schedule-your-meeting-page",
+                  "_blank"
+                )
+              }
             >
               BOOK YOUR CALL
             </button>

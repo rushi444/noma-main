@@ -1,12 +1,74 @@
 import React from "react";
 import BlogopenImagecompo from "../common/BlogopenImagecompo";
 import Link from "next/link";
+import {
+  documentToReactComponents,
+} from "@contentful/rich-text-react-renderer";
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 
-const BlogOpenSection = () => {
+const BlogOpenSection = ({ blog }) => {
   return (
     <>
-      <div className="bg-lynxwhite">
-        <div className="max-w-[1120px] w-full mx-auto p-4">
+      <div className="px-4 max-w-[1120px] m-auto">
+        {documentToReactComponents(blog?.content?.json, {
+          renderNode: {
+            [BLOCKS.PARAGRAPH]: (node, children) => (
+              <p className="text-carbon-Black font-Montserrat text-base font-medium leading-normal mb-4">
+                {children}
+              </p>
+            ),
+            [BLOCKS.HEADING_2]: (node, children) => (
+              <h2 className="text-carbon-Black font-Montserrat text-xl sm:text-2xl font-extrabold leading-normal">
+                {children}
+              </h2>
+            ),
+            [BLOCKS.HEADING_1]: (node, children) => (
+              <h1 className="md:py-8 py-4 font-sergio-trendy text-5xl max-sm:text-2xl font-normal capitalize text-carbon-Black max-w-[814px] w-full text-center leading-normal mx-auto">
+                {children}
+              </h1>
+            ),
+            [BLOCKS.HEADING_3]: (node, children) => (
+              <h3 className="text-carbon-Black font-Montserrat text-base font-medium leading-normal">
+                {children}
+              </h3>
+            ),
+            [BLOCKS.HEADING_5]: (node, children) => (
+              <h5 className="sm:py-4 py-2 text-carbon-Black font-Montserrat font-extrabold text-sm sm:text-base text-center max-w-[992px] w-full">
+                {children}
+              </h5>
+            ),
+            [BLOCKS.UL_LIST]: (node, children) => (
+              <ul className="mt-4 flex flex-col gap-3">{children}</ul>
+            ),
+            [BLOCKS.LIST_ITEM]: (node, children) => (
+              <li className="para">{children}</li>
+            ),
+            [BLOCKS.HR]: (node, children) => (
+              <hr className="mt-8" />
+            ),
+            // [BLOCKS.EMBEDDED_ASSET]: (node, children) => (
+            //   <img
+            //     src={node.data.target.fields.file.url}
+            //     className="w-full h-auto"
+            //   />
+            // ),
+            [BLOCKS.EMBEDDED_ENTRY]: (node, children) => (
+              <div className="py-8 max-w-[992px] w-full mx-auto flex flex-col gap-4 md:gap-8">
+                <p className="text-carbon-Black font-Montserrat text-base font-medium leading-normal">
+                  {children}
+                </p>
+              </div>
+            ),
+            // [BLOCKS.QUOTE] : (node, children) => (
+            //   <div className="py-8 max-w-[992px] w-full mx-auto flex flex-col gap-4 md:gap-8">
+            //     <p className="text-gray font-Montserrat text-base font-medium leading-normal">
+            //       {children}
+            //     </p>
+            //   </div>
+            // ),
+          },
+        })}
+        {/* <div className="max-w-[1120px] w-full mx-auto p-4">
           <h1 className="md:py-8 py-4 font-sergio-trendy text-5xl max-sm:text-2xl font-normal capitalize text-carbon-Black max-w-[814px] w-full text-center leading-normal mx-auto">
             El Dia de los Muertos A Celebration of Life
           </h1>
@@ -254,7 +316,7 @@ const BlogOpenSection = () => {
               EXPLORE OAXACA EDITION
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   );

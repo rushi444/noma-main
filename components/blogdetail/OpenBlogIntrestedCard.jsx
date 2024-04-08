@@ -7,23 +7,24 @@ const OpenBlogIntrestedCard = ({ item }) => {
 
   return (
     <>
-      <div className="max-w-[328px] cursor-pointer hover:scale-[1.02] transition duration-300 ease-in-out w-full mx-auto">
+      <div className="w-[328px] cursor-pointer hover:scale-[1.02] transition duration-300 ease-in-out mx-auto">
         <button
           type="submit"
-          className={` px-2 py-[7px] rounded-[31px] duration-300 max-w-[169px] w-full text-carbon-Black font-Montserrat text-sm font-normal leding-normal`}
+          className={`px-2 py-[7px] rounded-[31px] duration-300 max-w-[169px] w-full text-carbon-Black font-Montserrat text-sm font-normal leding-normal`}
           style={{ backgroundColor: BgColor }}
         >
-          {item.btnheading}
+          {item?.category}
         </button>
-        <Image
-          className="rounded-lg mt-2"
-          src={item.image}
-          width={328}
-          height={400}
-          alt={item.image}
-        />
+        <div className={`w-[328px] ${item?.cardImage?.url ? '' : 'invisible'}`}>
+          <img
+            className="rounded-lg mt-2 object-fit h-[328px] w-[328px] object-cover"
+            src={item?.cardImage?.url}
+            alt={item?.cardImage?.title}
+          />
+        </div>
+
         <h1 className="text-carbon-Black font-Montserrat text-2xl lg:text-2xl font-extrabold mt-2">
-          {item.heading}
+          {item.title}
         </h1>
       </div>
     </>

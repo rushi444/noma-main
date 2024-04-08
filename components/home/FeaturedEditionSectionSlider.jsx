@@ -6,8 +6,9 @@ import { Scrollbar } from "swiper/modules";
 import { SliderLeftArrowIcon, SliderRightArrowIcon } from "../common/Icons";
 import FeaturedEditionCard from "../common/FeaturedEditionCard";
 import { format, differenceInDays } from "date-fns";
+import Link from "next/link";
 
-export default function FeaturedEditionSectionSlider({locations}) {
+export default function FeaturedEditionSectionSlider({ locations }) {
   const locationsMapped = locations?.map((l) => ({
     id: l?.sys?.id,
     firstbtn: l?.timeZone,
@@ -89,7 +90,9 @@ export default function FeaturedEditionSectionSlider({locations}) {
       >
         {locationsMapped.map((item, index) => (
           <SwiperSlide key={index}>
-            <FeaturedEditionCard item={item} value={index} key={index} />
+            <Link href={`/location/${item.id}`}>
+              <FeaturedEditionCard item={item} value={index} key={index} />
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
