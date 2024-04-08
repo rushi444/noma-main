@@ -10,7 +10,7 @@ const OpenBlogInterested = () => {
           <h1 className="py-8 text-center text-3xl md:text-5xl font-sergio-trendy capitalize leading-normal font-normal ">
             Blogs You Might Be Interested In
           </h1>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-9 2xl:gap-[68px] ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-9 2xl:gap-[68px] invisible">
             {BlogOpenInterestedBlogs.map((item, index) => (
               <OpenBlogIntrestedCard item={item} key={index} />
             ))}
