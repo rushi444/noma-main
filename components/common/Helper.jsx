@@ -74,7 +74,7 @@ export const basics = [
 export const whatWeOfferCardData = [
   {
     heading: "Community",
-    src: "/img/comunity-card-img.png",
+    src: "/img/comunity-card-img.jpg",
     text: "Our community is what makes us truly unique. You'll connect with a network of like-minded individuals, forging lifelong friendships and unlocking a world of personal and professional growth. Tap into the alumni network for career opportunities, skill sharing and invaluable connections.",
   },
   {
@@ -84,12 +84,12 @@ export const whatWeOfferCardData = [
   },
   {
     heading: "Plug & Play",
-    src: "/img/plugandplay-card-img.png",
+    src: "/img/plugandplay-card-img.jpg",
     text: "Our carefully curated Editions seamlessly blend remote work with endless adventure. Our beautiful locations are equipped with reliable Wi-Fi and co-working spaces. Be inspired by your surroundings and never miss a meeting - ensuring that work-from-anywhere is as efficient as it is picturesque.",
   },
   {
     heading: "Support",
-    src: "/img/support-card-img.png",
+    src: "/img/support-card-img.jpg",
     text: "Our support extends far beyond the Edition - we always have your back. From ensuring an integrated and unique experience from our on-site and local community managers to our specialized alumni Slack channel, offering guidance and recommendations whenever you need them..",
   },
 ];
@@ -132,12 +132,12 @@ export const navLinksData = [
   // },
   {
     link: "/news",
-    name: "News",
+    name: "What's New",
   },
-  {
-    link: "",
-    name: "Alumni (Soon)",
-  },
+  // {
+  //   link: "",
+  //   name: "Alumni (Soon)",
+  // },
 ];
 export const featuredSliderCardsData = [
   {

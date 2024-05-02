@@ -10,7 +10,7 @@ const ProfileMeet = ({ manager }) => {
         <div className="flex gap-4 items-center sm:hidden">
           <FaciltiesIcons />
           <p className="text-[#313131] font-Montserrat text-base font-extrabold  ">
-            Management and Host
+            {/* Management and Host */}
           </p>
         </div>
         <div className=" flex max-sm:flex-col justify-center xl:justify-end gap-1 sm:gap-8 md:gap-[68px] items-center max-sm:mt-[38px]">

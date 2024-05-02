@@ -15,6 +15,11 @@
   font-weight: 400;
 }
 
+@font-face {
+  font-family: "Kurdis-ExtraWide-SemiBold";
+  src: url("/font/Kurdis-ExtraWideSemiBold.ttf");
+}
+
 body {
   background-color: #f4f1e6;
 }

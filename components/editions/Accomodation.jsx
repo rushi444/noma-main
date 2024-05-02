@@ -8,7 +8,7 @@ const Accomodation = ({accomodation}) => {
   return (
     <div className="px-4 xl:px-0">
       <div className="w-full px-2.5 py-4 sm:pb-4 sm:pt-8 mx-auto">
-        <NewsHeading heading="The Accommodation" />
+        <NewsHeading heading="Accommodation" />
       </div>
       {/* <div className="max-w-[794px] w-full px-2.5 py-4 sm:pt-4 sm:pb-8 mx-auto">
         <NewsSubheading subheading="Short description about the hotel or houses or the place, no more than 3 lines, and not describing any amenities " />

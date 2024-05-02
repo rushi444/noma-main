@@ -10,6 +10,7 @@ module.exports = {
       fontFamily: {
         "sergio-trendy": ["sergio-trendy", "serif"],
         Montserrat: ["Montserrat", "sans-serif"],
+        kurdis: ["Kurdis-ExtraWideSemiBold", "sans-serif"],
       },
       colors: {
         "main-orange": "#FF9500",

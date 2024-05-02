@@ -1,8 +1,4 @@
-import Image from "next/image";
-import React from "react";
-
 const NewsCard = ({ item }) => {
-  console.log({item})
   return (
     <article className="flex flex-col hover:scale-95 cursor-pointer transition duration-300 ease-in-out pb-5 md:pb-0 items-center">
       <article className="max-w-[328px] w-full pb-8">
@@ -20,6 +16,7 @@ const NewsCard = ({ item }) => {
         <h1 className="text-carbon-Black font-Montserrat text-lg font-extrabold mt-2 leading-normal line-clamp-3">
           {item.title}
         </h1>
+        <p>{item?.excerpt || ''}</p>
       </article>
       {/* <article className=" mx-auto w-fit">
         <button

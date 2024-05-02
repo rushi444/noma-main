@@ -12,7 +12,7 @@ export default function WhatWeOfferSlider() {
           hide: false,
         }}
         autoplay={{
-          delay: 2500,
+          delay: 3000,
         }}
         loop={true}
         breakpoints={{

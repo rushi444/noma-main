@@ -11,9 +11,10 @@ const NewsForBlog = ({ blogs }) => {
     <>
       <div className="max-w-[1120px] w-full mx-auto pb-8 px-4">
         <div className="px-3 pt-8">
-          <Heading heading="Faffy Name For Blog" />
+          <Heading heading="Blog" />
         </div>
-        <div className="bg-pastel-yellow max-w-[736px] w-full h-12 sm:h-16 mx-auto rounded-[57px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.10)] flex gap-2 items-center justify-between px-4  mt-12 sm:mt-16">
+          <p className='px-24 pt-4'>This is your go-to hub for all things digital nomad. We&apos;re here to provide you with the tools to thrive, from finding remote jobs to essential top tips to inspiring travel guides. Welcome to your one-stop shop for navigating the digital nomad landscape.</p>
+        <div className="bg-pastel-yellow max-w-[736px] w-full h-12 sm:h-16 mx-auto rounded-[57px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.10)] flex gap-2 items-center justify-between px-4  mt-8 sm:mt-16">
           <input
             type="text"
             className=" text-black outline-none w-full bg-transparent font-Montserrat text-sm font-normal leading-normal sm:pl-4 "

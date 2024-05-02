@@ -7,22 +7,6 @@ const FeaturedEditionCard = ({ item, value }) => {
   const { BgColor1, BgColor2 } = featuredEditionCardBgs({ value });
   return (
     <article className="mx-auto w-[328px] hover:scale-[1.02] transition duration-300 ease-in-out rounded-full cursor-pointer">
-      <article className="flex gap-2">
-        <button
-          type="submit"
-          className="px-3 py-2 rounded-full text-carbon-Black font-Montserrat text-sm font-normal "
-          style={{ backgroundColor: BgColor1 }}
-        >
-          {item.firstbtn}
-        </button>
-        <button
-          type="submit"
-          className="px-3 py-2 rounded-full"
-          style={{ backgroundColor: BgColor2 }}
-        >
-          {item.secondbtn}
-        </button>
-      </article>
       <article
         className="rounded-2xl shadow-[0px_4px_4px_0px_rgba(0,0,0,0.10)] mt-2"
         style={{ backgroundColor: BgColor1 }}
@@ -43,6 +27,22 @@ const FeaturedEditionCard = ({ item, value }) => {
             </p>
           </article>
         </article>
+      </article>
+      <article className="flex gap-2 mt-2">
+        <button
+          type="submit"
+          className="px-3 py-2 rounded-full text-carbon-Black font-Montserrat text-sm font-normal "
+          style={{ backgroundColor: BgColor1 }}
+        >
+          {item.firstbtn}
+        </button>
+        <button
+          type="submit"
+          className="px-3 py-2 rounded-full"
+          style={{ backgroundColor: BgColor2 }}
+        >
+          {item.secondbtn}
+        </button>
       </article>
     </article>
   );

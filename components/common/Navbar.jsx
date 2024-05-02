@@ -44,12 +44,12 @@ const Navbar = () => {
         </div>
       </div>
       <div className="flex items-center justify-between gap-6 max-md:hidden">
-        <div>
+        <div className='mr-12'>
           <Link href="/">
             <LogoIcon />
           </Link>
         </div>
-        <div className="max-w-[863px] w-full flex items-center gap-3 justify-end md:justify-between">
+        <div className="max-w-[863px] w-full flex items-center gap-3 justify-end md:justify-between pl-4">
           {navLinksData.map((item, index) => (
             <NavbarLinks item={item} value={item.name} key={index} />
           ))}

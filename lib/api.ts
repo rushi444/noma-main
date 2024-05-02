@@ -89,6 +89,7 @@ const GET_ALL_BLOGSS = `
         }
         title
         category
+        excerpt
         cardImage {
           url
           title

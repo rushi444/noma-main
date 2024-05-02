@@ -1,3 +1,4 @@
+import CommonButton from "@/components/common/CommonButton";
 import Heading from "@/components/common/Heading";
 import HeroImage from "@/components/common/HeroImage";
 import Layout from "@/components/common/Layout";
@@ -36,16 +37,16 @@ const HowItWork = ({ faqs }) => {
       <div className="mt-8">
         <Steps />
       </div>
-      <div className="mt-8">
-        <VideoComponent video="/video/sample-video.mp4" />
-      </div>{" "}
       <div className="mt-11 mb-8 sm:mb-0">
         <Subheading
           width="800px"
-          paragraph="Something here about key community values and the vetting process (dont use this terinology) t make sure our community is super open minded and compassionate and here for the same thing basically. Not sure if we have some kind of charter for how we like to do this but maybe we make one"
+          paragraph={`Noma Collective not only brings you the world, but a real community to see it with. Above all else, we recognize that it’s the people who make the experience. Each Edition brings together a unique and diverse community who are united through values of openness, compassion and collaboration. We create a safe space for creative collaboration where you and your community can thrive.`}
         />
       </div>
       <Basics faqs={faq} />
+      <div className="mb-24">
+        <CommonButton text="BOOK YOUR CALL" />
+      </div>
     </Layout>
   );
 };

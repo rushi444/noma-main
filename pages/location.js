@@ -1,3 +1,4 @@
+import CommonButton from "@/components/common/CommonButton";
 import Heading from "@/components/common/Heading";
 import HeroImage from "@/components/common/HeroImage";
 import Layout from "@/components/common/Layout";
@@ -18,18 +19,32 @@ export const getServerSideProps = async () => {
   };
 };
 
+const shuffleArray = (array) =>
+  array
+    .map((value) => ({ value, sort: Math.random() }))
+    .sort((a, b) => a.sort - b.sort)
+    .map(({ value }) => value);
+
 const locations = ({ locations }) => {
   const [searchInput, setSearchInput] = useState("");
-  const locationItems = locations.contentTypeLocationCollection.items;
+
+  const [locationItems, setLocationItems] = useState(
+    locations.contentTypeLocationCollection.items
+  );
 
   const filteredItems = useMemo(() => {
-    return locationItems?.filter((item) => {
-      return (
-        item.city.toLowerCase().includes(searchInput.toLowerCase()) ||
-        item.country.toLowerCase().includes(searchInput.toLowerCase())
-      );
-    }) || []
+    return (
+      locationItems?.filter((item) => {
+        return (
+          item.city.toLowerCase().includes(searchInput.toLowerCase()) ||
+          item.country.toLowerCase().includes(searchInput.toLowerCase())
+        );
+      }) || []
+    );
   }, [searchInput, locationItems]);
+
+  const onSurpriseMeClick = () => setLocationItems((v) => shuffleArray(v));
+
   return (
     <Layout>
       <PageSEO title="Locations" />
@@ -38,18 +53,19 @@ const locations = ({ locations }) => {
         <Heading heading="Where do you want to go" />
       </div>
       <div className="sm:max-w-[500px] w-full mx-auto max-xl:px-4">
-        <Subheading
-          paragraph="Fun fluffy line about the start of your journey here CAN be two lines
-        and make it inspiring"
-        />
+        <Subheading paragraph="Your remote work journey starts here, check out our specially curated Noma Editions and embrace the freedom to work from anywhere." />
       </div>
-      <div className="px-4 xl:px-0 lg:pt-4 pb-8">
+      <div className="px-4 xl:px-0 lg:pt-4">
         <SearchInput
           searchInput={searchInput}
           setSearchInput={setSearchInput}
+          onSurpriseMeClick={onSurpriseMeClick}
         />
       </div>
       <TimeZoneSwiper locations={filteredItems} />
+      <div className="mb-24">
+        <CommonButton text='Book Your Call'/>
+      </div>
     </Layout>
   );
 };

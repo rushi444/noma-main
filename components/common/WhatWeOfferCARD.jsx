@@ -14,7 +14,7 @@ const WhatWeOfferCARD = ({ item }) => {
             width={267}
             height={230}
             alt={item.src}
-            className="rounded-lg max-sm:w-full mx-auto"
+            className="rounded-lg max-sm:w-full mx-auto w-[267px] h-[230px] object-cover"
           />
           <p className="text-center text-carbon-Black font-Montserrat text-base font-normal px-2.5 py-4 leading-normal">
             {item.text}

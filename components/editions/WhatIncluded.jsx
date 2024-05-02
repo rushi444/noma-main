@@ -47,7 +47,7 @@ const WhatIncluded = ({ d, items }) => {
           </div>
           <div className="w-full sm:max-w-[417px] mx-auto sm:px-0 px-4 ">
             <h1 className="text-[#313131] font-Montserrat text-2xl sm:text-[32px] font-extrabold leading-normal max-md:text-center ">
-              What's included
+              {/* What's included */}
             </h1>
             <div className="flex gap-4 items-center md:hidden mt-[38px]">
               {/* <FaciltiesIcons /> */}
@@ -68,7 +68,7 @@ const WhatIncluded = ({ d, items }) => {
                     alt="img"
                     className="max-sm:w-12 max-sm:h-12"
                   />
-                  <div>
+                  <div className='flex-col justify-center align-middle items-middle'>
                     <p className="text-[#313131] h-5 font-Montserrat text-[10px] sm:text-sm md:text-base font-bold leading-normal">
                       {item.title}
                     </p>

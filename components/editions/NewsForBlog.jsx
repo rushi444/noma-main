@@ -10,7 +10,7 @@ const NewsForBlog = () => {
     <>
       <div className="max-w-[1120px] w-full mx-auto pb-8 px-4">
         <div className="px-3 pt-8">
-          <Heading heading="Faffy Name For Blog" />
+          <Heading heading="News" />
         </div>
         <div className="bg-[#FFDA7F] max-w-[736px] w-full h-12 sm:h-16 mx-auto rounded-[57px] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.10)] flex gap-2 items-center justify-between px-4  mt-12 sm:mt-16">
           <input

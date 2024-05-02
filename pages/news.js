@@ -9,7 +9,7 @@ export const getServerSideProps = async () => {
   const blogs = await getAllBlogs();
   return {
     props: {
-      title: "News",
+      title: "What's New",
       blogs: blogs || [],
     },
   };
@@ -19,7 +19,7 @@ const News = ({ blogs }) => {
   console.log({ blogs });
   return (
     <Layout>
-      <PageSEO title="News" />
+      <PageSEO title="What's New" />
       <HeroImage bg="url('/img/news-hero-bg-img.png')" />
       <NewsForBlog blogs={blogs}/>
     </Layout>

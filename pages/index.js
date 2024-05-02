@@ -12,6 +12,8 @@ import Waves from "@/components/home/Waves";
 import WhatWeOffer from "@/components/home/WhatWeOffer";
 import Steps from "@/components/how-it-work/Steps";
 import { getAllBlogs, getAllEditions } from "@/lib/api";
+import dynamic from "next/dynamic";
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export const getServerSideProps = async () => {
   const locations = await getAllEditions();
@@ -31,14 +33,22 @@ export default function Home({ locations, blogs }) {
     <Layout>
       <PageSEO title="Home" />
 
-      <HeroImage bg="url('/img/hero-bg.png')" />
+      {/* <HeroImage bg="url('/img/hero-bg.png')" /> */}
+      <ReactPlayer
+        url="/video/noma_header_video.mp4"
+        playing
+        loop
+        muted
+        width="100%"
+        height="100%"
+      />
       <Waves />
-      <div className="px-4 py-8">
+      <div className="px-4 py-2">
         <Heading heading="Bring Your Job, Well Do The Rest" />
       </div>
       <div className="sm:max-w-[600px] w-full mx-auto max-xl:px-4 pb-3 sm:pb-0">
         <Subheading
-          paragraph=" Your remote work, done differently. We curate extraordinary 2-4 week
+          paragraph="Your remote work, done differently. We curate extraordinary 2-4 week
           trips for remote workers, building a community of like-minded
           professionals. Whether you work fully remotely or you can take time
           away from the office, why not embrace the world with us, and redefine
