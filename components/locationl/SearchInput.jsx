@@ -1,27 +1,80 @@
 import { useState } from "react";
 import { InputRightSideIcon, SearchIcon } from "../common/Icons";
 
-const filters = {
-  "Average Temp": [
-    "Less than 15°C | 59°F",
-    "15°C | 59°F - 20°C | 68°F",
-    "20°C | 68°F - 25°C | 77°F",
-    "25°C | 77°F - 30°C | 86°F",
-    "More than 30°C | 86°F ",
-  ],
-  "Length of Trip": ['1 Week', '2 Weeks', '3 Weeks', '4 Weeks'],
-  Continent: ["Europe", "Africa", "Central America", "South America"],
-  "Type of Trip": [
-    "Foodie Heaven",
-    "Wellness & relaxation",
-    "Nightlife & partying",
-    "Nature & wildlife",
-    "Activity & fitness",
-  ],
-};
-
-const SearchInput = ({ searchInput, setSearchInput, onSurpriseMeClick }) => {
+const SearchInput = ({
+  searchInput,
+  setSearchInput,
+  onSurpriseMeClick,
+  setPlaceFilter,
+  setDaysFilter,
+  setTempFilter,
+  setTypeFilter,
+  placeFilter,
+  daysFilter,
+  tempFilter,
+  typeFilter,
+}) => {
   const [filterOpen, setFilterOpen] = useState(false);
+  const filters = {
+    "Average Temp": {
+      value: tempFilter,
+      onSelect: setTempFilter,
+      items: [
+        {
+          label: "Less than 15°C | 59°F",
+          value: { min: { F: 0, C: 0 }, max: { F: 59, C: 15 } },
+        },
+        {
+          label: "15°C | 59°F - 20°C | 68°F",
+          value: { min: { F: 59, C: 15 }, max: { F: 68, C: 20 } },
+        },
+        {
+          label: "20°C | 68°F - 25°C | 77°F",
+          value: { min: { F: 68, C: 20 }, max: { F: 77, C: 25 } },
+        },
+        {
+          label: "25°C | 77°F - 30°C | 86°F",
+          value: { min: { F: 77, C: 25 }, max: { F: 86, C: 30 } },
+        },
+        {
+          label: "More than 30°C | 86°F ",
+
+          value: { min: { F: 86, C: 30 }, max: { F: 1000, C: 100 } },
+        },
+      ],
+    },
+    "Length of Trip": {
+      value: daysFilter,
+      onSelect: setDaysFilter,
+      items: [
+        { label: "1 Week", value: 7 },
+        { label: "2 Week", value: 14 },
+        { label: "3 Week", value: 21 },
+        { label: "4 Week", value: 28 },
+      ],
+    },
+    Continent: {
+      value: placeFilter,
+      onSelect: setPlaceFilter,
+      items: [
+        { label: "Europe", value: "Europe" },
+        { label: "London", value: "London" },
+        { label: "Central America", value: "Central America" },
+        { label: "South America", value: "South America" },
+      ],
+    },
+    "Type of Trip": {
+      value: typeFilter,
+      onSelect: setTypeFilter,
+      items: [
+        { label: "Foodie Heaven", value: "Foodie Heaven" },
+        { label: "Wellness & relaxation", value: "Wellness & relaxation" },
+        { label: "Nightlife & partying", value: "Nightlife & partying" },
+        { label: "Nature & wildlife", value: "Nature & wildlife" },
+        { label: "Activity & fitness", value: "Activity & fitness" },
+      ],
+    },
+  };
   return (
     <div>
       <article className="flex items-center shadow-[0px_4px_4px_0px_rgba(0,0,0,0.10)] mx-auto sm:max-w-[600px] mt-5 max-w-[358px] w-full h-[48px] sm:h-14 rounded-[57px]">
@@ -37,7 +90,7 @@ const SearchInput = ({ searchInput, setSearchInput, onSurpriseMeClick }) => {
             placeholder="Type to search a location"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
-            className="w-full bg-white text-[#666] placeholder:text-[#666] text-[10px] sm:text-[13px] font-Montserrat font-normal leading-normal  placeholder:text-[10px] sm:placeholder:text-[13px] placeholder:font-Montserrat placeholder:font-normal placeholder:leading-normal bg-transparent h-full outline-none"
+            className="w-full mx-2 bg-white text-[#666] placeholder:text-[#666] text-[10px] sm:text-[13px] font-Montserrat font-normal leading-normal  placeholder:text-[10px] sm:placeholder:text-[13px] placeholder:font-Montserrat placeholder:font-normal placeholder:leading-normal bg-transparent h-full outline-none"
           />
         </article>
         <article className="sm:max-w-[200px] sm:w-full w-[110px] border-l border-light-grey bg-pastel-yellow rounded-r-[57px] h-full flex items-center py-4 pr-[15px]">
@@ -54,11 +107,25 @@ const SearchInput = ({ searchInput, setSearchInput, onSurpriseMeClick }) => {
       </article>
       {filterOpen && (
         <div className="flex justify-around">
-          {Object.entries(filters).map(([key, values]) => (
-            <div className="mt-4">
-              <h6 className='font-Montserrat ml-4 font-bold'>{key}</h6>
-              {values.map((value) => (
-                <div className='bg-white rounded-full m-2 p-1 px-2 font-Montserrat cursor-pointer'>{value}</div>
+          {Object.entries(filters).map(([key, values], index) => (
+            <div key={index} className="mt-4">
+              <h6 className="font-Montserrat ml-4 font-bold">{key}</h6>
+              {values.items.map((item, index) => (
+                <div
+                  key={index}
+                  onClick={() => {
+                    if (values.value !== item.value || values.value === "") {
+                      values.onSelect(item.value);
+                    } else {
+                      values.onSelect("");
+                    }
+                  }}
+                  className={`${
+                    values.value === item.value ? "bg-orange-200" : "bg-white"
+                  } rounded-full m-2 py-2 px-3 font-Montserrat cursor-pointer`}
+                >
+                  {item.label}
+                </div>
               ))}
             </div>
           ))}
