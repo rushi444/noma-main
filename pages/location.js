@@ -26,6 +26,7 @@ const shuffleArray = (array) =>
     .map(({ value }) => value);
 
 const locations = ({ locations }) => {
+  console.log(locations);
   const [searchInput, setSearchInput] = useState("");
   const [tempFilter, setTempFilter] = useState("");
   const [daysFilter, setDaysFilter] = useState("");
@@ -65,13 +66,16 @@ const locations = ({ locations }) => {
           item.country.toLowerCase().includes(placeFilter.toLowerCase());
 
         // Filter by type of trip
-        // const typeFilterPass =
-        //   !typeFilter || item.type.toLowerCase() === typeFilter.toLowerCase();
+        const typeFilterPass =
+          !typeFilter || item.tripType.includes(typeFilter);
 
         // Combine all filters
         return (
-          searchFilter && tempFilterPass && daysFilterPass && placeFilterPass
-          // && typeFilterPass
+          searchFilter &&
+          tempFilterPass &&
+          daysFilterPass &&
+          placeFilterPass &&
+          typeFilterPass
         );
       }) || []
     );

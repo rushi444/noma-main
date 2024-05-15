@@ -70,6 +70,7 @@ const GET_ALL_EDITIONS = `
         endDate
         timeZone
         temperature
+        tripType
         accomodationsCollection {
           items {
             price
