@@ -22,19 +22,19 @@ const SearchInput = ({
       items: [
         {
           label: "Less than 15°C | 59°F",
-          value: { min: { F: 0, C: 0 }, max: { F: 59, C: 15 } },
+          value: { min: 0, max: 15 },
         },
         {
           label: "15°C | 59°F - 20°C | 68°F",
-          value: { min: { F: 59, C: 15 }, max: { F: 68, C: 20 } },
+          value: { min: 15, max: 20 },
         },
         {
           label: "20°C | 68°F - 25°C | 77°F",
-          value: { min: { F: 68, C: 20 }, max: { F: 77, C: 25 } },
+          value: { min: 20, max: 25 },
         },
         {
           label: "25°C | 77°F - 30°C | 86°F",
-          value: { min: { F: 77, C: 25 }, max: { F: 86, C: 30 } },
+          value: { min: 25, max: 30 },
         },
         {
           label: "More than 30°C | 86°F ",
@@ -114,14 +114,17 @@ const SearchInput = ({
                 <div
                   key={index}
                   onClick={() => {
-                    if (values.value !== item.value || values.value === "") {
-                      values.onSelect(item.value);
-                    } else {
+                    if (values.value !== "") {
                       values.onSelect("");
+                    } else {
+                      values.onSelect(item.value);
                     }
                   }}
                   className={`${
-                    values.value === item.value ? "bg-orange-200" : "bg-white"
+                    values.value == item.value ||
+                    JSON.stringify(values.value) === JSON.stringify(item.value)
+                      ? "bg-orange-200"
+                      : "bg-white"
                   } rounded-full m-2 py-2 px-3 font-Montserrat cursor-pointer`}
                 >
                   {item.label}

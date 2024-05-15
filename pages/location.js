@@ -26,7 +26,6 @@ const shuffleArray = (array) =>
     .map(({ value }) => value);
 
 const locations = ({ locations }) => {
-  console.log(locations);
   const [searchInput, setSearchInput] = useState("");
   const [tempFilter, setTempFilter] = useState("");
   const [daysFilter, setDaysFilter] = useState("");
@@ -49,9 +48,9 @@ const locations = ({ locations }) => {
         const tempFilterPass =
           !tempFilter ||
           (tempFilter.min &&
-            parseInt(item.temperature.split("°")[0]) >= tempFilter.min.C &&
+            parseInt(item.temperature.split("°")[0]) >= tempFilter.min &&
             tempFilter.max &&
-            parseInt(item.temperature.split("°")[0]) <= tempFilter.max.C);
+            parseInt(item.temperature.split("°")[0]) <= tempFilter.max);
 
         // Filter by length of trip
         const daysFilterPass =
