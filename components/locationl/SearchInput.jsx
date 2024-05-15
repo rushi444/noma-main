@@ -78,8 +78,11 @@ const SearchInput = ({
   return (
     <div>
       <article className="flex items-center shadow-[0px_4px_4px_0px_rgba(0,0,0,0.10)] mx-auto sm:max-w-[600px] mt-5 max-w-[358px] w-full h-[48px] sm:h-14 rounded-[57px]">
-        <article className="bg-light-green w-[44px] border-r border-light-grey md:w-[98px] cursor-pointer rounded-l-[57px] flex items-center justify-center h-full px-[30px] py-4">
-          <span onClick={() => setFilterOpen((v) => !v)}>
+        <article
+          onClick={() => setFilterOpen((v) => !v)}
+          className="bg-light-green w-[44px] border-r border-light-grey md:w-[98px] cursor-pointer rounded-l-[57px] flex items-center justify-center h-full px-[30px] py-4"
+        >
+          <span>
             <InputRightSideIcon />
           </span>
         </article>
