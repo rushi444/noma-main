@@ -16,7 +16,7 @@ const Footer = () => {
               <input
                 type="text"
                 placeholder="Email"
-                class="form-input px-4 py-2 border rounded-full text-gray-700 focus:outline-none focus:border-blue-500 w-[350px]"
+                className="form-input px-4 py-2 border rounded-full text-gray-700 focus:outline-none focus:border-blue-500 w-[350px]"
               />
               <button className="rounded-full bg-orange-400 text-white px-4 font-Montserrat">
                 LET'S CONNECT
