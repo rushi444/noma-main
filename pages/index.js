@@ -42,11 +42,18 @@ export default function Home({ locations, blogs }) {
         width="100%"
         height="100%"
       />
-      <Waves />
-      <div className="px-4 py-2">
-        <Heading heading="Bring Your Job, Well Do The Rest" />
+      {/* <Waves /> */}
+      <div className="px-4 py-2 mt-4 sm:mt-8">
+        <Heading
+          heading={
+            <>
+              Bring Your Job, We<span className="font-serif">'</span><span className='lowercase'>l</span>l Do
+              The Rest
+            </>
+          }
+        />
       </div>
-      <div className="sm:max-w-[600px] w-full mx-auto max-xl:px-4 pb-3 sm:pb-0">
+      <div className="sm:max-w-[900px] w-full mx-auto max-xl:px-4 pb-3 sm:pb-0">
         <Subheading
           paragraph="Your remote work, done differently. We curate extraordinary 2-4 week
           trips for remote workers, building a community of like-minded
@@ -55,7 +62,7 @@ export default function Home({ locations, blogs }) {
           your work-life balance."
         />
       </div>
-      <VideoComponent video="/video/sample-video.mp4" />
+      {/* <VideoComponent video="/video/sample-video.mp4" /> */}
       <div className="sm:mt-8">
         <CommonButton text="BOOK YOUR CALL" />
       </div>

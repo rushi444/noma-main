@@ -79,7 +79,7 @@ export const whatWeOfferCardData = [
   },
   {
     heading: "Experiences",
-    src: "/img/experiences-card-img.png",
+    src: "/img/experiences-card-img.jpg",
     text: "Experience the extraordinary with Noma Collective - immerse yourself in unique cultural journeys led by those who know them best. Discover hidden gems, bucket-list opportunities and create memories that will last forever in truly unforgettable locations all over the world.",
   },
   {
@@ -89,7 +89,7 @@ export const whatWeOfferCardData = [
   },
   {
     heading: "Support",
-    src: "/img/support-card-img.jpg",
+    src: "/img/hugging.png",
     text: "Our support extends far beyond the Edition - we always have your back. From ensuring an integrated and unique experience from our on-site and local community managers to our specialized alumni Slack channel, offering guidance and recommendations whenever you need them..",
   },
 ];
@@ -381,6 +381,7 @@ export const BlogOpenInterestedBlogs = [
   },
 ];
 export const ForBlogBtnData = [
+  { btnname: "All" },
   {
     btnname: "Locations Lowdowns",
   },
@@ -496,22 +497,22 @@ export const accomodationCardData = [
 ];
 export const profileMapData = [
   {
-    name: "Sachit Michra",
-    btn: [{ btn1: "1 edition done" }, { btn1: "PM at a startup" }],
+    name: "Sachit",
+    btn: [{ btn1: "1 edition" }, { btn1: "PM at a startup" }],
     img: "/img/profile-data-card-1.png",
     description:
       "Logistically, Noma handles things extremely well. The communication, accommodation, and excursions were impeccable and professionally handled. But more than that, this was an incredibly well curated experience of connection, friendship, and adventure. And that was in no small part thanks to our extremely reliable and friendly community manager, Mariela, who set the tone for the whole trip. I will never forget my Noma experience and you can be sure I'll be booking another.",
   },
   {
-    name: "Michele Khan",
-    btn: [{ btn1: "2 edition done" }, { btn1: "Research Manager" }],
+    name: "Michele",
+    btn: [{ btn1: "2 editions" }, { btn1: "Research Manager" }],
     img: "/img/profile-data-card-2.png",
     description:
       "I had an absolutely amazing time in Antigua. The accommodations were lovely, spacious and clean! The best part, by far, was our Noma crew. We had a blast and everything was so well organized and thought out. From family dinners, crazy weekend adventures (including hiking a volcano and releasing baby sea turtles into the ocean), to cozy nights in, I had an incredible time and met some of the coolest people. I can say that I made some wonderful, life-long friends as well.",
   },
   {
-    name: "Michelle Jean ",
-    btn: [{ btn1: "3 edition done" }, { btn1: "UI/ UX designer" }],
+    name: "Sachit",
+    btn: [{ btn1: "3 editions" }, { btn1: "UI/ UX designer" }],
     img: "/img/profile-data-card-1.png",
     description:
       "I recently did two Noma trips (Guatemala and Panama) and these experiences changed my perspective on travel. It's not just about visiting beautiful places, but most importantly the connections you make along the way. Traveling with Noma gives you community and a more authentic traveling experience. There was a perfect balance of work, free time, and planned activities for the group. I highly recommend booking with Noma for your next trip!",

@@ -1,6 +1,10 @@
-import Image from "next/image";
-import React from "react";
 import { featuredBlogsBgs } from "../utils/Functions";
+const colorLookup = {
+  'Location Lowdowns': '#BBE4D7',
+  'Travel Tips': '#FFDA7F',
+  'Remote Life': '#D5D1EA',
+  'Alum-News': '#BBE4D7'
+}
 
 const OpenBlogIntrestedCard = ({ item }) => {
   const BgColor = featuredBlogsBgs({ item });
@@ -11,7 +15,7 @@ const OpenBlogIntrestedCard = ({ item }) => {
         <button
           type="submit"
           className={`px-2 py-[7px] rounded-[31px] duration-300 max-w-[169px] w-full text-carbon-Black font-Montserrat text-sm font-normal leding-normal`}
-          style={{ backgroundColor: BgColor }}
+          style={{ backgroundColor: colorLookup[item?.category] || BgColor }}
         >
           {item?.category}
         </button>
@@ -26,6 +30,7 @@ const OpenBlogIntrestedCard = ({ item }) => {
         <h1 className="text-carbon-Black font-Montserrat text-2xl lg:text-2xl font-extrabold mt-2">
           {item.title}
         </h1>
+        <p>{item?.excerpt || ''}</p>
       </div>
     </>
   );

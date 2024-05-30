@@ -7,14 +7,24 @@ const NewsSection = ({ blogs }) => {
   return (
     <div className="bg-romance pb-[100px] w-full px-4 ">
       <div className="w-full  py-8 px-1 sm:px-2.5">
-        <div className="hidden sm:block">
-          <Heading heading="NEWS SECTION" />
+        <div className="hidden sm:block !font-kurdis">
+          <Heading
+            heading={
+              <>
+                What<span className="font-serif">'</span>
+                <span className="lowercase">s</span> new
+              </>
+            }
+          />
         </div>
-        <div>
-          <p className="text-center text-black font-Montserrat text-2xl font-extrabold leading-normal block sm:hidden">
-            News
-          </p>
-        </div>
+        <Heading
+          heading={
+            <div className="sm:hidden">
+              What<span className="font-serif">'</span>
+              <span className="lowercase">s</span> new
+            </div>
+          }
+        />
       </div>
       <NewsCards blogs={blogs} />
     </div>

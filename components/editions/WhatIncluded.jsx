@@ -11,7 +11,7 @@ const WhatIncluded = ({ d, items }) => {
       <div className="bg-[#FFDA7F]">
         <div className="xl:px-0 sm:px-4 sm:pt-4 pb-8 mx-auto max-w-[950px] w-full flex max-md:flex-col gap-4 md:gap-6 lg:gap-9 xl:gap-[76px]">
           <div className="sm:max-w-[457px] max-sm:bg-[#F4F1E6] flex flex-col justify-between w-full mx-auto pt-4 sm:pt-8">
-            <div className="sm:mb-0 mb-5 text-[#313131] text-center font-Montserrat text-sm md:text-base font-normal !leading-5 pt-4">
+            <div className="sm:mb-0 mb-5 text-[#313131] text-center font-Montserrat text-sm md:text-base font-normal !leading-5 pt-4 py-2">
               {/* <p className="text-[#313131] text-center font-Montserrat text-sm md:text-base font-normal !leading-5 "> */}
                 {/* Our explosive Edition in Antigua, Guatemala, has you
                 experiencing everything this hidden beauty has to offer. From

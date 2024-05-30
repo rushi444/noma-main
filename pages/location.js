@@ -94,7 +94,7 @@ const locations = ({ locations }) => {
       <PageSEO title="Locations" />
       <HeroImage bg="url('/img/locations-bg.png')" />
       <div className="px-4 pt-8 ">
-        <Heading heading="Where do you want to go" />
+        <Heading heading={<>Where do you want to go<span className='font-serif font-extrabold'>?</span></>} />
       </div>
       <div className="sm:max-w-[500px] w-full mx-auto max-xl:px-4">
         <Subheading paragraph="Your remote work journey starts here, check out our specially curated Noma Editions and embrace the freedom to work from anywhere." />
@@ -115,8 +115,8 @@ const locations = ({ locations }) => {
         />
       </div>
       <TimeZoneSwiper locations={filteredItems} />
-      <div className="mb-24">
-        <CommonButton text="Book Your Call" />
+      <div className="mb-36">
+        <CommonButton text="BOOK YOUR CALL" />
       </div>
     </Layout>
   );

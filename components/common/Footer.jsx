@@ -28,12 +28,12 @@ const Footer = () => {
               any time.
             </p>{" "}
           </div>
-          <div className="pl-4 sm:pl-0 sm:flex sm:justify-around sm:w-full">
+          <div className="pl-4 sm:pl-0 sm:flex sm:justify-around sm:w-full max-w-[1000px]">
             <div className="column-uno text-white">
               <Link href="/">
-              <img src='/img/logo-white.png' width={150} className='mb-4'/>
+              <img src='/img/high-res-logo.png' width={150} className='-ml-3'/>
               </Link>
-              <div className="flex gap-2">
+              <div className="flex gap-2 mb-2 -mt-8">
                 <Link href="https://www.instagram.com/noma_collective/">
                   <img
                     src="/img/socials/instagram.png"
@@ -72,7 +72,7 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="column-dos flex flex-col text-white">
+            <div className="column-dos flex flex-col text-white mb-2">
               <Link href="/location">LOCATIONS</Link>
               <Link href="/how-it-works">HOW IT WORKS</Link>
               <Link href="/news">WHAT'S NEW</Link>
@@ -84,10 +84,10 @@ const Footer = () => {
               </Link>
             </div>
             <div className="column-dos flex flex-col text-white">
-              <Link href="/">FAQ</Link>
+              <Link href="/how-it-works">FAQ</Link>
               <Link href="/">TERMS & CONDITIONS</Link>
               <Link href="/">PRIVACY POLICY</Link>
-              <Link href="/">CONTACT US</Link>
+              <Link href="/contact-us">CONTACT US</Link>
             </div>
           </div>
         </div>

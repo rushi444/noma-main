@@ -16,7 +16,6 @@ export const getServerSideProps = async () => {
 };
 
 const News = ({ blogs }) => {
-  console.log({ blogs });
   return (
     <Layout>
       <PageSEO title="What's New" />

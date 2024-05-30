@@ -109,7 +109,7 @@ const SearchInput = ({
         </article>
       </article>
       {filterOpen && (
-        <div className="flex justify-around">
+        <div className="flex justify-around max-w-[1000px] m-auto mt-2">
           {Object.entries(filters).map(([key, values], index) => (
             <div key={index} className="mt-4">
               <h6 className="font-Montserrat ml-4 font-bold">{key}</h6>
@@ -128,7 +128,7 @@ const SearchInput = ({
                     JSON.stringify(values.value) === JSON.stringify(item.value)
                       ? "bg-orange-200"
                       : "bg-white"
-                  } rounded-full m-2 py-2 px-3 font-Montserrat cursor-pointer`}
+                  } rounded-full m-2 py-2 px-3 font-Montserrat cursor-pointer shadow-md`}
                 >
                   {item.label}
                 </div>

@@ -22,7 +22,7 @@ export default function FeaturedEditionSectionSlider({ locations }) {
     days: Math.abs(
       differenceInDays(new Date(l.endDate), new Date(l.startDate))
     ),
-    price: l.accomodationsCollection.items[0].price,
+    price: l?.accomodationsCollection?.items[0]?.price,
     img: [{ src: l?.heroImage?.url }],
   }));
   const swiperRef = useRef(null);
@@ -58,18 +58,18 @@ export default function FeaturedEditionSectionSlider({ locations }) {
             slidesPerView: 1,
             spaceBetween: 20,
           },
-          430: {
-            slidesPerView: 1.2,
-            spaceBetween: 20,
-          },
-          540: {
-            slidesPerView: 1.5,
-            spaceBetween: 20,
-          },
-          640: {
-            slidesPerView: 1.5,
-            spaceBetween: 20,
-          },
+          // 430: {
+          //   slidesPerView: 1.2,
+          //   spaceBetween: 20,
+          // },
+          // 540: {
+          //   slidesPerView: 1.5,
+          //   spaceBetween: 20,
+          // },
+          // 640: {
+          //   slidesPerView: 1.5,
+          //   spaceBetween: 20,
+          // },
           768: {
             slidesPerView: 2,
             spaceBetween: 40,

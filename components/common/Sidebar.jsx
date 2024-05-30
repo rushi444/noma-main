@@ -3,7 +3,7 @@ import SidebarLinks from "./SidebarLinks";
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col h-full overflow-auto">
+    <div className="flex flex-col h-full overflow-auto font-kurdis">
       {navLinksData.map((items, index) => (
         <SidebarLinks item={items} value={index} key={index} />
       ))}

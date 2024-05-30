@@ -16,7 +16,7 @@ const TimeZoneSwiper = ({ locations }) => {
     days: Math.abs(
       differenceInDays(new Date(l.endDate), new Date(l.startDate))
     ),
-    price: l.accomodationsCollection.items[0].price,
+    price: l?.accomodationsCollection?.items?.[0]?.price,
     img: [{ src: l?.heroImage?.url }],
   }));
 

@@ -21,14 +21,13 @@ export const getServerSideProps = async () => {
 };
 
 const HowItWork = ({ faqs }) => {
-  console.log({ faqs });
   const faq = faqs.faqCollection.items;
   return (
     <Layout>
       <PageSEO title="How it works" />
       <HeroImage bg="url(/img/hero-water.png)" />
       <div className="pt-8">
-        <Heading heading="How do i start  it work" />
+        <Heading heading="How it works" />
       </div>
       <Subheading
         width="730px"
@@ -44,6 +43,15 @@ const HowItWork = ({ faqs }) => {
         />
       </div>
       <Basics faqs={faq} />
+      <h4 className="heading my-4 text-4xl m-auto max-w-[1000px]">
+        Still can<span className="font-serif">'</span>
+        <span className="lowercase">t</span> decide
+        <span className="font-serif font-extrabold">?</span> Let our expert team
+        help you craft your dream Edition. Adventure awaits{" "}
+        <span className="font-serif font-extrabold">-</span> book a call today
+        <span className="font-serif font-extrabold">?</span>
+      </h4>
+
       <div className="mb-24">
         <CommonButton text="BOOK YOUR CALL" />
       </div>

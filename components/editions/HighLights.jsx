@@ -52,18 +52,18 @@ const HighLights = ({ highlights }) => {
                 slidesPerView: 1,
                 spaceBetween: 5,
               },
-              430: {
-                slidesPerView: 1.2,
-                spaceBetween: 5,
-              },
-              540: {
-                slidesPerView: 1.5,
-                spaceBetween: 10,
-              },
-              640: {
-                slidesPerView: 1.5,
-                spaceBetween: 15,
-              },
+              // 430: {
+              //   slidesPerView: 1.2,
+              //   spaceBetween: 5,
+              // },
+              // 540: {
+              //   slidesPerView: 1.5,
+              //   spaceBetween: 10,
+              // },
+              // 640: {
+              //   slidesPerView: 1.5,
+              //   spaceBetween: 15,
+              // },
               768: {
                 slidesPerView: 2,
                 spaceBetween: 20,
@@ -83,7 +83,7 @@ const HighLights = ({ highlights }) => {
             paginationType="bullets"
             paginationClickable={true}
             modules={[Pagination]}
-            className="mySwiper5 py-10  w-[328px]"
+            className="mySwiper w-full"
             ref={swiperRef}
           >
             {highlights.map((item, index) => (
