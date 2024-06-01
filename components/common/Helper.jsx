@@ -616,3 +616,33 @@ export const progressCardsData = [
     color: "#FF9500",
   },
 ];
+
+export const socialMedialist = [
+  {
+    id: 1,
+    username: "nomacollectivehq",
+    logoSrc: "/img/socials/social-card-logo-img.png",
+    imageSrc: "/img/socials/social-card-img1.png",
+  },
+  {
+    id: 2,
+    username: "nomacollectivehq",
+    logoSrc: "/img/socials/social-card-logo-img.png",
+    imageSrc: "/img/socials/social-card-img2.png",
+  },
+  {
+    id: 3,
+    username: "nomacollectivehq",
+    logoSrc: "/img/socials/social-card-logo-img.png",
+    imageSrc: "/img/socials/social-card-img3.png",
+  },
+];
+
+export const faqList = [
+  {
+    question: "Do I need a remote work job to join?",
+  },
+  {
+    question: "Do I need any special vaccinations to join?",
+  },
+];

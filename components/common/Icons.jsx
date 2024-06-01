@@ -17,9 +17,7 @@ export const StarIcon = () => {
   );
 };
 export const LogoIcon = () => {
-  return (
-    <img src='/img/noma-logo-transparent.png' width={150} />
-  );
+  return <img src="/img/noma-logo-transparent.png" width={150} />;
 };
 export const SliderLeftArrowIcon = () => {
   return (
@@ -191,3 +189,405 @@ export const ScrollToTopButtonIcon = () => {
     </svg>
   );
 };
+
+export const InstaIcon = () => (
+  <svg
+    width="100%"
+    height="100%"
+    viewBox="0 0 115 115"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_d_2002_3444)">
+      <circle cx="57.5" cy="53.5" r="53.5" fill="#313131" />
+    </g>
+    <path
+      d="M58 27.768C66.544 27.768 67.5573 27.8 70.9333 27.9547C79.6053 28.3493 83.656 32.464 84.0507 41.072C84.2053 44.4453 84.2347 45.4587 84.2347 54.0027C84.2347 62.5493 84.2027 63.56 84.0507 66.9333C83.6533 75.5333 79.6133 79.656 70.9333 80.0507C67.5573 80.2053 66.5493 80.2373 58 80.2373C49.456 80.2373 48.4427 80.2053 45.0693 80.0507C36.376 79.6533 32.3467 75.52 31.952 66.9307C31.7973 63.5573 31.7653 62.5467 31.7653 54C31.7653 45.456 31.8 44.4453 31.952 41.0693C32.3493 32.464 36.3893 28.3467 45.0693 27.952C48.4453 27.8 49.456 27.768 58 27.768ZM58 22C49.3093 22 48.2213 22.0373 44.808 22.192C33.1867 22.7253 26.728 29.1733 26.1947 40.8053C26.0373 44.2213 26 45.3093 26 54C26 62.6907 26.0373 63.7813 26.192 67.1947C26.7253 78.816 33.1733 85.2747 44.8053 85.808C48.2213 85.9627 49.3093 86 58 86C66.6907 86 67.7813 85.9627 71.1947 85.808C82.8053 85.2747 89.28 78.8267 89.8053 67.1947C89.9627 63.7813 90 62.6907 90 54C90 45.3093 89.9627 44.2213 89.808 40.808C89.2853 29.1973 82.8293 22.728 71.1973 22.1947C67.7813 22.0373 66.6907 22 58 22ZM58 37.568C48.9253 37.568 41.568 44.9253 41.568 54C41.568 63.0747 48.9253 70.4347 58 70.4347C67.0747 70.4347 74.432 63.0773 74.432 54C74.432 44.9253 67.0747 37.568 58 37.568ZM58 64.6667C52.1093 64.6667 47.3333 59.8933 47.3333 54C47.3333 48.1093 52.1093 43.3333 58 43.3333C63.8907 43.3333 68.6667 48.1093 68.6667 54C68.6667 59.8933 63.8907 64.6667 58 64.6667ZM75.0827 33.08C72.96 33.08 71.24 34.8 71.24 36.92C71.24 39.04 72.96 40.76 75.0827 40.76C77.2027 40.76 78.92 39.04 78.92 36.92C78.92 34.8 77.2027 33.08 75.0827 33.08Z"
+      fill="#F4F1E6"
+    />
+    <defs>
+      <filter
+        id="filter0_d_2002_3444"
+        x="0"
+        y="0"
+        width="115"
+        height="115"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+      >
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="2" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_2002_3444"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_2002_3444"
+          result="shape"
+        />
+      </filter>
+    </defs>
+  </svg>
+);
+
+export const FacebookIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="100%"
+    height="100%"
+    fill="none"
+    viewBox="0 0 115 115"
+  >
+    <g filter="url(#filter0_d_2002_3445)">
+      <circle cx="57.5" cy="53.5" r="53.5" fill="#313131"></circle>
+    </g>
+    <path
+      fill="#F4F1E6"
+      d="M49.75 43.667H42V54h7.75v31h12.917V54h9.408L73 43.667H62.667V39.36c0-2.467.496-3.443 2.88-3.443H73V23h-9.837c-9.29 0-13.413 4.09-13.413 11.922v8.745z"
+    ></path>
+    <defs>
+      <filter
+        id="filter0_d_2002_3445"
+        width="115"
+        height="115"
+        x="0"
+        y="0"
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+        <feColorMatrix
+          in="SourceAlpha"
+          result="hardAlpha"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        ></feColorMatrix>
+        <feOffset dy="4"></feOffset>
+        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+        <feComposite in2="hardAlpha" operator="out"></feComposite>
+        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"></feColorMatrix>
+        <feBlend
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_2002_3445"
+        ></feBlend>
+        <feBlend
+          in="SourceGraphic"
+          in2="effect1_dropShadow_2002_3445"
+          result="shape"
+        ></feBlend>
+      </filter>
+    </defs>
+  </svg>
+);
+
+export const TwitterIcon = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="100%"
+    height="100%"
+    fill="none"
+    viewBox="0 0 115 115"
+  >
+    <g filter="url(#filter0_d_2002_3446)">
+      <circle cx="57.5" cy="53.5" r="53.5" fill="#313131"></circle>
+    </g>
+    <mask
+      id="mask0_2002_3446"
+      style={{ maskType: "luminance" }}
+      width="62"
+      height="56"
+      x="27"
+      y="26"
+      maskUnits="userSpaceOnUse"
+    >
+      <path fill="#fff" d="M27 26h61.333v55.2H27V26z"></path>
+    </mask>
+    <g mask="url(#mask0_2002_3446)">
+      <path
+        fill="#F4F1E6"
+        d="M75.073 26.69h9.225L64.15 49.489l23.702 31.023H69.29L54.754 61.697 38.12 80.51h-9.224l21.55-24.383-22.734-29.44H46.74l13.14 17.197 15.196-17.197-.004.003zm-3.235 48.356h5.11L43.961 31.867H38.48l33.36 43.179z"
+      ></path>
+    </g>
+    <defs>
+      <filter
+        id="filter0_d_2002_3446"
+        width="115"
+        height="115"
+        x="0"
+        y="0"
+        colorInterpolationFilters="sRGB"
+        filterUnits="userSpaceOnUse"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix"></feFlood>
+        <feColorMatrix
+          in="SourceAlpha"
+          result="hardAlpha"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+        ></feColorMatrix>
+        <feOffset dy="4"></feOffset>
+        <feGaussianBlur stdDeviation="2"></feGaussianBlur>
+        <feComposite in2="hardAlpha" operator="out"></feComposite>
+        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"></feColorMatrix>
+        <feBlend
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_2002_3446"
+        ></feBlend>
+        <feBlend
+          in="SourceGraphic"
+          in2="effect1_dropShadow_2002_3446"
+          result="shape"
+        ></feBlend>
+      </filter>
+    </defs>
+  </svg>
+);
+
+export const LinkedinIcon = () => (
+  <svg
+    width="100%"
+    height="100%"
+    viewBox="0 0 115 115"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_d_2002_3447)">
+      <circle cx="57.5" cy="53.5" r="53.5" fill="#313131" />
+    </g>
+    <path
+      d="M39.865 31.3043C39.865 34.7869 36.9975 37.6087 33.4583 37.6087C29.9192 37.6087 27.0517 34.7869 27.0517 31.3043C27.0517 27.8243 29.9192 25 33.4583 25C36.9975 25 39.865 27.8243 39.865 31.3043ZM39.9167 42.6522H27V83H39.9167V42.6522ZM60.5368 42.6522H47.7028V83H60.5394V61.8199C60.5394 50.0434 76.1143 49.0801 76.1143 61.8199V83H89V57.4523C89 37.581 65.9515 38.3047 60.5368 48.0865V42.6522Z"
+      fill="#F4F1E6"
+    />
+    <defs>
+      <filter
+        id="filter0_d_2002_3447"
+        x="0"
+        y="0"
+        width="115"
+        height="115"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+      >
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="2" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_2002_3447"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_2002_3447"
+          result="shape"
+        />
+      </filter>
+    </defs>
+  </svg>
+);
+
+export const TiktokIcon = () => (
+  <svg
+    width="100%"
+    height="100%"
+    viewBox="0 0 115 115"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_d_2002_3448)">
+      <circle cx="57.5" cy="53.5" r="53.5" fill="#313131" />
+    </g>
+    <path
+      d="M59.2605 26.0467C62.4016 26 65.5196 26.0243 68.6358 26C68.7394 29.793 70.3205 33.2068 72.8361 35.7355L72.8322 35.7317C75.5397 38.1054 79.0626 39.6442 82.9463 39.9057L83 39.9094V49.3143C79.3312 49.2247 75.8812 48.4011 72.7708 46.9855L72.9282 47.049C71.4238 46.345 70.1516 45.6222 68.9428 44.8154L69.0426 44.8789C69.0195 51.6936 69.0656 58.5082 68.9946 65.2986C68.797 68.7592 67.615 71.9153 65.7192 74.5504L65.7576 74.4925C62.5877 78.9111 57.4529 81.8114 51.614 81.9832H51.5871C51.3511 81.9944 51.0729 82 50.7927 82C47.4732 82 44.3705 81.0998 41.7264 79.5367L41.8031 79.5797C36.9907 76.7616 33.6712 71.9396 33.0572 66.3314L33.0495 66.2548C33.0015 65.0876 32.9785 63.9204 33.0265 62.7774C33.9667 53.8525 41.6496 46.9482 50.9885 46.9482C52.0381 46.9482 53.0665 47.036 54.0662 47.2022L53.9588 47.1872C54.0068 50.6403 53.8628 54.0952 53.8628 57.5483C53.0512 57.2626 52.1148 57.0964 51.1381 57.0964C47.5538 57.0964 44.5048 59.3262 43.3765 62.4394L43.3593 62.4954C43.1041 63.2929 42.9563 64.2098 42.9563 65.1585C42.9563 65.5433 42.9813 65.9242 43.0273 66.2977L43.0235 66.2529C43.6605 70.0739 47.0261 72.9574 51.0844 72.9574C51.2015 72.9574 51.3166 72.9555 51.4317 72.9499H51.4144C54.2217 72.8677 56.6586 71.398 58.0363 69.226L58.0554 69.1924C58.5678 68.4977 58.9189 67.6573 59.036 66.7441L59.0379 66.7179C59.2777 62.5403 59.1818 58.3868 59.2048 54.2092C59.2278 44.8042 59.1818 35.4217 59.2528 26.0411L59.2605 26.0467Z"
+      fill="#F4F1E6"
+    />
+    <defs>
+      <filter
+        id="filter0_d_2002_3448"
+        x="0"
+        y="0"
+        width="115"
+        height="115"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+      >
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="2" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_2002_3448"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_2002_3448"
+          result="shape"
+        />
+      </filter>
+    </defs>
+  </svg>
+);
+
+export const YoutubeIcon = () => (
+  <svg
+    width="100%"
+    height="100%"
+    viewBox="0 0 115 115"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_d_2002_3449)">
+      <circle cx="57.5" cy="53.5" r="53.5" fill="#313131" />
+    </g>
+    <path
+      d="M77.4894 31.4705C68.0289 30.8419 46.958 30.8444 37.5106 31.4705C27.281 32.1503 26.0761 38.166 26 54C26.0761 69.8059 27.2705 75.8471 37.5106 76.5295C46.9606 77.1556 68.0289 77.1581 77.4894 76.5295C87.719 75.8497 88.9239 69.834 89 54C88.9239 38.1941 87.7295 32.1529 77.4894 31.4705ZM49.625 64.2221V43.7779L70.625 53.9821L49.625 64.2221Z"
+      fill="#F4F1E6"
+    />
+    <defs>
+      <filter
+        id="filter0_d_2002_3449"
+        x="0"
+        y="0"
+        width="115"
+        height="115"
+        filterUnits="userSpaceOnUse"
+        color-interpolation-filters="sRGB"
+      >
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="2" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_2002_3449"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_2002_3449"
+          result="shape"
+        />
+      </filter>
+    </defs>
+  </svg>
+);
+
+export const LikeIcon = ({ color }) => (
+  <svg
+    width="23"
+    height="21"
+    viewBox="0 0 23 21"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M11.5 3.34243C9.40071 0.847315 5.89274 0.0762152 3.26244 2.36099C0.632126 4.64577 0.261814 8.46578 2.32741 11.168C4.04482 13.4147 9.24227 18.1532 10.9457 19.6869C11.1362 19.8585 11.2316 19.9443 11.3427 19.978C11.4397 20.0073 11.5459 20.0073 11.6429 19.978C11.7541 19.9443 11.8493 19.8585 12.0399 19.6869C13.7434 18.1532 18.9408 13.4147 20.6582 11.168C22.7238 8.46578 22.3987 4.62174 19.7232 2.36099C17.0476 0.10025 13.5993 0.847315 11.5 3.34243Z"
+      stroke="black"
+      className={color ? "stroke-rose-600 fill-rose-600 " : "stroke-black"}
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const CommentIcon = () => (
+  <svg
+    width="22"
+    height="24"
+    viewBox="0 0 22 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
+      d="M11 19.5C11.803 19.5 12.5785 19.398 13.3237 19.2247L16.5605 21.3473L16.5172 17.868C18.9984 16.2405 20.625 13.5495 20.625 10.5C20.625 5.52975 16.3158 1.5 11 1.5C5.68425 1.5 1.375 5.52975 1.375 10.5C1.375 15.471 5.68425 19.5 11 19.5ZM11 0C17.0748 0 22 4.70175 22 10.5C22 13.8142 20.3878 16.7655 17.875 18.6893V24L13.0563 20.8103C12.3894 20.9303 11.7033 21 11 21C4.92525 21 0 16.299 0 10.5C0 4.70175 4.92525 0 11 0Z"
+      fill="black"
+    />
+  </svg>
+);
+
+export const ShareIcon = () => (
+  <svg
+    width="22"
+    height="19"
+    viewBox="0 0 22 19"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7.79966 9.37608L20.6378 1.30335M7.98989 9.91389L9.2813 15.1965C9.59343 16.4731 9.74943 17.1114 10.0754 17.3473C10.3583 17.552 10.7219 17.6093 11.0541 17.5018C11.4369 17.3778 11.782 16.8186 12.4722 15.7002L19.9403 3.59897C20.5418 2.62454 20.8424 2.13729 20.7985 1.75969C20.7603 1.4312 20.5756 1.13759 20.2961 0.960963C19.9747 0.757899 19.4053 0.818012 18.2665 0.938203L4.12489 2.43102C2.81797 2.56898 2.16451 2.63796 1.88704 2.92934C1.64625 3.18219 1.54058 3.53478 1.60262 3.87835C1.6741 4.2743 2.1819 4.69138 3.19754 5.52532L7.40025 8.97661C7.56764 9.11405 7.65133 9.18272 7.7187 9.26439C7.77861 9.33695 7.82888 9.41685 7.86827 9.50214C7.9128 9.59836 7.93846 9.70353 7.98989 9.91389Z"
+      stroke="black"
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+);
+
+export const SelectDownArrow = () => (
+  <svg
+    width="20"
+    height="10"
+    viewBox="0 0 20 10"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0.00282091 1.13792C0.00282092 0.823664 0.169619 0.509413 0.49514 0.285247C1.10045 -0.129564 2.02052 -0.0855688 2.55589 0.385808L10.2151 9.77354L17.2609 0.415139C17.7721 -0.0709031 18.6921 -0.140038 19.3136 0.260108C19.9377 0.658159 20.0265 1.37465 19.5127 1.8586L11.3423 9.58499C11.0706 9.84267 10.6671 9.99351 10.242 9.9998C9.81424 10.0061 9.40532 9.86572 9.12284 9.61641L0.366007 1.88793C0.121193 1.67214 0.000131531 1.40398 0.000131545 1.13582L0.00282091 1.13792Z"
+      fill="#313131"
+    />
+  </svg>
+);
