@@ -32,6 +32,8 @@ module.exports = {
         "beveled-Glass ": "#80CEB7",
         lynxwhite: "#F7F7F7",
         "light-red": "#FCD9DF",
+        squantgrey: "#666",
+        erieblack: "#1E1E1E",
       },
     },
   },

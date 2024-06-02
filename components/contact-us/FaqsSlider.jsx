@@ -3,9 +3,8 @@ import { Autoplay, Scrollbar } from "swiper/modules";
 import Image from "next/image";
 
 export const FaqsSlider = ({ faqs }) => {
-  
   return (
-    <div className="max-w-[1120px] w-full mx-auto lg:pt-8 pb-8">
+    <div className="max-w-[1120px] w-full mx-auto lg:pt-8 pb-8 px-4">
       <Swiper
         scrollbar={{
           hide: false,
