@@ -4,8 +4,6 @@ import SocialMediaCardFooter from "./SocialMediaCardFooter";
 
 const SocialMediaList = ({ List, index }) => {
   const [likedCards, setLikedCards] = useState({});
-  console.log(likedCards);
-
   const toggleLike = (id) => {
     setLikedCards((prev) => ({
       ...prev,
@@ -25,12 +23,12 @@ const SocialMediaList = ({ List, index }) => {
             src={List.logoSrc}
             alt="card-logo"
           />
-          <p className="text-xs text-[#1E1E1E] font-extrabold font-Montserrat">
+          <p className="text-xs text-erieblack font-extrabold font-Montserrat">
             {List.username}
           </p>
         </div>
         <div className="">
-          <img src={List.imageSrc} alt="" />
+          <img src={List.imageSrc} alt="social media images" />
         </div>
         <SocialMediaCardFooter color={likedCards[List.id]} />
       </div>

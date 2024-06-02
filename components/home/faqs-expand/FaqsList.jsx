@@ -7,15 +7,12 @@ const FaqsList = ({ openFaq, handleToggleFaq }) => {
   return (
     <div>
       {faqList.map((faq, index) => (
-        <div key={index} className="flex flex-col mb-4">
-          <div
-            onClick={() => handleToggleFaq(index)}
-            className="flex justify-between gap-2 items-center cursor-pointer  bg-[#ECECFD] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.10)] pl-4 rounded-[57px] z-10 relative"
-          >
-            <h3 className="text-[#313131] font-Montserrat text-base ">
+        <div key={index} className="flex flex-col mb-6">
+          <div onClick={() => handleToggleFaq(index)} className="faq-btn-style">
+            <h3 className="text-carbon-Black font-Montserrat text-sm sm:text-base">
               {faq.question}
             </h3>
-            <span className="bg-pastel-yellow px-4 sm:px-8 py-4 rounded-r-full">
+            <span className="bg-pastel-yellow px-4 sm:px-8 py-5 sm:py-4 rounded-r-full">
               <SelectDownArrow />
             </span>
           </div>
@@ -25,11 +22,11 @@ const FaqsList = ({ openFaq, handleToggleFaq }) => {
             className="transition-height custom-shadow"
           >
             <div
-              className={`flex px-8 pb-4 pt-12  relative -mt-7  rounded-t-[57px] ${
+              className={`flex px-5 sm:px-8 pb-4 pt-12  relative -mt-7  rounded-t-[57px] ${
                 openFaq === index ? "custom-shadow" : ""
               }`}
             >
-              <p className=" text-[#313131] font-Montserrat text-base max-w-[635px]">
+              <p className="faq-content-style">
                 Yes, you need to have an existing part-time or full-time remote
                 job to join. Noma Collective does not offer any remote work job
                 opportunities.

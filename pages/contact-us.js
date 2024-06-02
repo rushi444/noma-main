@@ -20,7 +20,7 @@ export const getServerSideProps = async () => {
 const ContactUs = ({ faqs }) => {
   return (
     <Layout>
-      <PageSEO title="Noma - Contact us" />
+      <PageSEO title="Noma - Contact-us" />
       <HeroImage bg='url("/img/contact-us-cover.png")' />
       <div className="my-4">
         <Heading heading="Contact Us" />

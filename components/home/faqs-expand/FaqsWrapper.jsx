@@ -9,8 +9,8 @@ const FaqsWrapper = () => {
   };
 
   return (
-    <div className="py-10 max-w-[800px] mx-auto pb-[150px] px-4">
-      <div className="py-12">
+    <div className="py-10 max-w-[800px] mx-auto pb-[104px] sm:pb-[150px] px-4">
+      <div className="pb-12 sm:py-12">
         <div className="h-full">
           <FaqsList openFaq={openFaq} handleToggleFaq={handleToggleFaq} />
         </div>

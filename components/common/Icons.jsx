@@ -213,9 +213,9 @@ export const InstaIcon = () => (
         width="115"
         height="115"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -379,9 +379,9 @@ export const LinkedinIcon = () => (
         width="115"
         height="115"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -434,9 +434,9 @@ export const TiktokIcon = () => (
         width="115"
         height="115"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -489,9 +489,9 @@ export const YoutubeIcon = () => (
         width="115"
         height="115"
         filterUnits="userSpaceOnUse"
-        color-interpolation-filters="sRGB"
+        colorInterpolationFilters="sRGB"
       >
-        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
         <feColorMatrix
           in="SourceAlpha"
           type="matrix"
@@ -530,14 +530,14 @@ export const LikeIcon = ({ color }) => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M11.5 3.34243C9.40071 0.847315 5.89274 0.0762152 3.26244 2.36099C0.632126 4.64577 0.261814 8.46578 2.32741 11.168C4.04482 13.4147 9.24227 18.1532 10.9457 19.6869C11.1362 19.8585 11.2316 19.9443 11.3427 19.978C11.4397 20.0073 11.5459 20.0073 11.6429 19.978C11.7541 19.9443 11.8493 19.8585 12.0399 19.6869C13.7434 18.1532 18.9408 13.4147 20.6582 11.168C22.7238 8.46578 22.3987 4.62174 19.7232 2.36099C17.0476 0.10025 13.5993 0.847315 11.5 3.34243Z"
       stroke="black"
       className={color ? "stroke-rose-600 fill-rose-600 " : "stroke-black"}
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -551,8 +551,8 @@ export const CommentIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      fill-rule="evenodd"
-      clip-rule="evenodd"
+      fillRule="evenodd"
+      clipRule="evenodd"
       d="M11 19.5C11.803 19.5 12.5785 19.398 13.3237 19.2247L16.5605 21.3473L16.5172 17.868C18.9984 16.2405 20.625 13.5495 20.625 10.5C20.625 5.52975 16.3158 1.5 11 1.5C5.68425 1.5 1.375 5.52975 1.375 10.5C1.375 15.471 5.68425 19.5 11 19.5ZM11 0C17.0748 0 22 4.70175 22 10.5C22 13.8142 20.3878 16.7655 17.875 18.6893V24L13.0563 20.8103C12.3894 20.9303 11.7033 21 11 21C4.92525 21 0 16.299 0 10.5C0 4.70175 4.92525 0 11 0Z"
       fill="black"
     />
@@ -570,9 +570,9 @@ export const ShareIcon = () => (
     <path
       d="M7.79966 9.37608L20.6378 1.30335M7.98989 9.91389L9.2813 15.1965C9.59343 16.4731 9.74943 17.1114 10.0754 17.3473C10.3583 17.552 10.7219 17.6093 11.0541 17.5018C11.4369 17.3778 11.782 16.8186 12.4722 15.7002L19.9403 3.59897C20.5418 2.62454 20.8424 2.13729 20.7985 1.75969C20.7603 1.4312 20.5756 1.13759 20.2961 0.960963C19.9747 0.757899 19.4053 0.818012 18.2665 0.938203L4.12489 2.43102C2.81797 2.56898 2.16451 2.63796 1.88704 2.92934C1.64625 3.18219 1.54058 3.53478 1.60262 3.87835C1.6741 4.2743 2.1819 4.69138 3.19754 5.52532L7.40025 8.97661C7.56764 9.11405 7.65133 9.18272 7.7187 9.26439C7.77861 9.33695 7.82888 9.41685 7.86827 9.50214C7.9128 9.59836 7.93846 9.70353 7.98989 9.91389Z"
       stroke="black"
-      stroke-width="1.5"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
@@ -589,5 +589,74 @@ export const SelectDownArrow = () => (
       d="M0.00282091 1.13792C0.00282092 0.823664 0.169619 0.509413 0.49514 0.285247C1.10045 -0.129564 2.02052 -0.0855688 2.55589 0.385808L10.2151 9.77354L17.2609 0.415139C17.7721 -0.0709031 18.6921 -0.140038 19.3136 0.260108C19.9377 0.658159 20.0265 1.37465 19.5127 1.8586L11.3423 9.58499C11.0706 9.84267 10.6671 9.99351 10.242 9.9998C9.81424 10.0061 9.40532 9.86572 9.12284 9.61641L0.366007 1.88793C0.121193 1.67214 0.000131531 1.40398 0.000131545 1.13582L0.00282091 1.13792Z"
       fill="#313131"
     />
+  </svg>
+);
+
+export const ModalCloseIcon = () => (
+  <svg
+    width="53"
+    height="53"
+    viewBox="0 0 53 53"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_d_4_2111)">
+      <circle cx="26.5" cy="22.5" r="22.5" fill="#F4F1E6" />
+    </g>
+    <rect
+      x="16.4473"
+      y="10"
+      width="32.8819"
+      height="3.46125"
+      rx="1.73063"
+      transform="rotate(45 16.4473 10)"
+      fill="#313131"
+    />
+    <rect
+      x="39.6982"
+      y="12.4478"
+      width="32.8819"
+      height="3.46125"
+      rx="1.73063"
+      transform="rotate(135 39.6982 12.4478)"
+      fill="#313131"
+    />
+    <defs>
+      <filter
+        id="filter0_d_4_2111"
+        x="0"
+        y="0"
+        width="53"
+        height="53"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="2" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_4_2111"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_4_2111"
+          result="shape"
+        />
+      </filter>
+    </defs>
   </svg>
 );
