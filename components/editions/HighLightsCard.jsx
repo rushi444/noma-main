@@ -24,7 +24,7 @@ const HighLightsCard = ({ item, value }) => {
             width={328}
             height={400}
             alt={item?.title}
-            className="w-[328px] h-[328px]"
+            className="w-[328px] h-[328px] object-cover"
           />
         </div>
         <div className="w-[308px] mt-2">

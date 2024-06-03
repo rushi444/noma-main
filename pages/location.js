@@ -36,6 +36,8 @@ const locations = ({ locations }) => {
     locations.contentTypeLocationCollection.items
   );
 
+  console.log({ daysFilter });
+
   const filteredItems = useMemo(() => {
     return (
       locationItems?.filter((item) => {
@@ -53,11 +55,28 @@ const locations = ({ locations }) => {
             parseInt(item.temperature.split("°")[0]) <= tempFilter.max);
 
         // Filter by length of trip
-        const daysFilterPass =
-          !daysFilter ||
+        const tripDuration =
           (new Date(item.endDate) - new Date(item.startDate)) /
-            (1000 * 60 * 60 * 24) <=
-            daysFilter;
+          (1000 * 60 * 60 * 24);
+        let daysFilterPass = true;
+        if (daysFilter) {
+          switch (+daysFilter?.split(' ')[0]) {
+            case 1:
+              daysFilterPass = tripDuration >= 1 && tripDuration <= 7;
+              break;
+            case 2:
+              daysFilterPass = tripDuration >= 8 && tripDuration <= 14;
+              break;
+            case 3:
+              daysFilterPass = tripDuration >= 15 && tripDuration <= 21;
+              break;
+            case 4:
+              daysFilterPass = tripDuration >= 22 && tripDuration <= 28;
+              break;
+            default:
+              daysFilterPass = true;
+          }
+        }
 
         // Filter by continent
         const placeFilterPass =
@@ -94,7 +113,14 @@ const locations = ({ locations }) => {
       <PageSEO title="Locations" />
       <HeroImage bg="url('/img/locations-bg.png')" />
       <div className="px-4 pt-8 ">
-        <Heading heading={<>Where do you want to go<span className='font-serif font-extrabold'>?</span></>} />
+        <Heading
+          heading={
+            <>
+              Where do you want to go
+              <span className="font-serif font-extrabold">?</span>
+            </>
+          }
+        />
       </div>
       <div className="sm:max-w-[500px] w-full mx-auto max-xl:px-4">
         <Subheading paragraph="Your remote work journey starts here, check out our specially curated Noma Editions and embrace the freedom to work from anywhere." />

@@ -1,10 +1,11 @@
 import React from "react";
 import ImageSwiper from "./Imageswiper";
 import { featuredEditionCardBgs } from "../utils/Functions";
-import Link from "next/link";
 
 const FeaturedEditionCard = ({ item, value }) => {
-  const { BgColor1, BgColor2 } = featuredEditionCardBgs({ value });
+  const { BgColor1, BgColor2 } = featuredEditionCardBgs({
+    value: value % 8,
+  });
   return (
     <article className="mx-auto w-[328px] hover:scale-[1.02] transition duration-300 ease-in-out rounded-full cursor-pointer">
       <article
@@ -34,7 +35,7 @@ const FeaturedEditionCard = ({ item, value }) => {
           className="px-3 py-2 rounded-full text-carbon-Black font-Montserrat text-sm font-normal "
           style={{ backgroundColor: BgColor1 }}
         >
-          {item.firstbtn}
+          {item?.firstbtn || "--"}
         </button>
         <button
           type="submit"

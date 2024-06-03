@@ -77,14 +77,10 @@ const Editions = ({ location }) => {
       <div className="py-4">
         <Heading heading={<CustomText text={locationMapped?.heading} />} />
       </div>
-      <div className="sm:max-w-[1000px] w-full mx-auto max-xl:px-4 hidden sm:block">
+      <div className="sm:max-w-[1000px] w-full mx-auto max-xl:px-4">
         <Subheading paragraph={locationMapped?.description} />
       </div>
-      <div className="block sm:hidden px-2.5 pt-2 pb-4">
-        <p className="text-center text-[#313131] font-Montserrat text-base font-extrabold leading-normal">
-          {locationMapped?.description}
-        </p>
-      </div>
+
       <ProgressCircle />
       <WhatIncluded
         d={locationMapped?.description2}

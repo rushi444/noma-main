@@ -25,7 +25,7 @@ const NewsForBlog = ({ blogs }) => {
   }, [b, search, categoryFilter]);
   return (
     <>
-      <div className="max-w-[1120px] w-full mx-auto pb-8 px-4">
+      <div className="max-w-[1120px] w-full mx-auto pb-10 px-4">
         <div className="px-3 pt-8">
           <Heading
             heading={
@@ -37,7 +37,7 @@ const NewsForBlog = ({ blogs }) => {
             }
           />
         </div>
-        <p className="px-24 pt-4 text-center">
+        <p className="md:px-24 pt-4 text-center">
           This is your go-to hub for all things digital nomad. We&apos;re here
           to provide you with the tools to thrive, from finding remote jobs to
           essential top tips to inspiring travel guides. Welcome to your
@@ -53,9 +53,9 @@ const NewsForBlog = ({ blogs }) => {
           />
           <SearchIcon />
         </div>
-        <div className="flex flex-wrap gap-x-4  sm:mt-8 justify-center">
+        <div className="flex flex-wrap gap-x-4 sm:mt-8 justify-center">
           {ForBlogBtnData.map((items, index) => (
-            <Fourbotton items={items} value={index} key={index} onFilterSelect={(f) => setCategoryFilter(f)}/>
+            <Fourbotton items={items} value={index} key={index} onFilterSelect={(f) => setCategoryFilter(f)} className='!mt-2'/>
           ))}
         </div>
       </div>

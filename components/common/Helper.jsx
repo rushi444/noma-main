@@ -641,8 +641,161 @@ export const socialMedialist = [
 export const faqList = [
   {
     question: "Do I need a remote work job to join?",
+    answer: (
+      <div>
+        Yes, you need to have an existing part-time or full-time remote job to
+        join.
+        <br />
+        Noma Collective does not offer any remote work job opportunities.
+        <br />
+        <br />
+        However, our blog and social media channels are packed with resources to
+        equip you with information about finding a remote job and navigating the
+        digital nomad lifestyle.
+        <br />
+        <br />
+        Noma Collective reserve the right to cancel any booking or reject any
+        booking request if the individual is not able to work remotely.
+      </div>
+    ),
   },
   {
     question: "Do I need any special vaccinations to join?",
+    answer:
+      "Noma Collective does not require any vaccinations to join. However, we recommend speaking with your medical provider about the best choices for you, given the destinations you are traveling to.",
+  },
+  {
+    question: "How do I book?",
+    answer: `It's easy! Just fill out our short "Get Started" form on our website. This form will connect you with a Noma Collective team member who can schedule a call to discuss your ideal location and answer any questions you may have.`,
+  },
+  {
+    question: "Can I change my booking?",
+    answer:
+      "Need to change your travel plans? No worries! At Noma Collective, we understand that life happens. If you need to reschedule your trip due to personal, health, or travel reasons, we offer a flexible solution, no questions asked. We can easily move your deposit to a different location. Just let us know your new preferred destination and dates. We can hold your deposit for up to one calendar year, which gives you plenty of time to rebook your remote work adventure.",
+  },
+  {
+    question: "Why do I need to book a call?",
+    answer: `We're here to help you make the most of your remote work journey. Our calls serve two important purposes. Planning your dream trip, we'll discuss the locations you're interested in and answer any questions you have about what to expect on-site. This ensures you choose the perfect Noma Collective destination for your needs. Secondly, Noma is all about fostering a positive and collaborative environment for a community of like-minded and hard-working professionals. The call helps us get to know you a bit better and ensure we'd be a great fit for you.`,
+  },
+  {
+    question: "What are the rates for couples/friends sharing a room?",
+    answer: `Looking to share a room with a friend or partner? We've got you covered! Sharing a room is a great way to save on your Noma Collective experience. Here's the deal - pay the standard "per person" rate for one person and add a second person for just 20% extra.`,
+  },
+  {
+    question: "Do I need a visa?",
+    answer: `Since our Editions are only between 2-4 weeks long, in most cases, you'll be able to enter the country as a tourist. However, for trips over 3 weeks, we advise visiting the embassy website of the country you're entering to view their visa requirements. Please note that Noma Collective is not responsible for you obtaining a visa, and we recommend checking visa requirements well in advance of your trip to ensure a smooth arrival.`,
+  },
+  {
+    question: "What is your refund/cancellation policy?",
+    answer: (
+      <div>
+        Any cancellation of reservations or portions of reservations MUST be
+        received in writing.
+        <br />
+        <br />
+        ● 60 days or more prior to arrival = The amount of the deposit made,
+        minus 20% cancellation fee (of total trip price) + US$100 processing
+        fee.
+        <br />
+        <br />
+        ● 0 - 60 days prior to arrival = No refund
+        <br />
+        <br />
+        ● No show = No refund
+        <br />
+        <br />
+        ● All shared accommodation is non transferable
+        <br />
+        <br />
+        Due to the above it is HIGHLY recommended that all clients purchase
+        “trip cancellation insurance” in order to cover a possible cancellation
+        of 60 days or less of your itinerary.
+        <br />
+        <br />
+        Noma Collective reserves the right to cancel your booking or reject a
+        booking request based on a person's ability to remote work or value
+        misalignment with Noma's strong values of community, kindness, optimism,
+        adventure and understanding. This is not only important to our thriving
+        community but also to our dedicated team, who work hard to provide the
+        best experience for all of our Noma community.
+      </div>
+    ),
+  },
+  {
+    question: "How much should I budget for my stay?",
+    answer: `Everyone is different in terms of their lifestyle, so it is hard to give exact numbers. As a general framework, all of our locations have restaurants/bars nearby, offering a wide range of options and pricing. Each accommodation has a communal kitchen (some locations are more equipped than others; please speak with your assigned team member on your call) that gives you the flexibility to save money by going to local grocery stores and cooking your meals. Upon booking an Edition, we will provide a location-specific budgeting sheet for food, beverages, groceries and excursions.`,
+  },
+  {
+    question: "I have specific dietary requirements.",
+    answer: `At Noma Collective, we understand that everyone has different dietary preferences. Before your Edition begins, we'll send you an "Onsite Advance Form", which allows you to specify any dietary requirements or allergies you may have. If you have any specific enquiries, then please get in touch.`,
+  },
+  {
+    question: "What should I expect every week?",
+    answer: `Every week is different but you can always count on the Noma experience. Your onsite community manager is in charge of creating a weekly schedule that includes an element of fitness, your 9-5 working hours and a daily community event that can range from a bonfire on the beach to an authentic cooking class (depending on location). On the weekends we explore and have off-site adventures (for additional cost) such as our famous catamaran cruise day in Belize, a weekend at Lake Atitlan in Antigua, and a trip to Mendoza wine region in Argentina...with so many places to see and explore, Noma Collective helps give you a full, well-balanced week.`,
+  },
+  {
+    question: "Can I bring my dog?",
+    answer: (
+      <div>
+        We understand that service dogs are an essential part of many people's
+        lives. Noma Collective is happy to welcome properly documented service
+        dogs across all our locations!
+        <br />
+        <br />
+        Please note: While all locations can accommodate service dogs, some may
+        be better equipped than others. During your booking call, our team will
+        help you choose the most suitable location for your needs.
+      </div>
+    ),
+  },
+  {
+    question: "Is being a nomad right for me?",
+    answer: (
+      <div>
+        Wondering if the nomad lifestyle is a good fit for you? There's no
+        one-size-fits-all answer, but here are some things to consider.
+        <br />
+        <br />
+        Are you curious and adventurous? If so, the digital nomad lifestyle can
+        be incredibly rewarding. However, do you crave structure and routine?
+        The nomadic life can be flexible, but it also requires self-discipline.
+        If you thrive in a traditional work environment, this might not be the
+        best fit.
+        <br />
+        <br />
+        If you're unsure, Noma Collective offers a supportive environment to
+        take your first dip into the digital nomad lifestyle - think of it as a
+        "test drive". Ready to explore your options? Let's chat! We'd be happy
+        to share our personal experiences and help you decide if Noma Collective
+        is the right fit for starting your remote work adventure.
+      </div>
+    ),
+  },
+  {
+    question: "Should I quit my job?",
+    answer: (
+      <div>
+        The freedom and flexibility of remote work are enticing, but it's
+        important to be realistic. You'll need a steady income stream, whether
+        from savings or a secure remote job, to support yourself during the
+        initial phase. Finding a stable remote position can take 3-6 months. For
+        some, transitioning into a remote role with their current employer can
+        be a fantastic way to test the waters without a drastic change.
+        <br />
+        <br />
+        While we don't offer remote jobs, we do provide resources to help you
+        find the perfect remote position. As part of the onboarding process,
+        we'll help you navigate this decision-making process and explore all
+        your options.
+      </div>
+    ),
+  },
+  {
+    question: "How best to prepare",
+    answer: `To ensure a smooth transition, we’ll send a checklist well before your arrival on what to bring/how to prepare. Think of this like an extended work trip, so be ready with all your vacation essentials plus any additional items to support your remote work needs (Tech essentials, passport, insurance documents, etc.)`,
+  },
+  {
+    question: "What are the downsides of being a digital nomad?",
+    answer: `We explore these topics further on our blog, LinkedIn and other social media platforms. There are also some great online materials and YouTube vlogs that can provide some insight into this.`,
   },
 ];

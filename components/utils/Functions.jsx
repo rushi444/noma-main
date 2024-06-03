@@ -72,7 +72,7 @@ export const featuredEditionCardBgs = ({ value }) => {
       break;
     case 1:
       BgColor1 = "#ffda7f";
-      BgColor2 = "#f4f1e6";
+      BgColor2 = "#ffc300";
       break;
     case 2:
       BgColor1 = "#ececfd";

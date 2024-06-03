@@ -9,7 +9,7 @@ const SidebarLinks = ({ item, value }) => {
     <div>
       <Link
         href={item.link}
-        className="flex items-center justify-between px-9 py-4 text-md leading-normal !font-Montserrat"
+        className="flex items-center justify-between px-9 py-4 text-md !font-kurdis"
         style={{ backgroundColor: BgColor, color: TextColor }}
       >
         <span>{item.name}</span>

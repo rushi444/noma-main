@@ -1,5 +1,5 @@
 import { featuredBlogsBgs } from "../utils/Functions";
-const colorLookup = {
+export const colorLookup = {
   'Location Lowdowns': '#BBE4D7',
   'Travel Tips': '#FFDA7F',
   'Remote Life': '#D5D1EA',

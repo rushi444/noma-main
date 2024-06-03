@@ -8,7 +8,7 @@ const ReadOurReviews = () => {
           className="text-romance text-center font-Montserrat text-[32px] font-extrabold leading-noemal
         "
         >
-          4,8 ⭐ ON GOOGLE
+          4.8 ⭐ ON GOOGLE
         </p>
       </div>
       <div className="px-2 5 pb-8 mx-auto">

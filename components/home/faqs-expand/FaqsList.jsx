@@ -26,19 +26,7 @@ const FaqsList = ({ openFaq, handleToggleFaq }) => {
                 openFaq === index ? "custom-shadow" : ""
               }`}
             >
-              <p className="faq-content-style">
-                Yes, you need to have an existing part-time or full-time remote
-                job to join. Noma Collective does not offer any remote work job
-                opportunities.
-                <span className="py-4 inline-block">
-                  However, our blog and social media channels are packed with
-                  resources to equip you with information about finding a remote
-                  job and navigating the digital nomad lifestyle.
-                </span>
-                Noma Collective reserve the right to cancel any booking or
-                reject any booking request if the individual is not able to work
-                remotely.
-              </p>
+              {faq.answer}
             </div>
           </AnimateHeight>
         </div>

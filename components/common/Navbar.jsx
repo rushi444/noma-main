@@ -21,7 +21,7 @@ const Navbar = () => {
     };
   }, [sidebar]);
   return (
-    <div className="max-w-[1118px] w-full py-6 md:py-8 mx-auto px-4 relative">
+    <div className="max-w-[1118px] w-full py-6 md:py-2 mx-auto px-4 relative">
       <div className="flex justify-between items-center md:hidden">
         <div>
           <button type="submit" onClick={() => setSidebar(!sidebar)}>

@@ -40,7 +40,7 @@ const Footer = () => {
             </p>{" "}
           </div>
           <div className="pl-4 sm:pl-0 sm:flex sm:justify-around sm:w-full max-w-[1000px]">
-            <div className="column-uno text-white">
+            <div className="column-uno text-white -mt-8">
               <Link href="/">
                 <img
                   src="/img/high-res-logo.png"
@@ -99,7 +99,7 @@ const Footer = () => {
               </Link>
             </div>
             <div className="column-dos flex flex-col text-white">
-              <Link href="/how-it-works">FAQ</Link>
+              <Link href="/faqs">FAQ</Link>
               <Link href="/">TERMS & CONDITIONS</Link>
               <Link href="/">PRIVACY POLICY</Link>
               <Link href="/contact-us">CONTACT US</Link>

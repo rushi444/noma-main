@@ -13,7 +13,7 @@ const AccomodationCard = ({ item }) => {
         width={328}
         height={328}
         alt="img"
-        className="rounded-2xl w-[328px] h-[328px]"
+        className="rounded-2xl w-[328px] h-[328px] object-cover"
       />
       <h1 className="text-[#313131] font-Montserrat text-xl sm:text-[24px] font-extrabold leading-normal">
         {item.title}

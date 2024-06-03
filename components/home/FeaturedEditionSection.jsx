@@ -17,7 +17,7 @@ const FeaturedEditionSection = ({locations}) => {
         </div> */}
       </div>
       <FeaturedEditionSectionSlider locations={locations}/>
-      <div className="block sm:hidden">
+      <div className="block">
         <Button text="SEE ALL TRIPS" link='/location'/>
       </div>
     </div>

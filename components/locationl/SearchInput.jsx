@@ -47,10 +47,10 @@ const SearchInput = ({
       value: daysFilter,
       onSelect: setDaysFilter,
       items: [
-        { label: "1 Week", value: 7 },
-        { label: "2 Week", value: 14 },
-        { label: "3 Week", value: 21 },
-        { label: "4 Week", value: 28 },
+        { label: "1 Week", value: "1 Week" },
+        { label: "2 Weeks", value: "2 Weeks" },
+        { label: "3 Weeks", value: "3 Weeks" },
+        { label: "4 Weeks", value: "4 Weeks" },
       ],
     },
     Continent: {
