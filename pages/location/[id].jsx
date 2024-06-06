@@ -50,6 +50,11 @@ const Editions = ({ location }) => {
     temperature: location?.contentTypeLocation?.temperature,
     heading: `${location?.contentTypeLocation?.city}, ${location?.contentTypeLocation?.country}`,
     description: location?.contentTypeLocation?.description,
+    foodieHaven: location?.contentTypeLocation?.foodieHaven,
+    wellnessAndRelaxation: location?.contentTypeLocation?.wellnessAndRelaxation,
+    natureAndWildlife: location?.contentTypeLocation?.natureAndWildlife,
+    activityAndFitness: location?.contentTypeLocation?.activityAndFitness,
+    nightlifeAndPartying: location?.contentTypeLocation?.nightlifeAndPartying,
     description2: location?.contentTypeLocation?.description2?.json,
     hero: location?.contentTypeLocation?.heroImage?.url,
     whatsIncluded: location?.contentTypeLocation?.facilitiesCollection?.items,
@@ -81,7 +86,17 @@ const Editions = ({ location }) => {
         <Subheading paragraph={locationMapped?.description} />
       </div>
 
-      <ProgressCircle />
+      <ProgressCircle foodieHaven={
+        locationMapped?.foodieHaven
+      } wellnessAndRelaxation={
+        locationMapped?.wellnessAndRelaxation
+      } natureAndWildlife={
+        locationMapped?.natureAndWildlife
+      } activityAndFitness={
+        locationMapped?.activityAndFitness
+      } nightlifeAndPartying={
+        locationMapped?.nightlifeAndPartying
+      }/>
       <WhatIncluded
         d={locationMapped?.description2}
         items={locationMapped?.whatsIncluded}

@@ -124,6 +124,11 @@ const GET_LOCATION_BY_ID = (locationId: string) => `
       startDate
       endDate
       description
+      foodieHaven
+      wellnessAndRelaxation
+      natureAndWildlife
+      activityAndFitness
+      nightlifeAndPartying
       heroImage {
         url
       }
