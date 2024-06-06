@@ -19,7 +19,7 @@ const News = ({ blogs }) => {
   return (
     <Layout>
       <PageSEO title="What's New" />
-      <HeroImage bg="url('/img/news-hero-bg-img.png')" />
+      <HeroImage bg="url('/img/news_cover.jpg')" />
       <NewsForBlog blogs={blogs} />
     </Layout>
   );

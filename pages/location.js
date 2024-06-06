@@ -111,7 +111,7 @@ const locations = ({ locations }) => {
   return (
     <Layout>
       <PageSEO title="Locations" />
-      <HeroImage bg="url('/img/locations-bg.png')" />
+      <HeroImage bg="url('/img/locations_cover.png')" />
       <div className="px-4 pt-8 ">
         <Heading
           heading={
