@@ -9,7 +9,7 @@ const FaqsExpand = () => {
       <PageSEO title="Noma - FAQS expand" />
       <HeroImage bg='url("/img/faq-expand-cover-bg.png")' />
       <div className="mb-4 mt-6">
-        <h1 className="heading">FAQs The Basics</h1>
+        <h1 className="heading">FAQs</h1>
       </div>
       <FaqsWrapper />
     </Layout>
