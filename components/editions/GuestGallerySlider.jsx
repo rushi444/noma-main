@@ -6,6 +6,7 @@ SwiperCore.use([Navigation]);
 import { SliderLeftArrowIcon, SliderRightArrowIcon } from "../common/Icons";
 import { guestGalleryData } from "../common/Helper";
 import Image from "next/image";
+import { Scrollbar } from "swiper/modules";
 
 export default function GuestGallerySlider() {
   const swiperRef = useRef(null);
@@ -64,6 +65,7 @@ export default function GuestGallerySlider() {
           },
         }}
         slidesPerView={3}
+        modules={[Scrollbar]}
         className="mySwiper h-[376px] w-full px-8 pb-8 pt-4"
         ref={swiperRef}
       >

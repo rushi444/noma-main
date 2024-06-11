@@ -11,7 +11,6 @@ import SwiperCore, { Navigation } from "swiper";
 SwiperCore.use([Navigation]);
 
 const HighLights = ({ highlights }) => {
-  console.log({ highlights });
   const swiperRef = useRef(null);
 
   const goNext = () => {
@@ -40,9 +39,10 @@ const HighLights = ({ highlights }) => {
             <SliderLeftArrowIcon />
           </div>
           <Swiper
-            scrollbar={{
-              hide: false,
-            }}
+            scrollbar={{ hide: false }}
+            slidesPerView={3}
+            spaceBetween={30}
+            loop
             navigation={{
               prevEl: ".prev-btn",
               nextEl: ".next-btn",
@@ -50,36 +50,40 @@ const HighLights = ({ highlights }) => {
             breakpoints={{
               10: {
                 slidesPerView: 1,
-                spaceBetween: 20,
+                spaceBetween: 5,
               },
               // 430: {
               //   slidesPerView: 1.2,
-              //   spaceBetween: 20,
+              //   spaceBetween: 5,
               // },
               // 540: {
               //   slidesPerView: 1.5,
-              //   spaceBetween: 20,
+              //   spaceBetween: 10,
               // },
               // 640: {
               //   slidesPerView: 1.5,
-              //   spaceBetween: 20,
+              //   spaceBetween: 15,
               // },
               768: {
                 slidesPerView: 2,
-                spaceBetween: 40,
+                spaceBetween: 20,
               },
               1024: {
-                slidesPerView: 2.7,
-                spaceBetween: 50,
+                slidesPerView: 2.5,
+                spaceBetween: 22,
               },
               1280: {
                 slidesPerView: 3,
-                spaceBetween: 50,
+                spaceBetween: 32,
               },
             }}
-            slidesPerView={3}
-            modules={[Scrollbar]}
-            className="mySwiper h-[600px] w-full"
+            pagination={{
+              clickable: true,
+            }}
+            // paginationType="bullets"
+            paginationClickable={true}
+            modules={[ Scrollbar]}
+            className="mySwiper w-full"
             ref={swiperRef}
           >
             {highlights.map((item, index) => (
