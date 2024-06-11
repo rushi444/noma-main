@@ -73,10 +73,10 @@ const WhatIncluded = ({ d, items }) => {
                       {item.title}
                     </p>
                     <div className="flex flex-wrap gap-x-1 pr-2">
-                      <p className="text-[#313131] line-clamp-1 font-Montserrat text-[10px] sm:text-sm md:text-[13px] font-normal leading-normal h-4">
+                      <p className="text-[#313131] font-Montserrat text-[10px] sm:text-sm  font-normal leading-normal h-4">
                         {item.description}
                       </p>
-                      <p className="text-[#ADADAD] line-clamp-1 font-Montserrat text-[10px] sm:text-sm md:text-[13px] font-normal leading-normal h-4">
+                      <p className="text-[#ADADAD]  font-Montserrat text-[10px] font-normal leading-normal h-4">
                         {item.description1}
                       </p>
                     </div>
