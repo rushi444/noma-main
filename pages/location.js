@@ -7,7 +7,8 @@ import Subheading from "@/components/common/Subheading";
 import TimeZoneSwiper from "@/components/common/TimeZoneSwiper";
 import SearchInput from "@/components/locationl/SearchInput";
 import { getAllEditions } from "@/lib/api";
-import { useEffect, useMemo, useState } from "react";
+import { useRouter } from "next/router";
+import { useMemo, useState } from "react";
 
 export const getServerSideProps = async () => {
   const locations = await getAllEditions();
@@ -26,6 +27,7 @@ const shuffleArray = (array) =>
     .map(({ value }) => value);
 
 const locations = ({ locations }) => {
+  const router = useRouter();
   const [searchInput, setSearchInput] = useState("");
   const [tempFilter, setTempFilter] = useState("");
   const [daysFilter, setDaysFilter] = useState("");
@@ -60,7 +62,7 @@ const locations = ({ locations }) => {
           (1000 * 60 * 60 * 24);
         let daysFilterPass = true;
         if (daysFilter) {
-          switch (+daysFilter?.split(' ')[0]) {
+          switch (+daysFilter?.split(" ")[0]) {
             case 1:
               daysFilterPass = tripDuration >= 1 && tripDuration <= 7;
               break;
@@ -106,7 +108,11 @@ const locations = ({ locations }) => {
     typeFilter,
   ]);
 
-  const onSurpriseMeClick = () => setLocationItems((v) => shuffleArray(v));
+  const onSurpriseMeClick = () => {
+    const ids = locationItems.map((item) => item.sys.id);
+    const randomId = Math.floor(Math.random() * ids.length);
+    router.push(`/location/${ids[randomId]}`);
+  };
 
   return (
     <Layout>
