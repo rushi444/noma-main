@@ -23,7 +23,7 @@ export default function GuestGallerySlider() {
     }
   };
   return (
-    <div className="max-w-[1152px] w-full mx-auto flex items-center gap-4">
+    <div className="max-w-[1152px] w-full mx-auto flex items-center gap-4 pb-4">
       <div className="prev-btn hidden sm:block" onClick={goPrev}>
         <button type="submit">
           <SliderLeftArrowIcon />
@@ -34,6 +34,7 @@ export default function GuestGallerySlider() {
           prevEl: ".prev-btn",
           nextEl: ".next-btn",
         }}
+        scrollbar={{hide: false}}
         breakpoints={{
           20: {
             slidesPerView: 1,

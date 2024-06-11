@@ -61,7 +61,7 @@ const NewsForBlog = ({ blogs }) => {
               value={index}
               key={index}
               onFilterSelect={(f) => setCategoryFilter(f)}
-              className="!mt-2"
+              className=""
             />
           ))}
         </div>
