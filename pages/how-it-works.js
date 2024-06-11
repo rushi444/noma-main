@@ -24,7 +24,7 @@ const HowItWork = ({ faqs }) => {
   const faq = faqs.faqCollection.items;
   return (
     <Layout>
-      <PageSEO title="How it works" />
+      <PageSEO title="How It Works" />
       <HeroImage bg="url(/img/hero-water.png)" />
       <div className="pt-8">
         <Heading heading="How it works" />

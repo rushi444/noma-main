@@ -124,7 +124,7 @@ export const navLinksData = [
   },
   {
     link: "/how-it-works",
-    name: "How it works",
+    name: "How It Works",
   },
   // {
   //   link: "",
