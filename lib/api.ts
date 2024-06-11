@@ -176,6 +176,12 @@ const GET_LOCATION_BY_ID = (locationId: string) => `
           }
         }
       }
+      guestgalleryCollection {
+        items {
+          title
+          url
+        }
+      }
     }
   }
 `;

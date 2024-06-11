@@ -61,7 +61,10 @@ const Editions = ({ location }) => {
     manager: location?.contentTypeLocation?.managerCollection?.items?.[0],
     highlights: location?.contentTypeLocation?.highlightsCollection?.items,
     accomodation: location?.contentTypeLocation?.accomodationsCollection?.items,
+    guestGallery: location?.contentTypeLocation?.guestgalleryCollection?.items ||[],
   };
+
+  console.log(locationMapped.guestGallery)
   return (
     <Layout>
       <PageSEO title="Location" />
@@ -105,7 +108,7 @@ const Editions = ({ location }) => {
       <HighLights highlights={locationMapped?.highlights} />
       <Accomodation accomodation={locationMapped?.accomodation || []} />
       <div className="mt-[85px]">
-        <GuestGallery />
+        <GuestGallery guestGallery={locationMapped?.guestGallery}/>
       </div>
       <CardSlider />
     </Layout>

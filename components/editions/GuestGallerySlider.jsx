@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import SwiperCore, { Navigation } from "swiper";
@@ -7,9 +7,12 @@ import { SliderLeftArrowIcon, SliderRightArrowIcon } from "../common/Icons";
 import { guestGalleryData } from "../common/Helper";
 import Image from "next/image";
 import { Scrollbar } from "swiper/modules";
+import { ReactImageCarouselViewer } from "react-image-carousel-viewer";
 
-export default function GuestGallerySlider() {
+export default function GuestGallerySlider({ guestGallery }) {
   const swiperRef = useRef(null);
+  const [isOpen, setIsOpen] = useState(false);
+  const [index, setIndex] = useState(0);
 
   const goNext = () => {
     if (swiperRef.current && swiperRef.current.swiper) {
@@ -22,8 +25,20 @@ export default function GuestGallerySlider() {
       swiperRef.current.swiper.slidePrev();
     }
   };
+
+  const carouselImges = guestGallery.map((item) => ({
+    src: item.url,
+    description: item.title,
+  }));
+
   return (
     <div className="max-w-[1152px] w-full mx-auto flex items-center gap-4 pb-4">
+      <ReactImageCarouselViewer
+        open={isOpen}
+        onClose={() => setIsOpen(false)}
+        images={carouselImges}
+        startIndex={index}
+      />
       <div className="prev-btn hidden sm:block" onClick={goPrev}>
         <button type="submit">
           <SliderLeftArrowIcon />
@@ -34,7 +49,7 @@ export default function GuestGallerySlider() {
           prevEl: ".prev-btn",
           nextEl: ".next-btn",
         }}
-        scrollbar={{hide: false}}
+        scrollbar={{ hide: false }}
         breakpoints={{
           20: {
             slidesPerView: 1,
@@ -70,14 +85,18 @@ export default function GuestGallerySlider() {
         className="mySwiper h-[376px] w-full px-8 pb-8 pt-4"
         ref={swiperRef}
       >
-        {guestGalleryData.map((item, index) => (
+        {guestGallery.map((item, index) => (
           <SwiperSlide key={index}>
             <Image
-              src={item.img}
+              src={item.url}
               width={328}
               height={328}
-              alt="image"
+              alt={item?.title}
               className="rounded-2xl mx-auto"
+              onClick={() => {
+                setIsOpen(true);
+                setIndex(index);
+              }}
             />
           </SwiperSlide>
         ))}
