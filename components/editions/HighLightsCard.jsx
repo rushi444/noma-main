@@ -1,9 +1,12 @@
 import Image from "next/image";
 import React from "react";
 import { highLightsBg } from "../utils/Functions";
+import Link from "next/link";
 
 const HighLightsCard = ({ item, value }) => {
   const { BgColor } = highLightsBg({ value });
+
+  console.log({ item });
 
   return (
     <div
@@ -35,6 +38,15 @@ const HighLightsCard = ({ item, value }) => {
             {item?.description || ""}
           </p>
         </div>
+        {item?.videoUrl && (
+          <Link
+            href={item.videoUrl}
+            target="_blank"
+            className="font-medium hover:underline"
+          >
+            Watch
+          </Link>
+        )}
       </div>
     </div>
   );
