@@ -6,10 +6,10 @@ const Basics = ({ faqs = [] }) => {
   return (
     <div>
       <div className="sm:bg-pastel-yellow pb-[100px] bg-light-green ">
-        <h1 className=" text-center sm:hidden py-8 text-carbon-Black text-[32px] font-normal capitalize font-sergio-trendy">
+        <h1 className=" text-center py-8 text-carbon-Black text-[40px] font-normal capitalize font-sergio-trendy">
           FAQS
         </h1>
-        <div className="  gap-x-1  max-w-[890px]  w-full mx-auto grid grid-cols-1 sm:grid-cols-2 ">
+        <div className="  gap-x-1  max-w-[890px] w-full mx-auto grid grid-cols-1 sm:grid-cols-2 ">
           {faqs?.map((item, index) => (
             <BasicsCard item={item} key={index} />
           ))}

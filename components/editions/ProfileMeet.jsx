@@ -5,7 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 const ProfileMeet = ({ manager }) => {
   return (
-    <div className="bg-[#F4F1E6]">
+    <div className="bg-[#F4F1E6] my-4">
       <div className="max-w-[779px] w-full mx-auto pt-4 max-sm:pb-8 sm:py-6 xl:px-0 px-4">
         <div className="flex gap-4 items-center sm:hidden">
           <FaciltiesIcons />

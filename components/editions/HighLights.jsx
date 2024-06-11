@@ -5,7 +5,7 @@ import {
   SliderLeftArrowIcon,
   SliderRightArrowIcon,
 } from "../common/Icons";
-import { Pagination } from "swiper/modules";
+import { Pagination, Scrollbar } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Navigation } from "swiper";
 SwiperCore.use([Navigation]);
@@ -82,7 +82,7 @@ const HighLights = ({ highlights }) => {
             }}
             paginationType="bullets"
             paginationClickable={true}
-            modules={[Pagination]}
+            modules={[Pagination, Scrollbar]}
             className="mySwiper w-full"
             ref={swiperRef}
           >

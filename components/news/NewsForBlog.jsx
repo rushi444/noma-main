@@ -53,9 +53,16 @@ const NewsForBlog = ({ blogs }) => {
           />
           <SearchIcon />
         </div>
-        <div className="flex flex-wrap gap-x-4 sm:mt-8 justify-center">
+          <h4 className='text-center font-Montserrat pt-4 font-bold'>Filter by type</h4>
+        <div className="block sm:flex sm:flex-wrap gap-x-4 justify-center">
           {ForBlogBtnData.map((items, index) => (
-            <Fourbotton items={items} value={index} key={index} onFilterSelect={(f) => setCategoryFilter(f)} className='!mt-2'/>
+            <Fourbotton
+              items={items}
+              value={index}
+              key={index}
+              onFilterSelect={(f) => setCategoryFilter(f)}
+              className="!mt-2"
+            />
           ))}
         </div>
       </div>

@@ -101,7 +101,7 @@ const Editions = ({ location }) => {
         d={locationMapped?.description2}
         items={locationMapped?.whatsIncluded}
       />
-      {/* <ProfileMeet manager={locationMapped?.manager} /> */}
+      <ProfileMeet manager={locationMapped?.manager} />
       <HighLights highlights={locationMapped?.highlights} />
       <Accomodation accomodation={locationMapped?.accomodation || []} />
       <div className="mt-[85px]">

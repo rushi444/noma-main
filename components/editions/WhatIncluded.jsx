@@ -46,16 +46,16 @@ const WhatIncluded = ({ d, items }) => {
             </div>
           </div>
           <div className="w-full sm:max-w-[417px] mx-auto sm:px-0 px-4 ">
-            <h1 className="text-[#313131] font-Montserrat text-2xl sm:text-[32px] font-extrabold leading-normal max-md:text-center ">
-              {/* What's included */}
+            <h1 className="text-[#313131] font-Montserrat text-2xl sm:text-[32px] font-extrabold leading-normal max-md:text-center">
+              What's included
             </h1>
-            <div className="flex gap-4 items-center md:hidden mt-[38px]">
+            <div className="flex items-center m-auto">
               {/* <FaciltiesIcons /> */}
-              <p className="text-[#313131]  font-Montserrat text-base font-extrabold ">
+              <p className="text-[#313131] font-Montserrat text-base font-extrabold ">
                 Facilities and Amenities
               </p>
             </div>
-            <div className="flex flex-col gap-4 sm:gap-5 mt-[30px] sm:mt-9">
+            <div className="flex flex-col gap-4 sm:gap-5 mt-2 sm:mt-4">
               {items.map((item, index) => (
                 <div
                   key={index}
