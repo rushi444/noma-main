@@ -7,7 +7,7 @@ const HighLightsCard = ({ item, value }) => {
 
   return (
     <div
-      className={`w-[328px] my-5 max-xl:mx-auto  ${
+      className={`w-[328px] my-5 max-xl:mx-auto ${
         item?.image?.url ? "" : "invisible"
       }`}
     >
@@ -17,14 +17,14 @@ const HighLightsCard = ({ item, value }) => {
       >
         {item?.tag}
       </span>
-      <div className="mt-1.5">
+      <div className="mt-2.5">
         <div className={`w-[328px]  ${item?.image?.url ? "" : "invisible"}`}>
           <Image
             src={item?.image?.url || ""}
             width={328}
             height={400}
             alt={item?.title}
-            className="w-[328px] h-[328px] object-cover"
+            className="w-[328px] h-[328px] object-cover rounded"
           />
         </div>
         <div className="w-[308px] mt-2">

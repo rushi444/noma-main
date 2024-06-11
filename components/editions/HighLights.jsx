@@ -40,9 +40,9 @@ const HighLights = ({ highlights }) => {
             <SliderLeftArrowIcon />
           </div>
           <Swiper
-            slidesPerView={3}
-            spaceBetween={30}
-            loop
+            scrollbar={{
+              hide: false,
+            }}
             navigation={{
               prevEl: ".prev-btn",
               nextEl: ".next-btn",
@@ -50,40 +50,36 @@ const HighLights = ({ highlights }) => {
             breakpoints={{
               10: {
                 slidesPerView: 1,
-                spaceBetween: 5,
+                spaceBetween: 20,
               },
               // 430: {
               //   slidesPerView: 1.2,
-              //   spaceBetween: 5,
+              //   spaceBetween: 20,
               // },
               // 540: {
               //   slidesPerView: 1.5,
-              //   spaceBetween: 10,
+              //   spaceBetween: 20,
               // },
               // 640: {
               //   slidesPerView: 1.5,
-              //   spaceBetween: 15,
+              //   spaceBetween: 20,
               // },
               768: {
                 slidesPerView: 2,
-                spaceBetween: 20,
+                spaceBetween: 40,
               },
               1024: {
-                slidesPerView: 2.5,
-                spaceBetween: 22,
+                slidesPerView: 2.7,
+                spaceBetween: 50,
               },
               1280: {
                 slidesPerView: 3,
-                spaceBetween: 32,
+                spaceBetween: 50,
               },
             }}
-            pagination={{
-              clickable: true,
-            }}
-            paginationType="bullets"
-            paginationClickable={true}
-            modules={[Pagination, Scrollbar]}
-            className="mySwiper w-full"
+            slidesPerView={3}
+            modules={[Scrollbar]}
+            className="mySwiper h-[600px] w-full"
             ref={swiperRef}
           >
             {highlights.map((item, index) => (
