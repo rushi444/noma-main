@@ -53,8 +53,8 @@ const NewsForBlog = ({ blogs }) => {
           />
           <SearchIcon />
         </div>
-          <h4 className='text-center font-Montserrat pt-4 font-bold'>Filter by type</h4>
-        <div className="block sm:flex sm:flex-wrap gap-x-4 justify-center">
+          <h4 className='text-left font-Montserrat pt-4 font-bold'>Filter by type</h4>
+        <div className="block sm:flex sm:flex-wrap gap-x-4 justify-start">
           {ForBlogBtnData.map((items, index) => (
             <Fourbotton
               items={items}

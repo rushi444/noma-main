@@ -82,7 +82,7 @@ const Editions = ({ location }) => {
       <div className="py-4">
         <Heading heading={<CustomText text={locationMapped?.heading} />} />
       </div>
-      <div className="sm:max-w-[1000px] w-full mx-auto max-xl:px-4">
+      <div className="sm:max-w-[1000px] w-full mx-auto max-xl:px-4 pb-4">
         <Subheading paragraph={locationMapped?.description} />
       </div>
 

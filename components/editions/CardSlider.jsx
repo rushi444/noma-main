@@ -1,7 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Scrollbar } from "swiper/modules";
 import { profileMapData } from "../common/Helper";
 import ProfileData from "./ProfileData";
 
@@ -10,6 +10,9 @@ export default function CardSlider() {
     <div className="w-full sm:bg-[#F4F1E6] pb-[120px] bg-[#FFDA7F]">
       <div className="max-w-[1120px] w-full mx-auto px-4 xl:px-4 sm:pt-[29px] pt-4 pb-[31px]">
         <Swiper
+          scrollbar={{
+            hide: false,
+          }}
           autoplay={{
             delay: 2700,
           }}
@@ -18,14 +21,14 @@ export default function CardSlider() {
               slidesPerView: 1,
               spaceBetween: 5,
             },
-            430: {
-              slidesPerView: 1.2,
-              spaceBetween: 10,
-            },
-            540: {
-              slidesPerView: 1.5,
-              spaceBetween: 15,
-            },
+            // 430: {
+            //   slidesPerView: 1.2,
+            //   spaceBetween: 10,
+            // },
+            // 540: {
+            //   slidesPerView: 1.5,
+            //   spaceBetween: 15,
+            // },
 
             640: {
               slidesPerView: 2,
@@ -42,8 +45,8 @@ export default function CardSlider() {
             },
           }}
           slidesPerView={3}
-          modules={[Autoplay]}
-          className="mySwiper3 w-full"
+          modules={[Autoplay, Scrollbar]}
+          className="mySwiper3 w-full h-[700px]"
         >
           {profileMapData.map((items, index) => (
             <SwiperSlide key={index}>
