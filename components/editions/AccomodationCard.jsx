@@ -6,7 +6,10 @@ const AccomodationCard = ({ item }) => {
   return (
     <div className="mx-auto w-[328px] cursor-pointer hover:scale-[1.02] transition duration-300 ease-in-out flex flex-col gap-2 max-sm:px-2 max-sm:py-4">
       <div className="flex gap-2">
-        <AccomodationCardBtns item={{ button: item?.spotsLeft + ' Spots left' }} value={0} />
+        <AccomodationCardBtns
+          item={{ button: item?.spotsLeft + " Spots left" }}
+          value={0}
+        />
       </div>
       <Image
         src={item.imagesCollection.items[0]?.url}
@@ -15,16 +18,18 @@ const AccomodationCard = ({ item }) => {
         alt="img"
         className="rounded-2xl w-[328px] h-[328px] object-cover"
       />
-      <h1 className="text-[#313131] font-Montserrat text-xl sm:text-[24px] font-extrabold leading-normal">
-        {item.title}
-      </h1>
-      <p className="text-[#313131] font-Montserrat text-sm sm:text-sm font-normal leading-normal min-h-[100px]">
-        {item.description}
-      </p>
+      <div className='min-h-[140px]'>
+        <h1 className="text-[#313131] font-Montserrat text-xl sm:text-[24px] font-extrabold leading-normal">
+          {item.title}
+        </h1>
+        <p className="text-[#313131] font-Montserrat text-sm sm:text-sm font-normal leading-normal">
+          {item.description}
+        </p>
+      </div>
       <div className="bg-[#ADADAD] w-full h-px"></div>
       <div className="flex items-center justify-between gap-2 5">
         <p className="text-[#313131] text-sm sm:text-base font-Montserrat font-bold leading-normal max-sm:order-2">
-         From ${item.price}
+          From ${item.price}
         </p>
         <button
           type="submit"

@@ -4,6 +4,7 @@ import { ForBlogBtnData } from "../common/Helper";
 import FeatureBlog from "./FeatureBlog";
 import { SearchIcon } from "../common/Icons";
 import Fourbotton from "./Fourbtns";
+import NewsSection from "../home/NewsSection";
 
 const NewsForBlog = ({ blogs }) => {
   const [search, setSearch] = useState("");
@@ -23,6 +24,11 @@ const NewsForBlog = ({ blogs }) => {
 
     return filtered;
   }, [b, search, categoryFilter]);
+
+  console.log({ b });
+
+  const highlightedBlogs = b?.filter((i) => i.highlight === true);
+
   return (
     <>
       <div className="max-w-[1120px] w-full mx-auto pb-10 px-4">
@@ -53,7 +59,9 @@ const NewsForBlog = ({ blogs }) => {
           />
           <SearchIcon />
         </div>
-          <h4 className='text-left font-Montserrat pt-4 font-bold'>Filter by type</h4>
+        <h4 className="text-left font-Montserrat pt-4 font-bold">
+          Filter by type
+        </h4>
         <div className="block sm:flex sm:flex-wrap gap-x-4 justify-start">
           {ForBlogBtnData.map((items, index) => (
             <Fourbotton
@@ -65,6 +73,16 @@ const NewsForBlog = ({ blogs }) => {
             />
           ))}
         </div>
+      </div>
+      <div className="!bg-main-red">
+        <NewsSection
+          blogs={{
+            blogCollection: {
+              items: highlightedBlogs,
+            },
+          }}
+          highlighted
+        />
       </div>
       <FeatureBlog blogs={bs} />
     </>

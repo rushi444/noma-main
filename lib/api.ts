@@ -88,6 +88,7 @@ const GET_ALL_BLOGSS = `
         sys {
           id
         }
+        highlight
         title
         category
         excerpt

@@ -109,30 +109,33 @@ const SearchInput = ({
         </article>
       </article>
       {filterOpen && (
-        <div className="flex justify-around max-w-[1000px] m-auto mt-2">
+        <div className="block sm:flex sm:justify-around max-w-[1000px] m-auto mt-2">
           {Object.entries(filters).map(([key, values], index) => (
             <div key={index} className="mt-4">
               <h6 className="font-Montserrat ml-4 font-bold">{key}</h6>
-              {values.items.map((item, index) => (
-                <div
-                  key={index}
-                  onClick={() => {
-                    if (values.value !== "") {
-                      values.onSelect("");
-                    } else {
-                      values.onSelect(item.value);
-                    }
-                  }}
-                  className={`${
-                    values.value == item.value ||
-                    JSON.stringify(values.value) === JSON.stringify(item.value)
-                      ? "bg-orange-200"
-                      : "bg-white"
-                  } rounded-full m-2 py-2 px-3 font-Montserrat cursor-pointer shadow-md`}
-                >
-                  {item.label}
-                </div>
-              ))}
+              <div className="flex flex-wrap">
+                {values.items.map((item, index) => (
+                  <div
+                    key={index}
+                    onClick={() => {
+                      if (values.value !== "") {
+                        values.onSelect("");
+                      } else {
+                        values.onSelect(item.value);
+                      }
+                    }}
+                    className={`${
+                      values.value == item.value ||
+                      JSON.stringify(values.value) ===
+                        JSON.stringify(item.value)
+                        ? "bg-orange-200"
+                        : "bg-white"
+                    } rounded-full m-2 py-2 px-3 font-Montserrat cursor-pointer shadow-md w-auto`}
+                  >
+                    {item.label}
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
