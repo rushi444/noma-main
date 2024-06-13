@@ -40,11 +40,11 @@ const Footer = () => {
             </p>{" "}
           </div>
           <button
-                onClick={handleOpenModal}
-                className="flex sm:hidden m-auto p-2 w-[182px] h-[42px] items-center justify-center bg-main-orange rounded-[28px] text-white text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange mb-6"
-              >
-                LET'S CONNECT
-              </button>
+            onClick={handleOpenModal}
+            className="flex sm:hidden m-auto p-2 w-[182px] h-[42px] items-center justify-center bg-main-orange rounded-[28px] text-white text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange mb-6"
+          >
+            LET'S CONNECT
+          </button>
           <div className="pl-4 sm:pl-0 sm:flex sm:justify-around sm:w-full max-w-[1000px]">
             <div className="column-uno text-white -mt-8">
               <Link href="/">
@@ -93,25 +93,23 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className='flex justify-between'>
-              <div className="column-dos flex flex-col text-white mb-2">
-                <Link href="/location">LOCATIONS</Link>
-                <Link href="/how-it-works">HOW IT WORKS</Link>
-                <Link href="/news">WHAT'S NEW</Link>
-                <Link
-                  href="https://lp.noma-collective.com/schedule-your-meeting-page"
-                  target="_blank"
-                  className="font-bold"
-                >
-                  BOOK A CALL
-                </Link>
-              </div>
-              <div className="column-dos flex flex-col text-white">
-                <Link href="/faqs">FAQ</Link>
-                <Link href="/">TERMS & CONDITIONS</Link>
-                <Link href="/">PRIVACY POLICY</Link>
-                <Link href="/contact-us">CONTACT US</Link>
-              </div>
+            <div className="column-dos flex flex-col text-white mb-2">
+              <Link href="/location">LOCATIONS</Link>
+              <Link href="/how-it-works">HOW IT WORKS</Link>
+              <Link href="/news">WHAT'S NEW</Link>
+              <Link
+                href="https://lp.noma-collective.com/schedule-your-meeting-page"
+                target="_blank"
+                className="font-bold"
+              >
+                BOOK A CALL
+              </Link>
+            </div>
+            <div className="column-dos flex flex-col text-white">
+              <Link href="/faqs">FAQ</Link>
+              <Link href="/">TERMS & CONDITIONS</Link>
+              <Link href="/">PRIVACY POLICY</Link>
+              <Link href="/contact-us">CONTACT US</Link>
             </div>
           </div>
         </div>
