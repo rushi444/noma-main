@@ -43,7 +43,7 @@ const HowItWork = ({ faqs }) => {
         />
       </div>
       <Basics faqs={faq} />
-      <h4 className="heading my-4 text-4xl m-auto max-w-[1000px]">
+      <h4 className="heading my-4 text-[22px] md:text-[28px] lg:text-4xl m-auto max-w-[1000px] leading-[120%]">
         Still can<span className="font-serif">'</span>
         <span className="lowercase">t</span> decide
         <span className="font-serif font-extrabold">?</span> Let our expert team

@@ -4,7 +4,7 @@ import React from "react";
 const BasicsCard = ({ item }) => {
   return (
     <>
-      <div className="pb-8 sm:py-8 px-[10px] max-w-[378px] w-full mx-auto bg-transparent">
+      <div className="pb-8 sm:py-8 px-4 max-w-[378px] w-full mx-auto bg-transparent">
         <Image
           src={item?.image?.url}
           alt="basic image"

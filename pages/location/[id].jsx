@@ -61,10 +61,11 @@ const Editions = ({ location }) => {
     manager: location?.contentTypeLocation?.managerCollection?.items?.[0],
     highlights: location?.contentTypeLocation?.highlightsCollection?.items,
     accomodation: location?.contentTypeLocation?.accomodationsCollection?.items,
-    guestGallery: location?.contentTypeLocation?.guestgalleryCollection?.items ||[],
+    guestGallery:
+      location?.contentTypeLocation?.guestgalleryCollection?.items || [],
   };
 
-  console.log(locationMapped.guestGallery)
+  console.log(locationMapped.guestGallery);
   return (
     <Layout>
       <PageSEO title="Location" />
@@ -88,18 +89,14 @@ const Editions = ({ location }) => {
       <div className="sm:max-w-[1000px] w-full mx-auto max-xl:px-4 pb-4">
         <Subheading paragraph={locationMapped?.description} />
       </div>
+      <ProgressCircle
+        foodieHaven={locationMapped?.foodieHaven}
+        wellnessAndRelaxation={locationMapped?.wellnessAndRelaxation}
+        natureAndWildlife={locationMapped?.natureAndWildlife}
+        activityAndFitness={locationMapped?.activityAndFitness}
+        nightlifeAndPartying={locationMapped?.nightlifeAndPartying}
+      />
 
-      <ProgressCircle foodieHaven={
-        locationMapped?.foodieHaven
-      } wellnessAndRelaxation={
-        locationMapped?.wellnessAndRelaxation
-      } natureAndWildlife={
-        locationMapped?.natureAndWildlife
-      } activityAndFitness={
-        locationMapped?.activityAndFitness
-      } nightlifeAndPartying={
-        locationMapped?.nightlifeAndPartying
-      }/>
       <WhatIncluded
         d={locationMapped?.description2}
         items={locationMapped?.whatsIncluded}
@@ -108,7 +105,7 @@ const Editions = ({ location }) => {
       <HighLights highlights={locationMapped?.highlights} />
       <Accomodation accomodation={locationMapped?.accomodation || []} />
       <div className="mt-[85px]">
-        <GuestGallery guestGallery={locationMapped?.guestGallery}/>
+        <GuestGallery guestGallery={locationMapped?.guestGallery} />
       </div>
       <CardSlider />
     </Layout>

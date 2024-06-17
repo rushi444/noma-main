@@ -43,17 +43,17 @@ export default function Home({ locations, blogs }) {
         height="100%"
       />
       {/* <Waves /> */}
-      <div className="px-4 py-2 mt-4 sm:mt-8">
+      <div className="py-2 mt-4 sm:mt-8">
         <Heading
           heading={
             <>
-              Bring Your Job, We<span className="font-serif">'</span><span className='lowercase'>l</span>l Do
-              The Rest
+              Bring Your Job, We<span className="font-serif">'</span>
+              <span className="lowercase">l</span>l Do The Rest
             </>
           }
         />
       </div>
-      <div className="sm:max-w-[900px] w-full mx-auto max-xl:px-4 pb-3 sm:pb-0">
+      <div className="sm:max-w-[900px] w-full mx-auto pb-3 sm:pb-0">
         <Subheading
           paragraph="Your remote work, done differently. We curate extraordinary 2-4 week
           trips for remote workers, building a community of like-minded

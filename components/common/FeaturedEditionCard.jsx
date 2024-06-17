@@ -32,7 +32,7 @@ const FeaturedEditionCard = ({ item, value }) => {
       <article className="flex gap-2 mt-2">
         <button
           type="submit"
-          className="px-3 py-2 rounded-full text-carbon-Black font-Montserrat text-sm font-normal "
+          className="px-3 py-2 rounded-full text-carbon-Black font-Montserrat text-sm font-normal"
           style={{ backgroundColor: BgColor1 }}
         >
           {item?.firstbtn || "--"}
