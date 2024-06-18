@@ -21,7 +21,7 @@ const NewsCard = ({ item }) => {
         <h1 className="text-carbon-Black font-Montserrat text-lg font-extrabold mt-2 leading-normal line-clamp-3">
           {item.title}
         </h1>
-        <p>{item?.excerpt || ''}</p>
+        <p>{item?.excerpt || ""}</p>
       </article>
       {/* <article className=" mx-auto w-fit">
         <button

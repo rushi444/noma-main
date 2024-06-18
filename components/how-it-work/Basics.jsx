@@ -5,7 +5,7 @@ import { basics } from "../common/Helper";
 const Basics = ({ faqs = [] }) => {
   return (
     <div>
-      <div className="pb-[100px] bg-light-green ">
+      <div className="pb-5 sm:pb-[100px] bg-light-green ">
         <h1 className=" text-center py-8 text-carbon-Black text-[40px] font-normal capitalize font-sergio-trendy">
           FAQS
         </h1>

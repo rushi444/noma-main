@@ -118,7 +118,7 @@ const locations = ({ locations }) => {
     <Layout>
       <PageSEO title="Locations" />
       <HeroImage bg="url('/img/locations_cover.png')" />
-      <div className="px-4 pt-8 ">
+      <div className="pt-8 ">
         <Heading
           heading={
             <>
@@ -128,10 +128,10 @@ const locations = ({ locations }) => {
           }
         />
       </div>
-      <div className="sm:max-w-[500px] w-full mx-auto max-xl:px-4">
+      <div className="sm:max-w-[500px] w-full mx-auto ">
         <Subheading paragraph="Your remote work journey starts here, check out our specially curated Noma Editions and embrace the freedom to work from anywhere." />
       </div>
-      <div className="px-4 xl:px-0 lg:pt-4">
+      <div className="px-4 xl:px-0 lg:pt-4 mb-3 sm:mb-0">
         <SearchInput
           setPlaceFilter={setPlaceFilter}
           setDaysFilter={setDaysFilter}
