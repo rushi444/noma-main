@@ -20,6 +20,18 @@ const Footer = () => {
             Sign up for our <br className="block sm:hidden" /> mailer
           </p>
           <div className="mb-4 sm:mb-8">
+            <div className="sm:hidden flex justify-between items-center gap-3">
+              <input
+                type="text"
+                placeholder="Name"
+                className=" px-4 py-2 border rounded-full text-gray-700 focus:outline-none focus:border-blue-500 max-w-[550px] w-full"
+              />
+              <input
+                type="text"
+                placeholder="Last name"
+                className=" px-4 py-2 border rounded-full text-gray-700 focus:outline-none focus:border-blue-500 max-w-[550px] w-full"
+              />
+            </div>
             <div className="flex justify-center gap-2 mt-2">
               <input
                 type="text"
@@ -43,7 +55,7 @@ const Footer = () => {
             onClick={handleOpenModal}
             className="flex sm:hidden m-auto p-2 w-[182px] h-[42px] items-center justify-center bg-main-orange rounded-[28px] text-white text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange mb-6"
           >
-            LET'S CONNECT
+            SUBMIT
           </button>
           <span className=" max-w-full block sm:hidden py-6">
             <FooterLine />

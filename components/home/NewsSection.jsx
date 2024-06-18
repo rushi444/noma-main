@@ -8,7 +8,7 @@ const NewsSection = ({ blogs, highlighted }) => {
     <div
       className={`${
         highlighted ? "bg-red" : "bg-romance"
-      } sm:pb-[100px] w-full px-4 ${highlighted ? "pb-0 mb-0" : ""}`}
+      } pb-[100px] w-full px-4 ${highlighted ? "pb-0 mb-0" : ""}`}
     >
       <div className="w-full  py-8 px-1 sm:px-2.5">
         <div className="hidden sm:block !font-kurdis">
