@@ -109,9 +109,9 @@ const SearchInput = ({
         </article>
       </article>
       {filterOpen && (
-        <div className="block sm:flex sm:justify-around max-w-[1000px] m-auto mt-2">
+        <div className="block sm:flex sm:justify-around max-w-[1000px] m-auto mt-2 gap-4">
           {Object.entries(filters).map(([key, values], index) => (
-            <div key={index} className="mt-4">
+            <div key={index} className="mt-4 w-[25%]">
               <h6 className="font-Montserrat ml-4 font-bold">{key}</h6>
               <div className="flex flex-wrap">
                 {values.items.map((item, index) => (

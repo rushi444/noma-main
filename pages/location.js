@@ -21,13 +21,21 @@ export const getLocationCardColor = (color) => {
     case "purple":
       return "#D5D1EA";
     case "light-purple":
-      return "#D9E4FC";
+      return "#ECECFD";
     case "light-yellow":
       return "#FFDA7F";
     case "light-green":
       return "#BBE4D7";
     case "green":
       return "#80CEB7";
+    case "deep-purple":
+      return "#8196CC";
+    case "orange":
+      return "#FF9500";
+    case 'pink':
+      return '#FC8B99'
+    case 'brown':
+      return '#C68443'
     default:
       return "#FFC300";
   }
