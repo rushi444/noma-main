@@ -1,9 +1,21 @@
 import React from "react";
-import { IncludedCardData } from "../common/Helper";
+import { getWhatsIncludedImage, IncludedCardData } from "../common/Helper";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 // import { FaciltiesIcons } from "../common/Icons";
 import Image from "next/image";
+
+const getStylesWhatsIncludedImage = (title) => {
+  if (
+    title?.toLowerCase().includes("community") ||
+    title?.toLowerCase().includes("adventure") ||
+    title?.toLowerCase().includes("excursions")
+  ) {
+    return "p-2 rounded-full shadow-lg";
+  }
+
+  return "";
+};
 
 const WhatIncluded = ({ d, items }) => {
   // console.log([whasw])
@@ -71,27 +83,26 @@ const WhatIncluded = ({ d, items }) => {
               {items.map((item, index) => (
                 <div
                   key={index}
-                  className="max-w-[417px] w-full mx-auto rounded-[57px] bg-[#F4F1E6] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.10)] flex items-center gap-1 h-[55px]"
+                  className="max-w-[417px] w-full mx-auto rounded-[70px] bg-[#F4F1E6] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.10)] flex items-center gap-1 h-[60px]"
                 >
                   <Image
-                    src={
-                      IncludedCardData?.[index]?.img ||
-                      IncludedCardData?.[0]?.img
-                    }
+                    src={getWhatsIncludedImage(item?.title)}
                     width={56}
                     height={56}
                     alt="img"
-                    className="max-sm:w-12 max-sm:h-12"
+                    className={`max-sm:w-12 max-sm:h-12 rounded-full ${getStylesWhatsIncludedImage(
+                      item?.title
+                    )}`}
                   />
                   <div className="flex-col justify-center align-middle items-middle">
                     <p className="text-[#313131] h-5 font-Montserrat text-[10px] sm:text-sm md:text-base font-bold leading-normal">
                       {item.title}
                     </p>
                     <div className="flex flex-wrap gap-x-1 pr-2">
-                      <p className="text-[#313131] font-Montserrat text-[10px] sm:text-sm  font-normal leading-normal h-4">
+                      <p className="text-[#313131] font-Montserrat text-[8px] sm:text-sm  font-normal h-4">
                         {item.description}
                       </p>
-                      <p className="text-[#ADADAD]  font-Montserrat text-[10px] font-normal leading-normal h-4">
+                      <p className="text-[#ADADAD] font-Montserrat text-[8px] font-normal h-6">
                         {item.description1}
                       </p>
                     </div>

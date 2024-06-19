@@ -546,6 +546,44 @@ export const heroBtnData = [
     btn: "25°C | 77°F",
   },
 ];
+
+export const getWhatsIncludedImage = (title) => {
+  if (title?.toLowerCase().includes("yoga")) {
+    return "/img/what-included-1.png";
+  }
+
+  if (title?.toLowerCase().includes("fitness")) {
+    return "/img/what-included-2.png";
+  }
+
+  if (title?.toLowerCase().includes("pool")) {
+    return "/img/what-included-3.png";
+  }
+
+  if (title?.toLowerCase().includes("onsite")) {
+    return "/img/what-included-4.png";
+  }
+
+  if (title?.toLowerCase().includes("adventure")) {
+    return "/img/what-included-8.png";
+  }
+
+  if (title?.toLowerCase().includes("wifi")) {
+    return "/img/what-included-6.png";
+  }
+  if (title?.toLowerCase().includes("community")) {
+    return "/img/what-included-9.png";
+  }
+
+  if (title?.toLowerCase().includes("working")) {
+    return "/img/what-included-5.png";
+  }
+
+  if (title?.toLowerCase().includes("excursions")) {
+    return "/img/what-included-7.png";
+  }
+};
+
 export const IncludedCardData = [
   {
     img: "/img/what-included-1.png",
