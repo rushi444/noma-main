@@ -16,6 +16,7 @@ const FEATURED_EDITIONS = `
         country
         startDate
         endDate
+        locationCardColor
         timeZone
         temperature
         accomodationsCollection {
@@ -68,6 +69,7 @@ const GET_ALL_EDITIONS = `
         country
         startDate
         endDate
+        locationCardColor
         timeZone
         temperature
         tripType
@@ -181,6 +183,16 @@ const GET_LOCATION_BY_ID = (locationId: string) => `
         items {
           title
           url
+        }
+      }
+      alumniReviewCollection {
+        items {
+          alumniName
+          review {
+            json
+          }
+          numberOfTrips
+          jobTitle
         }
       }
     }

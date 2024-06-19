@@ -586,7 +586,7 @@ export const IncludedCardData = [
 ];
 export const progressCardsData = [
   {
-    title: "Foodie Haven",
+    title: "Foodie Heaven",
     img: "/img/foodie-heaven.png",
     value: "70%",
     color: "#FC5B67",

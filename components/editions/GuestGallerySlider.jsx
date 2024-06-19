@@ -92,11 +92,11 @@ export default function GuestGallerySlider({ guestGallery }) {
               width={328}
               height={328}
               alt={item?.title}
-              className="rounded-2xl mx-auto"
               onClick={() => {
                 setIsOpen(true);
                 setIndex(index);
               }}
+              className="h-[328px] w-[328px] rounded-2xl mx-auto cursor-pointer object-cover"
             />
           </SwiperSlide>
         ))}

@@ -5,10 +5,10 @@ import { Autoplay, Scrollbar } from "swiper/modules";
 import { profileMapData } from "../common/Helper";
 import ProfileData from "./ProfileData";
 
-export default function CardSlider() {
+export default function CardSlider({alumniReviews}) {
   return (
     <div className="w-full sm:bg-[#F4F1E6] pb-[120px] bg-[#FFDA7F]">
-      <div className="max-w-[1120px] w-full mx-auto px-4 xl:px-4 sm:pt-[29px] pt-4 pb-[31px]">
+      <div className="max-w-[1120px] w-full mx-auto px-4 xl:px-4 sm:pt-[29px] pt-4">
         <Swiper
           scrollbar={{
             hide: false,
@@ -46,11 +46,11 @@ export default function CardSlider() {
           }}
           slidesPerView={3}
           modules={[Autoplay, Scrollbar]}
-          className="mySwiper3 w-full h-[700px]"
+          className="mySwiper3 w-full h-[500px]"
         >
-          {profileMapData.map((items, index) => (
+          {alumniReviews.map((item, index) => (
             <SwiperSlide key={index}>
-              <ProfileData items={items} />
+              <ProfileData items={item} />
             </SwiperSlide>
           ))}
         </Swiper>

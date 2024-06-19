@@ -12,7 +12,7 @@ const getValueOfCircle = (
   activityAndFitness,
   nightlifeAndPartying
 ) => {
-  if (title === "Foodie Haven") {
+  if (title === "Foodie Heaven") {
     return { value: `${foodieHaven}%` };
   }
 

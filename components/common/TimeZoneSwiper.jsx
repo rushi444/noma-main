@@ -18,6 +18,7 @@ const TimeZoneSwiper = ({ locations }) => {
     ),
     price: l?.accomodationsCollection?.items?.[0]?.price,
     img: [{ src: l?.heroImage?.url }],
+    locationColor: l?.locationCardColor
   }));
 
   return (

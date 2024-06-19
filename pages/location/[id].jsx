@@ -14,6 +14,22 @@ import WhatIncluded from "@/components/editions/WhatIncluded";
 import { getLocationById } from "@/lib/api";
 import React from "react";
 
+function formatDateRange(startDate, endDate) {
+  const start = new Date(startDate);
+  const end = new Date(endDate);
+
+  const options = { day: "2-digit", month: "short" };
+
+  const startDayMonth = start
+    .toLocaleDateString("en-GB", options)
+    .toUpperCase();
+  const endDayMonth = end.toLocaleDateString("en-GB", options).toUpperCase();
+
+  const endYear = end.getFullYear();
+
+  return `${startDayMonth} - ${endDayMonth} ${endYear}`;
+}
+
 const CustomText = ({ text }) => {
   // Split the text by commas and parentheses
   const parts = text.split(/([,()])/);
@@ -49,6 +65,10 @@ const Editions = ({ location }) => {
     timeZone: location?.contentTypeLocation?.timeZone,
     temperature: location?.contentTypeLocation?.temperature,
     heading: `${location?.contentTypeLocation?.city}, ${location?.contentTypeLocation?.country}`,
+    dates: formatDateRange(
+      location?.contentTypeLocation?.startDate,
+      location?.contentTypeLocation?.endDate
+    ),
     description: location?.contentTypeLocation?.description,
     foodieHaven: location?.contentTypeLocation?.foodieHaven,
     wellnessAndRelaxation: location?.contentTypeLocation?.wellnessAndRelaxation,
@@ -63,9 +83,9 @@ const Editions = ({ location }) => {
     accomodation: location?.contentTypeLocation?.accomodationsCollection?.items,
     guestGallery:
       location?.contentTypeLocation?.guestgalleryCollection?.items || [],
+    alumniReviews: location?.contentTypeLocation?.alumniReviewCollection?.items,
   };
 
-  console.log(locationMapped.guestGallery);
   return (
     <Layout>
       <PageSEO title="Location" />
@@ -86,6 +106,9 @@ const Editions = ({ location }) => {
       <div className="py-4">
         <Heading heading={<CustomText text={locationMapped?.heading} />} />
       </div>
+      <div className='font-kurdis text-center font-bold text-2xl'>
+        <p>{locationMapped?.dates}</p>
+      </div>
       <div className="sm:max-w-[1000px] w-full mx-auto max-xl:px-4 pb-4">
         <Subheading paragraph={locationMapped?.description} />
       </div>
@@ -101,13 +124,15 @@ const Editions = ({ location }) => {
         d={locationMapped?.description2}
         items={locationMapped?.whatsIncluded}
       />
-      <ProfileMeet manager={locationMapped?.manager} />
+      {!!locationMapped?.manager && (
+        <ProfileMeet manager={locationMapped?.manager} />
+      )}
       <HighLights highlights={locationMapped?.highlights} />
       <Accomodation accomodation={locationMapped?.accomodation || []} />
       <div className="mt-[85px]">
         <GuestGallery guestGallery={locationMapped?.guestGallery} />
       </div>
-      <CardSlider />
+      <CardSlider alumniReviews={locationMapped?.alumniReviews} />
     </Layout>
   );
 };

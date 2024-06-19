@@ -13,17 +13,17 @@ SwiperCore.use([Navigation]);
 const HighLights = ({ highlights }) => {
   const swiperRef = useRef(null);
 
-  const goNext = () => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.slideNext();
-    }
-  };
+  // const goNext = () => {
+  //   if (swiperRef.current && swiperRef.current.swiper) {
+  //     swiperRef.current.swiper.slideNext();
+  //   }
+  // };
 
-  const goPrev = () => {
-    if (swiperRef.current && swiperRef.current.swiper) {
-      swiperRef.current.swiper.slidePrev();
-    }
-  };
+  // const goPrev = () => {
+  //   if (swiperRef.current && swiperRef.current.swiper) {
+  //     swiperRef.current.swiper.slidePrev();
+  //   }
+  // };
 
   return (
     <div className="bg-[#FCD9DF]">
@@ -35,9 +35,9 @@ const HighLights = ({ highlights }) => {
           Highlights
         </h2>
         <div className="flex items-center gap-[11px]">
-          <div className="prev-btn cursor-pointer" onClick={goPrev}>
+          {/* <div className="prev-btn cursor-pointer" onClick={goPrev}>
             <SliderLeftArrowIcon />
-          </div>
+          </div> */}
           <Swiper
             scrollbar={{ hide: false }}
             slidesPerView={3}
@@ -92,9 +92,9 @@ const HighLights = ({ highlights }) => {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="next-btn cursor-pointer" onClick={goNext}>
+          {/* <div className="next-btn cursor-pointer" onClick={goNext}>
             <SliderRightArrowIcon />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

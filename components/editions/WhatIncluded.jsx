@@ -1,6 +1,7 @@
 import React from "react";
 import { IncludedCardData } from "../common/Helper";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS } from "@contentful/rich-text-types";
 // import { FaciltiesIcons } from "../common/Icons";
 import Image from "next/image";
 
@@ -11,14 +12,25 @@ const WhatIncluded = ({ d, items }) => {
       <div className="bg-[#FFDA7F]">
         <div className="xl:px-0 sm:px-4 sm:pt-4 pb-8 mx-auto max-w-[950px] w-full flex max-md:flex-col gap-4 md:gap-6 lg:gap-9 xl:gap-[76px]">
           <div className="sm:max-w-[457px] max-sm:bg-[#F4F1E6] flex flex-col justify-between w-full mx-auto pt-4 sm:pt-8">
-            <div className="sm:mb-0 mb-5 text-[#313131] text-center font-Montserrat text-sm md:text-base font-normal !leading-5 pt-4 py-2 px-4">
+            <div className="sm:mb-0 mb-5 text-[#313131] text-center font-Montserrat text-lg md:text-xl font-normal !leading-5 pt-4 py-2 px-4">
               {/* <p className="text-[#313131] text-center font-Montserrat text-sm md:text-base font-normal !leading-5 "> */}
               {/* Our explosive Edition in Antigua, Guatemala, has you
                 experiencing everything this hidden beauty has to offer. From
                 the sacred Lake Atitlan to hiking the unbelievable Volcan
                 Acatenango to discovering hidden bars and artisan markets, every
                 moment is an opportunity for exploration.{" "} */}
-              {documentToReactComponents(d)}
+              {documentToReactComponents(d, {
+                renderNode: {
+                  [BLOCKS.PARAGRAPH]: (node, children) => {
+                    return (
+                      <>
+                        <p>{children}</p>
+                        <br />
+                      </>
+                    );
+                  },
+                },
+              })}
               {/* </p> */}
               {/* <p className="text-[#313131] text-center font-Montserrat text-sm md:text-base font-normal !leading-5 pt-4">
                 Antigua's rich volcanic soils produce some of the best quality
@@ -49,12 +61,12 @@ const WhatIncluded = ({ d, items }) => {
             <h1 className="text-[#313131] font-Montserrat text-2xl sm:text-[32px] font-extrabold leading-normal max-md:text-center">
               What's included
             </h1>
-            <div className="flex items-center m-auto pt-5">
-              {/* <FaciltiesIcons /> */}
-              <p className="text-[#313131] font-Montserrat text-base font-extrabold ">
+            {/* <div className="flex items-center m-auto pt-5"> */}
+            {/* <FaciltiesIcons /> */}
+            {/* <p className="text-[#313131] font-Montserrat text-base font-extrabold ">
                 Facilities and Amenities
-              </p>
-            </div>
+              </p> */}
+            {/* </div> */}
             <div className="flex flex-col gap-4 sm:gap-5 mt-2 sm:mt-4">
               {items.map((item, index) => (
                 <div

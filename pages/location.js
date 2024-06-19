@@ -10,6 +10,29 @@ import { getAllEditions } from "@/lib/api";
 import { useRouter } from "next/router";
 import { useMemo, useState } from "react";
 
+export const getLocationCardColor = (color) => {
+  switch (color) {
+    case "light-blue":
+      return "#D9E4FC";
+    case "yellow":
+      return "#FFC300";
+    case "bone":
+      return "#DFD4AD";
+    case "purple":
+      return "#D5D1EA";
+    case "light-purple":
+      return "#D9E4FC";
+    case "light-yellow":
+      return "#FFDA7F";
+    case "light-green":
+      return "#BBE4D7";
+    case "green":
+      return "#80CEB7";
+    default:
+      return "#FFC300";
+  }
+};
+
 export const getServerSideProps = async () => {
   const locations = await getAllEditions();
   return {
@@ -38,11 +61,13 @@ const locations = ({ locations }) => {
     locations.contentTypeLocationCollection.items
   );
 
-  console.log({ daysFilter });
-
   const filteredItems = useMemo(() => {
-    return (
+    const filtered =
       locationItems?.filter((item) => {
+        // Filter out if endDate has passed today
+        const isValidDate =
+          item?.endDate && new Date(item.endDate) > new Date();
+
         // Filter by search input
         const searchFilter =
           item.city.toLowerCase().includes(searchInput.toLowerCase()) ||
@@ -91,13 +116,18 @@ const locations = ({ locations }) => {
 
         // Combine all filters
         return (
+          isValidDate &&
           searchFilter &&
           tempFilterPass &&
           daysFilterPass &&
           placeFilterPass &&
           typeFilterPass
         );
-      }) || []
+      }) || [];
+
+    // Sort by startDate in ascending order
+    return filtered.sort(
+      (a, b) => new Date(a.startDate) - new Date(b.startDate)
     );
   }, [
     searchInput,

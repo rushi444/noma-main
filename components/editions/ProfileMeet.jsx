@@ -22,11 +22,11 @@ const ProfileMeet = ({ manager }) => {
               Your local Community Manager
             </p>
             <Image
-              src="/img/meet-profile.png"
+              src={manager?.profileImage?.url}
               height={247}
               width={249}
-              className="pt-4"
-              alt="img"
+              className="pt-4 rounded-full object-fill"
+              alt={`Noma Collective community manager - ${manager?.name}`}
             />
           </div>
           <div className="sm:max-w-[298px] w-full flex flex-col gap-2 sm:gap-4 text-center text-[#313131] text-sm sm:text-base font-normal font-Montserrat leading-normal">
