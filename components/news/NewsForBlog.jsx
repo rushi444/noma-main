@@ -25,8 +25,6 @@ const NewsForBlog = ({ blogs }) => {
     return filtered;
   }, [b, search, categoryFilter]);
 
-  console.log({ b });
-
   const highlightedBlogs = b?.filter((i) => i.highlight === true);
 
   return (

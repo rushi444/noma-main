@@ -18,7 +18,7 @@ const getStylesWhatsIncludedImage = (title) => {
 };
 
 const WhatIncluded = ({ d, items }) => {
-  // console.log([whasw])
+
   return (
     <>
       <div className="bg-[#FFDA7F]">

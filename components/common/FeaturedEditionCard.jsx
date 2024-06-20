@@ -4,7 +4,6 @@ import { featuredEditionCardBgs } from "../utils/Functions";
 import { getLocationCardColor } from "@/pages/location";
 
 const FeaturedEditionCard = ({ item, value }) => {
-  console.log({item, value})
   const { BgColor1, BgColor2 } = featuredEditionCardBgs({
     value: value % 8,
   });

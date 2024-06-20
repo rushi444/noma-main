@@ -5,9 +5,7 @@ import Link from "next/link";
 
 const HighLightsCard = ({ item, value }) => {
   const { BgColor } = highLightsBg({ value });
-
-  console.log({ item });
-
+  
   return (
     <div
       className={`w-[328px] my-5 max-xl:mx-auto ${

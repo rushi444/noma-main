@@ -69,8 +69,6 @@ const locations = ({ locations }) => {
     locations.contentTypeLocationCollection.items
   );
 
-  console.log({ locationItems });
-
   const continentFilterItems = useMemo(() => {
     const continents = locationItems
       ?.map((item) => item?.continent)

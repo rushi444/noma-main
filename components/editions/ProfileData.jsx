@@ -17,7 +17,7 @@ const ProfileData = ({ items }) => {
       </div>
 
       <p className="text-[#313131] font-Montserrat text-sm sm:text-base font-normal !leading-5">
-        {documentToReactComponents(items?.review?.json)}
+        {documentToReactComponents(items?.review?.json || {})}
       </p>
     </div>
   );
