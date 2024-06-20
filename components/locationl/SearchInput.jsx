@@ -13,6 +13,7 @@ const SearchInput = ({
   daysFilter,
   tempFilter,
   typeFilter,
+  continentFilterItems
 }) => {
   const [filterOpen, setFilterOpen] = useState(false);
   const filters = {
@@ -56,12 +57,7 @@ const SearchInput = ({
     Continent: {
       value: placeFilter,
       onSelect: setPlaceFilter,
-      items: [
-        { label: "Europe", value: "Europe" },
-        { label: "London", value: "London" },
-        { label: "Central America", value: "Central America" },
-        { label: "South America", value: "South America" },
-      ],
+      items: continentFilterItems,
     },
     "Type of Trip": {
       value: typeFilter,

@@ -67,6 +67,7 @@ const GET_ALL_EDITIONS = `
         }
         city
         country
+        continent
         startDate
         endDate
         locationCardColor

@@ -32,10 +32,10 @@ export const getLocationCardColor = (color) => {
       return "#8196CC";
     case "orange":
       return "#FF9500";
-    case 'pink':
-      return '#FC8B99'
-    case 'brown':
-      return '#C68443'
+    case "pink":
+      return "#FC8B99";
+    case "brown":
+      return "#C68443";
     default:
       return "#FFC300";
   }
@@ -68,6 +68,16 @@ const locations = ({ locations }) => {
   const [locationItems, setLocationItems] = useState(
     locations.contentTypeLocationCollection.items
   );
+
+  console.log({ locationItems });
+
+  const continentFilterItems = useMemo(() => {
+    const continents = locationItems
+      ?.map((item) => item?.continent)
+      .filter((v) => !!v);
+
+    return continents?.map((c) => ({ label: c, value: c })) || [];
+  }, [locationItems]);
 
   const filteredItems = useMemo(() => {
     const filtered =
@@ -116,7 +126,8 @@ const locations = ({ locations }) => {
         // Filter by continent
         const placeFilterPass =
           item.city.toLowerCase().includes(placeFilter.toLowerCase()) ||
-          item.country.toLowerCase().includes(placeFilter.toLowerCase());
+          item.country.toLowerCase().includes(placeFilter.toLowerCase()) ||
+          item?.continent?.toLowerCase().includes(placeFilter?.toLowerCase());
 
         // Filter by type of trip
         const typeFilterPass =
@@ -182,6 +193,7 @@ const locations = ({ locations }) => {
           searchInput={searchInput}
           setSearchInput={setSearchInput}
           onSurpriseMeClick={onSurpriseMeClick}
+          continentFilterItems={continentFilterItems}
         />
       </div>
       <TimeZoneSwiper locations={filteredItems} />
