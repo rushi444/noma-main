@@ -106,7 +106,7 @@ const Editions = ({ location }) => {
       <div className="py-4">
         <Heading heading={<CustomText text={locationMapped?.heading} />} />
       </div>
-      <div className='font-kurdis text-center font-bold text-2xl'>
+      <div className="font-kurdis text-center font-bold text-2xl">
         <p>{locationMapped?.dates}</p>
       </div>
       <div className="sm:max-w-[1000px] w-full mx-auto max-xl:px-4 pb-4">
@@ -129,9 +129,11 @@ const Editions = ({ location }) => {
       )}
       <HighLights highlights={locationMapped?.highlights} />
       <Accomodation accomodation={locationMapped?.accomodation || []} />
-      <div className="mt-[85px]">
-        <GuestGallery guestGallery={locationMapped?.guestGallery} />
-      </div>
+      {locationMapped?.guestGallery?.length > 0 && (
+        <div className="mt-[85px]">
+          <GuestGallery guestGallery={locationMapped?.guestGallery} />
+        </div>
+      )}
       <CardSlider alumniReviews={locationMapped?.alumniReviews} />
     </Layout>
   );
