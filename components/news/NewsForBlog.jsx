@@ -12,14 +12,23 @@ const NewsForBlog = ({ blogs }) => {
   const b = blogs?.blogCollection?.items || [];
 
   const bs = useMemo(() => {
-    const filtered = b?.filter(
-      (i) =>
+    const filtered = b?.filter((i) => {
+      if (!search) {
+        return true;
+      }
+
+      return (
         i.title.toLowerCase().includes(search?.toLowerCase()) ||
         i?.excerpt?.toLowerCase().includes(search?.toLowerCase())
-    );
+      );
+    });
 
     if (categoryFilter && categoryFilter !== "All") {
-      return filtered.filter((i) => i.category === categoryFilter);
+      return filtered.filter(
+        (i) =>
+          i?.category?.toLowerCase()?.trim() ===
+          categoryFilter?.toLowerCase()?.trim()
+      );
     }
 
     return filtered;

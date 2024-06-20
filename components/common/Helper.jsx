@@ -383,7 +383,7 @@ export const BlogOpenInterestedBlogs = [
 export const ForBlogBtnData = [
   { btnname: "All" },
   {
-    btnname: "Locations Lowdowns",
+    btnname: "Location Lowdowns",
   },
   {
     btnname: "Travel Tips",
