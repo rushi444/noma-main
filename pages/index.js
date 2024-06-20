@@ -11,12 +11,12 @@ import ReadOurReviews from "@/components/home/ReadOurReviews";
 import Waves from "@/components/home/Waves";
 import WhatWeOffer from "@/components/home/WhatWeOffer";
 import Steps from "@/components/how-it-work/Steps";
-import { getAllBlogs, getAllEditions } from "@/lib/api";
+import { getAllBlogs, getFeaturedEditions } from "@/lib/api";
 import dynamic from "next/dynamic";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export const getServerSideProps = async () => {
-  const locations = await getAllEditions();
+  const locations = await getFeaturedEditions();
   const blogs = await getAllBlogs();
   return {
     props: {

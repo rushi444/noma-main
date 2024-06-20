@@ -9,22 +9,28 @@ import { format, differenceInDays } from "date-fns";
 import Link from "next/link";
 
 export default function FeaturedEditionSectionSlider({ locations }) {
-  const locationsMapped = locations?.map((l) => ({
-    id: l?.sys?.id,
-    firstbtn: l?.timeZone,
-    secondbtn: l?.temperature,
-    title: l?.city,
-    description: l?.country,
-    date: `${format(new Date(l.startDate), "MMM d")} - ${format(
-      new Date(l.endDate),
-      "MMM d, yyyy"
-    )}`,
-    days: Math.abs(
-      differenceInDays(new Date(l.endDate), new Date(l.startDate))
-    ),
-    price: l?.accomodationsCollection?.items[0]?.price,
-    img: [{ src: l?.heroImage?.url }],
-  }));
+  const locationsMapped = locations
+    ?.map((l) => ({
+      ...l,
+      id: l?.sys?.id,
+      firstbtn: l?.timeZone,
+      secondbtn: l?.temperature,
+      title: l?.city,
+      description: l?.country,
+      date: `${format(new Date(l.startDate), "MMM d")} - ${format(
+        new Date(l.endDate),
+        "MMM d, yyyy"
+      )}`,
+      days: Math.abs(
+        differenceInDays(new Date(l.endDate), new Date(l.startDate))
+      ),
+      price: l?.accomodationsCollection?.items[0]?.price,
+      img: [{ src: l?.heroImage?.url }],
+      locationColor: l?.locationCardColor,
+    }))
+    .filter((item) => item?.endDate && new Date(item.endDate) > new Date())
+    .sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
+
   const swiperRef = useRef(null);
 
   const goNext = () => {
