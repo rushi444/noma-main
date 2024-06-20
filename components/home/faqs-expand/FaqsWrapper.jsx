@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FaqsList from "./FaqsList";
 
-const FaqsWrapper = () => {
+const FaqsWrapper = ({faqs}) => {
   const [openFaq, setOpenFaq] = useState(null);
 
   const handleToggleFaq = (index) => {
@@ -12,7 +12,7 @@ const FaqsWrapper = () => {
     <div className="py-10 max-w-[800px] mx-auto pb-[104px] sm:pb-[150px] px-4">
       <div className="pb-12 sm:py-12">
         <div className="h-full">
-          <FaqsList openFaq={openFaq} handleToggleFaq={handleToggleFaq} />
+          <FaqsList faqs={faqs} openFaq={openFaq} handleToggleFaq={handleToggleFaq} />
         </div>
       </div>
     </div>

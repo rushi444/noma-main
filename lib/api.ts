@@ -200,6 +200,19 @@ const GET_LOCATION_BY_ID = (locationId: string) => `
   }
 `;
 
+const GET_ALL_FAQS = `
+{
+  faqsPageFaqCollection {
+    items {
+      question
+      answer {
+        json
+      }
+    }
+  }
+}
+`;
+
 async function fetchGraphQL(query, preview = false) {
   return fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`,
@@ -254,5 +267,10 @@ export const getLocationById = async ({
 
 export const getBlogById = async ({ blogId }: { blogId: string }) => {
   const data = await fetchGraphQL(GET_BLOG_BY_ID(blogId));
+  return data?.data;
+};
+
+export const getAllFaqs = async () => {
+  const data = await fetchGraphQL(GET_ALL_FAQS);
   return data?.data;
 };

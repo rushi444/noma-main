@@ -1,12 +1,14 @@
 import { faqList } from "@/components/common/Helper";
 import { SelectDownArrow } from "@/components/common/Icons";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import React from "react";
 import AnimateHeight from "react-animate-height";
+import { BLOCKS } from "@contentful/rich-text-types";
 
-const FaqsList = ({ openFaq, handleToggleFaq }) => {
+const FaqsList = ({ openFaq, handleToggleFaq, faqs }) => {
   return (
     <div>
-      {faqList.map((faq, index) => (
+      {faqs.reverse().map((faq, index) => (
         <div key={index} className="flex flex-col mb-6">
           <div onClick={() => handleToggleFaq(index)} className="faq-btn-style">
             <h3 className="text-carbon-Black font-Montserrat text-sm sm:text-base">
@@ -26,7 +28,20 @@ const FaqsList = ({ openFaq, handleToggleFaq }) => {
                 openFaq === index ? "custom-shadow" : ""
               }`}
             >
-              {faq.answer}
+              <div>
+                {documentToReactComponents(faq.answer?.json, {
+                  renderNode: {
+                    [BLOCKS.PARAGRAPH]: (node, children) => {
+                      return (
+                        <>
+                          <p>{children}</p>
+                          <br />
+                        </>
+                      );
+                    },
+                  },
+                })}
+              </div>
             </div>
           </AnimateHeight>
         </div>
