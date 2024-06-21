@@ -31,7 +31,7 @@ const HowItWork = ({ faqs }) => {
       </div>
       <Subheading
         width="730px"
-        paragraph="Really lean into how we plan everything and curate this amazing experience with them. Maybe something about trusted by 700+ alumni?"
+        paragraph="Noma Collective carefully curates your whole adventure, organizing luxury remote friendly accommodation, wellness programmes, experiences, community nights, cultural immersion, give-back programmes and more. Having gained the trust of over 700 alumni, we excel in crafting unmatched and exceptional adventures."
       />
       <div className="mt-8">
         <Steps />

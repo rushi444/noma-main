@@ -8,7 +8,7 @@ import { BLOCKS } from "@contentful/rich-text-types";
 const FaqsList = ({ openFaq, handleToggleFaq, faqs }) => {
   return (
     <div>
-      {faqs.reverse().map((faq, index) => (
+      {faqs?.map((faq, index) => (
         <div key={index} className="flex flex-col mb-6">
           <div onClick={() => handleToggleFaq(index)} className="faq-btn-style">
             <h3 className="text-carbon-Black font-Montserrat text-sm sm:text-base">
