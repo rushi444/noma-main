@@ -10,7 +10,7 @@ const getStylesWhatsIncludedImage = (title) => {
     title?.toLowerCase().includes("community") ||
     title?.toLowerCase().includes("adventure") ||
     title?.toLowerCase().includes("excursions") ||
-    title?.toLowerCase().includes("airport") ||
+    title?.toLowerCase().includes("airport") 
   ) {
     return "p-2 rounded-full shadow-lg";
   }
