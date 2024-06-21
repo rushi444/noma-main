@@ -97,7 +97,7 @@ const Editions = ({ location }) => {
     whatsIncluded: location?.contentTypeLocation?.facilitiesCollection?.items,
     manager: location?.contentTypeLocation?.managerCollection?.items?.[0],
     highlights: location?.contentTypeLocation?.highlightsCollection?.items,
-    accomodation: location?.contentTypeLocation?.accomodationsCollection?.items,
+    accomodation: location?.contentTypeLocation?.accomodationsCollection?.items.sort((a, b) => a?.price - b?.price),
     guestGallery:
       location?.contentTypeLocation?.guestgalleryCollection?.items || [],
     alumniReviews: location?.contentTypeLocation?.alumniReviewCollection?.items,
