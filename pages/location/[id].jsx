@@ -12,22 +12,39 @@ import ProfileMeet from "@/components/editions/ProfileMeet";
 import ProgressCircle from "@/components/editions/ProgressCircle";
 import WhatIncluded from "@/components/editions/WhatIncluded";
 import { getLocationById } from "@/lib/api";
+import { parseISO, format } from "date-fns";
 import React from "react";
 
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
 function formatDateRange(startDate, endDate) {
-  const start = new Date(startDate);
-  const end = new Date(endDate);
+  const start = startDate?.split("T")[0];
+  const [year, month, date] = start?.split("-");
+  const formattedStartDate = `${monthNames[parseInt(month, 10) - 1]} ${parseInt(
+    date,
+    10
+  )}`;
+  const end = endDate?.split("T")[0];
+  const [endYear, endMonth, endDay] = end?.split("-");
+  const endDayMonth = `${monthNames[parseInt(endMonth, 10) - 1]} ${parseInt(
+    endDay,
+    10
+  )}`;
 
-  const options = { day: "2-digit", month: "short" };
-
-  const startDayMonth = start
-    .toLocaleDateString("en-GB", options)
-    .toUpperCase();
-  const endDayMonth = end.toLocaleDateString("en-GB", options).toUpperCase();
-
-  const endYear = end.getFullYear();
-
-  return `${startDayMonth} - ${endDayMonth} ${endYear}`;
+  return `${formattedStartDate} - ${endDayMonth} ${endYear}`;
 }
 
 const CustomText = ({ text }) => {

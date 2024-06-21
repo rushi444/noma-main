@@ -9,7 +9,7 @@ const FaqsList = ({ openFaq, handleToggleFaq, faqs }) => {
   return (
     <div>
       {faqs?.map((faq, index) => (
-        <div key={index} className="flex flex-col mb-6">
+        <div key={index + 'this is a faq'} className="flex flex-col mb-6">
           <div onClick={() => handleToggleFaq(index)} className="faq-btn-style">
             <h3 className="text-carbon-Black font-Montserrat text-sm sm:text-base">
               {faq.question}
