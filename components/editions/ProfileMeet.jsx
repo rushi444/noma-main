@@ -9,9 +9,9 @@ const ProfileMeet = ({ manager }) => {
       <div className="max-w-[779px] w-full mx-auto pt-4 max-sm:pb-8 sm:py-6 xl:px-0 px-4">
         <div className="flex gap-4 items-center sm:hidden">
           <FaciltiesIcons />
-          <p className="text-[#313131] font-Montserrat text-base font-extrabold  ">
+          {/* <p className="text-[#313131] font-Montserrat text-base font-extrabold  ">
             {/* Management and Host */}
-          </p>
+          {/* </p> */} 
         </div>
         <div className=" flex max-sm:flex-col justify-center xl:justify-end gap-1 sm:gap-8 md:gap-[68px] items-center max-sm:mt-[38px]">
           <div className="max-w-[265px] w-full">
