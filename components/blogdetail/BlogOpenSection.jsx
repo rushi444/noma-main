@@ -1,10 +1,8 @@
 import React from "react";
 import BlogopenImagecompo from "../common/BlogopenImagecompo";
 import Link from "next/link";
-import {
-  documentToReactComponents,
-} from "@contentful/rich-text-react-renderer";
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 
 const BlogOpenSection = ({ blog }) => {
   return (
@@ -43,9 +41,7 @@ const BlogOpenSection = ({ blog }) => {
             [BLOCKS.LIST_ITEM]: (node, children) => (
               <li className="para">{children}</li>
             ),
-            [BLOCKS.HR]: (node, children) => (
-              <hr className="mt-8" />
-            ),
+            [BLOCKS.HR]: (node, children) => <hr className="mt-8" />,
             // [BLOCKS.EMBEDDED_ASSET]: (node, children) => (
             //   <img
             //     src={node.data.target.fields.file.url}
@@ -59,6 +55,21 @@ const BlogOpenSection = ({ blog }) => {
                 </p>
               </div>
             ),
+            [BLOCKS.EMBEDDED_ASSET]: (node, children) => {
+              // render the EMBEDDED_ASSET as you need
+              const id = node.data.target.sys.id;
+              const info = blog.content.links.assets.block?.find(
+                (item) => item.sys.id === id
+              );
+              return (
+                <img
+                  src={info?.url}
+                  height={info?.height}
+                  width={info?.width}
+                  alt={info?.description}
+                />
+              );
+            },
             // [BLOCKS.QUOTE] : (node, children) => (
             //   <div className="py-8 max-w-[992px] w-full mx-auto flex flex-col gap-4 md:gap-8">
             //     <p className="text-gray font-Montserrat text-base font-medium leading-normal">

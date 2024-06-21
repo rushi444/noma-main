@@ -114,6 +114,19 @@ const GET_BLOG_BY_ID = (blogId: string) => `
     }
     content {
       json
+      links {
+        assets {
+          block {
+            sys {
+              id
+            }
+            url
+            width
+            height
+            description
+          }
+        }
+      }
     }
   }
 }`;
