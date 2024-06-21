@@ -9,6 +9,7 @@ import SearchInput from "@/components/locationl/SearchInput";
 import { getAllEditions } from "@/lib/api";
 import { useRouter } from "next/router";
 import { useMemo, useState } from "react";
+import uniq from 'lodash/uniq'
 
 export const getLocationCardColor = (color) => {
   switch (color) {
@@ -70,9 +71,9 @@ const locations = ({ locations }) => {
   );
 
   const continentFilterItems = useMemo(() => {
-    const continents = locationItems
+    const continents = uniq(locationItems
       ?.map((item) => item?.continent)
-      .filter((v) => !!v);
+      .filter((v) => !!v));
 
     return continents?.map((c) => ({ label: c, value: c })) || [];
   }, [locationItems]);

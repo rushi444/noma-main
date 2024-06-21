@@ -9,7 +9,7 @@ export const getServerSideProps = async () => {
   return {
     props: {
       title: "FAQS",
-      faqs: faqs?.faqsPageFaqCollection?.items || [],
+      faqs: faqs?.faqsPageFaqCollection?.items?.reverse() || [],
     },
   };
 };
