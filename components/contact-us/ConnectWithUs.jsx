@@ -13,7 +13,7 @@ const ConnectWithUs = () => {
     <div className="text-center m-auto w-full bg-light-purple ">
       <div className="px-4 max-w-[1000px] m-auto py-3">
         <h4 className="py-4 pb-8 text-3xl font-bold font-Montserrat">
-          Do you prefer personal assistance? Connect with us
+          Want to chat to us directly? Connect below
         </h4>
         <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4">
           <input

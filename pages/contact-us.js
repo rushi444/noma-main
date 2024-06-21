@@ -6,6 +6,7 @@ import ConnectWithUs from "@/components/contact-us/ConnectWithUs";
 import { FaqsSlider } from "@/components/contact-us/FaqsSlider";
 import SocialConnect from "@/components/contact-us/SocialConnect";
 import { getFaqs } from "@/lib/api";
+import Link from "next/link";
 
 export const getServerSideProps = async () => {
   const faqs = await getFaqs();
@@ -26,7 +27,7 @@ const ContactUs = ({ faqs }) => {
         <Heading heading="Contact Us" />
       </div>
       <h4 className="font-Montserrat my-4 font-bold text-2xl text-center px-4">
-        Have some questions? check our FAQs
+        Got a burning question? check our <Link href='/faqs' className='underline'>FAQs</Link>
       </h4>
       <FaqsSlider faqs={faqs?.faqCollection?.items} />
       <ConnectWithUs />
