@@ -582,6 +582,10 @@ export const getWhatsIncludedImage = (title) => {
   if (title?.toLowerCase().includes("excursions")) {
     return "/img/what-included-7.png";
   }
+
+  if(title?.toLowerCase().includes('airport')){
+    return "/img/what-included-10.png";
+  }
 };
 
 export const IncludedCardData = [
