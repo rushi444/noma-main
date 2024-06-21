@@ -15,7 +15,7 @@ import { getLocationById } from "@/lib/api";
 import { parseISO, format } from "date-fns";
 import React from "react";
 
-const monthNames = [
+export const monthNames = [
   "January",
   "February",
   "March",

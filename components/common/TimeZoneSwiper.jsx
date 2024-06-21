@@ -2,24 +2,53 @@ import FeaturedEditionCard from "./FeaturedEditionCard";
 import Link from "next/link";
 import { format, differenceInDays } from "date-fns";
 
+export const monthNames = [
+  "Jan",
+  "Feb",
+  "Mar",
+  "Apr",
+  "May",
+  "Jun",
+  "Jul",
+  "Aug",
+  "Sep",
+  "Oct",
+  "Nov",
+  "Dec",
+];
+
 const TimeZoneSwiper = ({ locations }) => {
-  const locationsMapped = locations?.map((l) => ({
-    id: l?.sys?.id,
-    firstbtn: l?.timeZone,
-    secondbtn: l?.temperature,
-    title: l?.city,
-    description: l?.country,
-    date: `${format(new Date(l.startDate), "MMM d")} - ${format(
-      new Date(l.endDate),
-      "MMM d, yyyy"
-    )}`,
-    days: Math.abs(
-      differenceInDays(new Date(l.endDate), new Date(l.startDate))
-    ),
-    price: Math.min(...l?.accomodationsCollection?.items?.map((i) => i?.price)),
-    img: [{ src: l?.heroImage?.url }],
-    locationColor: l?.locationCardColor,
-  }));
+  const locationsMapped = locations?.map((l) => {
+    const start = l?.startDate?.split("T")[0];
+    const [year, month, date] = start?.split("-");
+    const formattedStartDate = `${monthNames[parseInt(month, 10) - 1]} ${parseInt(
+      date,
+      10
+    )}`;
+    const end = l?.endDate?.split("T")[0];
+    const [endYear, endMonth, endDay] = end?.split("-");
+    const endDayMonth = `${monthNames[parseInt(endMonth, 10) - 1]} ${parseInt(
+      endDay,
+      10
+    )}`;
+
+    return {
+      id: l?.sys?.id,
+      firstbtn: l?.timeZone,
+      secondbtn: l?.temperature,
+      title: l?.city,
+      description: l?.country,
+      date: `${formattedStartDate} - ${endDayMonth} ${endYear}`,
+      days: Math.abs(
+        differenceInDays(new Date(l.endDate), new Date(l.startDate))
+      ),
+      price: Math.min(
+        ...l?.accomodationsCollection?.items?.map((i) => i?.price)
+      ),
+      img: [{ src: l?.heroImage?.url }],
+      locationColor: l?.locationCardColor,
+    };
+  });
 
   return (
     <>
