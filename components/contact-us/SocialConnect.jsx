@@ -21,7 +21,7 @@ const SocialConnect = () => {
         <div className="flex flex-wrap justify-center items-center gap-3 mb-2 ">
           <Link
             className="max-w-[70px] sm:max-w-[100px]"
-            href="https://www.instagram.com/noma_collective/"
+            href="https://www.instagram.com/nomacollectivehq"
             target="_blank"
           >
             <InstaIcon />
