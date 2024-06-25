@@ -3,11 +3,11 @@ import CommonSelector from "../common/CommonSelector";
 
 const ConnectWithUs = () => {
   const data = [
-    { id: 1, name: "Reason to getting in touch" },
-    { id: 2, name: "Best opportunities" },
-    { id: 3, name: "Best service" },
-    { id: 4, name: "Option 4" },
-    { id: 5, name: "Option 5" },
+    { id: 1, name: "Questions about the Noma Program" },
+    { id: 2, name: "I've booked a trip – now what" },
+    { id: 3, name: "I have specific questions about a certain location" },
+    { id: 4, name: "I do not know which trip is right for me" },
+    { id: 5, name: "Just curious" },
   ];
   return (
     <div className="text-center m-auto w-full bg-light-purple ">
