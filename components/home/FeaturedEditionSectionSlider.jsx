@@ -38,6 +38,8 @@ export default function FeaturedEditionSectionSlider({ locations }) {
         10
       )}`;
 
+      console.log({l})
+
       return {
         ...l,
         id: l?.sys?.id,
@@ -49,7 +51,9 @@ export default function FeaturedEditionSectionSlider({ locations }) {
         days: Math.abs(
           differenceInDays(new Date(l.endDate), new Date(l.startDate))
         ),
-        price: l?.accomodationsCollection?.items[0]?.price,
+        price: Math.min(
+          ...l?.accomodationsCollection?.items?.map((i) => i?.price)
+        ),
         img: [{ src: l?.heroImage?.url }],
         locationColor: l?.locationCardColor,
       };
