@@ -74,12 +74,12 @@ const Basics = ({ faqs = [] }) => {
             }}
             slidesPerView={3}
             modules={[Scrollbar]}
-            className="mySwiper h-[376px] w-full px-8 pb-8 pt-4"
+            className="mySwiper w-full px-8 pb-8 pt-4"
             ref={swiperRef}
           >
             {faqs?.map((item, index) => (
               <SwiperSlide key={index + 'faq-card-page'}>
-                <Link href="/faqs">
+                <Link href="/faqs" className='mb-2'>
                   <BasicsCard item={item} key={index} />
                 </Link>
               </SwiperSlide>

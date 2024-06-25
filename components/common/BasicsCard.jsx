@@ -10,7 +10,7 @@ const BasicsCard = ({ item }) => {
           alt="basic image"
           width={358}
           height={328}
-          className="rounded-[8px]"
+          className="rounded-[8px] h-[300px] w-[360px] object-cover mx-auto"
         />
         <p className="pt-4 text-center font-Montserrat font-extrabold text-[24px] sm:text-[32px] text-carbon-Black">
           {item?.title}
