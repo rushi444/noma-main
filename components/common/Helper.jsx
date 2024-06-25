@@ -592,6 +592,9 @@ export const getWhatsIncludedImage = (title) => {
   if(title?.toLowerCase().includes('private apartment')){
     return "/img/what-included-12.png";
   }
+  if(title?.toLowerCase().includes('other inclusions')){
+    return "/img/what-included-10.png";
+  }
 };
 
 export const IncludedCardData = [
