@@ -218,6 +218,7 @@ const GET_ALL_FAQS = `
   faqsPageFaqCollection {
     items {
       question
+      order
       answer {
         json
       }

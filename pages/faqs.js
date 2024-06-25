@@ -9,7 +9,14 @@ export const getServerSideProps = async () => {
   return {
     props: {
       title: "FAQS",
-      faqs: faqs?.faqsPageFaqCollection?.items?.reverse() || [],
+      faqs:
+        faqs?.faqsPageFaqCollection?.items?.sort((a, b) => {
+          // If 'order' is missing, treat it as a very high value (e.g., Infinity)
+          const orderA = a.order !== undefined ? a.order : Infinity;
+          const orderB = b.order !== undefined ? b.order : Infinity;
+
+          return orderA - orderB;
+        }) || [],
     },
   };
 };
@@ -22,7 +29,7 @@ const FaqsExpand = ({ faqs }) => {
       <div className="mb-4 mt-6">
         <h1 className="heading">FAQs</h1>
       </div>
-      <FaqsWrapper faqs={faqs}/>
+      <FaqsWrapper faqs={faqs} />
     </Layout>
   );
 };
