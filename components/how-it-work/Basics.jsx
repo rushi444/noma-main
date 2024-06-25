@@ -21,8 +21,8 @@ const Basics = ({ faqs = [] }) => {
   };
   return (
     <div>
-      <div className="pb-5 sm:pb-[100px] bg-light-green ">
-        <h1 className=" text-center py-8 text-carbon-Black text-[40px] font-normal capitalize font-sergio-trendy">
+      <div className="pb-5 sm:pb-[100px] bg-[#ECECFD] ">
+       <h1 className=" text-center py-8 text-carbon-Black text-[40px] font-normal capitalize font-sergio-trendy">
           FAQS
         </h1>
         {/* <div className="  gap-x-1  max-w-[890px] w-full mx-auto grid grid-cols-1 sm:grid-cols-2 ">
@@ -78,7 +78,7 @@ const Basics = ({ faqs = [] }) => {
             ref={swiperRef}
           >
             {faqs?.map((item, index) => (
-              <SwiperSlide>
+              <SwiperSlide key={index + 'faq-card-page'}>
                 <Link href="/faqs">
                   <BasicsCard item={item} key={index} />
                 </Link>
