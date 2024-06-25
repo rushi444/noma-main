@@ -38,8 +38,6 @@ export default function FeaturedEditionSectionSlider({ locations }) {
         10
       )}`;
 
-      console.log({l})
-
       return {
         ...l,
         id: l?.sys?.id,

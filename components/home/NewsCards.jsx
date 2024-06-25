@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Scrollbar } from "swiper/modules";
 import NewsCard from "../common/NewsCard";
 import { newsCardsData } from "../common/Helper";
+import Link from "next/link";
 export default function NewsCards({ blogs }) {
   const b = blogs?.blogCollection?.items || [];
   return (
@@ -46,11 +47,15 @@ export default function NewsCards({ blogs }) {
         modules={[Scrollbar, Autoplay]}
         className="mySwiper3 w-full"
       >
-        {b?.map((item, index) => (
-          <SwiperSlide key={index}>
-            <NewsCard item={item} />
-          </SwiperSlide>
-        ))}
+        {b?.map((item, index) => {
+          return (
+            <SwiperSlide key={index}>
+              <Link href={`/blog/${item?.sys?.id}`}>
+                <NewsCard item={item} />
+              </Link>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
   );
