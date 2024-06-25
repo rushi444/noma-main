@@ -50,7 +50,7 @@ const NewsForBlog = ({ blogs }) => {
             }
           />
         </div>
-        <p className="md:px-24 pt-4 text-center">
+        <p className="md:px-24 pt-4 text-center font-Montserrat">
           This is your go-to hub for all things digital nomad. We&apos;re here
           to provide you with the tools to thrive, from finding remote jobs to
           essential top tips to inspiring travel guides. Welcome to your
