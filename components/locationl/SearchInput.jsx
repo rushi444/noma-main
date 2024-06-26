@@ -13,7 +13,7 @@ const SearchInput = ({
   daysFilter,
   tempFilter,
   typeFilter,
-  continentFilterItems
+  continentFilterItems,
 }) => {
   const [filterOpen, setFilterOpen] = useState(false);
   const filters = {
@@ -23,24 +23,24 @@ const SearchInput = ({
       items: [
         {
           label: "Less than 15°C | 59°F",
-          value: { min: 0, max: 15 },
+          value: "Less than 15°C | 59°F",
         },
         {
           label: "15°C | 59°F - 20°C | 68°F",
-          value: { min: 15, max: 20 },
+          value: "15°C | 59°F - 20°C | 68°F",
         },
         {
           label: "20°C | 68°F - 25°C | 77°F",
-          value: { min: 20, max: 25 },
+          value: "20°C | 68°F - 25°C | 77°F",
         },
         {
           label: "25°C | 77°F - 30°C | 86°F",
-          value: { min: 25, max: 30 },
+          value: "25°C | 77°F - 30°C | 86°F",
         },
         {
           label: "More than 30°C | 86°F ",
 
-          value: { min: { F: 86, C: 30 }, max: { F: 1000, C: 100 } },
+          value: "More than 30°C | 86°F ",
         },
       ],
     },

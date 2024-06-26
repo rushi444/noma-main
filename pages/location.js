@@ -9,7 +9,7 @@ import SearchInput from "@/components/locationl/SearchInput";
 import { getAllEditions } from "@/lib/api";
 import { useRouter } from "next/router";
 import { useMemo, useState } from "react";
-import uniq from 'lodash/uniq'
+import uniq from "lodash/uniq";
 
 export const getLocationCardColor = (color) => {
   switch (color) {
@@ -52,11 +52,20 @@ export const getServerSideProps = async () => {
   };
 };
 
-const shuffleArray = (array) =>
-  array
-    .map((value) => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value);
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
 
 const locations = ({ locations }) => {
   const router = useRouter();
@@ -71,9 +80,9 @@ const locations = ({ locations }) => {
   );
 
   const continentFilterItems = useMemo(() => {
-    const continents = uniq(locationItems
-      ?.map((item) => item?.continent)
-      .filter((v) => !!v));
+    const continents = uniq(
+      locationItems?.map((item) => item?.continent).filter((v) => !!v)
+    );
 
     return continents?.map((c) => ({ label: c, value: c })) || [];
   }, [locationItems]);
@@ -81,22 +90,28 @@ const locations = ({ locations }) => {
   const filteredItems = useMemo(() => {
     const filtered =
       locationItems?.filter((item) => {
+
         // Filter out if endDate has passed today
         const isValidDate =
           item?.endDate && new Date(item.endDate) > new Date();
 
         // Filter by search input
+        const start = item?.startDate?.split("T")[0];
+        const [year, month, date] = start?.split("-");
+        const startMonth = monthNames[parseInt(month, 10) - 1];
+        const end = item?.endDate?.split("T")[0];
+        const [endYear, endMonth, endDay] = end?.split("-");
+        const endMonthName = monthNames[parseInt(endMonth, 10) - 1];
         const searchFilter =
           item.city.toLowerCase().includes(searchInput.toLowerCase()) ||
-          item.country.toLowerCase().includes(searchInput.toLowerCase());
+          item.country.toLowerCase().includes(searchInput.toLowerCase()) ||
+          item?.continent?.toLowerCase().includes(searchInput.toLowerCase()) ||
+          startMonth.toLowerCase().includes(searchInput.toLowerCase()) ||
+          endMonthName.toLowerCase().includes(searchInput.toLowerCase());
 
         // Filter by temperature
         const tempFilterPass =
-          !tempFilter ||
-          (tempFilter.min &&
-            parseInt(item.temperature.split("°")[0]) >= tempFilter.min &&
-            tempFilter.max &&
-            parseInt(item.temperature.split("°")[0]) <= tempFilter.max);
+          !tempFilter || item.temperature.includes(tempFilter);
 
         // Filter by length of trip
         const tripDuration =
