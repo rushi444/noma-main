@@ -123,8 +123,8 @@ const Footer = () => {
             </div>
             <div className="column-dos hidden sm:flex flex-col text-white order-1 sm:order-1 ">
               <Link href="/faqs">FAQ</Link>
-              <Link href="/">TERMS & CONDITIONS</Link>
-              <Link href="/">PRIVACY POLICY</Link>
+              <Link href="/terms-conditions">TERMS & CONDITIONS</Link>
+              <Link href="/privacy-policy">PRIVACY POLICY</Link>
               <Link href="/contact-us">CONTACT US</Link>
             </div>
             <div className="sm:hidden flex justify-between">
@@ -142,8 +142,8 @@ const Footer = () => {
               </div>
               <div className="column-dos flex flex-col text-white order-1 sm:order-1 ">
                 <Link href="/faqs">FAQ</Link>
-                <Link href="/">TERMS & CONDITIONS</Link>
-                <Link href="/">PRIVACY POLICY</Link>
+                <Link href="/terms-conditions">TERMS & CONDITIONS</Link>
+                <Link href="/privacy-policy">PRIVACY POLICY</Link>
                 <Link href="/contact-us">CONTACT US</Link>
               </div>
             </div>
