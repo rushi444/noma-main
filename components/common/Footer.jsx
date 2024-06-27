@@ -70,7 +70,7 @@ const Footer = () => {
                 />
               </Link>
               <div className="flex gap-2 mb-2 -mt-8">
-                <Link href="https://www.instagram.com/noma_collective/">
+                <Link href="https://www.instagram.com/nomacollectivehq">
                   <img
                     src="/img/socials/instagram.png"
                     style={{ height: "16px", width: "16px" }}
@@ -149,7 +149,7 @@ const Footer = () => {
             </div>
 
             <div className="sm:hidden flex justify-center items-center gap-8 mt-8 mb-5">
-              <Link href="https://www.instagram.com/noma_collective/">
+              <Link href="https://www.instagram.com/nomacollectivehq">
                 <img
                   src="/img/socials/instagram.png"
                   style={{ height: "16px", width: "16px" }}
