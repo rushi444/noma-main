@@ -47,7 +47,9 @@ const AccomodationCard = ({ item }) => {
           } hover:bg-transparent transition duration-300 ease-in-out  max-sm:order-1`}
           onClick={() =>
             window.open(
-              "https://lp.noma-collective.com/schedule-your-meeting-page",
+              zeroSpots
+                ? "https://www.noma-collective-bookings.com/waitlist"
+                : "https://lp.noma-collective.com/schedule-your-meeting-page",
               "_blank"
             )
           }
