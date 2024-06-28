@@ -2,7 +2,7 @@ import React from "react";
 import { accomodationCardBg } from "../utils/Functions";
 
 const AccomodationCardBtns = ({ item, value }) => {
-  const { BgColor, TextColor } = accomodationCardBg({ value: 0 });
+  const { BgColor, TextColor } = accomodationCardBg({ value: value });
   return (
     <>
       <button
