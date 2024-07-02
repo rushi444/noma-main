@@ -20,6 +20,11 @@ const nextConfig = {
         destination: "https://www.noma-collective-bookings.com/products/shuffle-dance-edition",
         permanent: true,
         basePath: false,
+      },
+      {
+        source: '/404',
+        destination: '/',
+        permanent: true,
       }
     ];
   }
