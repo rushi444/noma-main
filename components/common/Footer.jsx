@@ -12,31 +12,31 @@ const Footer = () => {
     setIsModalOpen(false);
   };
   return (
-    <>
-      <div className="bg-[#666666] h-[300px]">
-        <iframe
-          src="https://link.jbenquet.com/widget/form/SO8up6ErSbXX2VnWL3BX"
-          // style="width:100%;height:100%;border:none;border-radius:36px"
-          className="w-full h-full border-none border-radius-[36px]"
-          id="inline-SO8up6ErSbXX2VnWL3BX"
-          data-layout="{'id':'INLINE'}"
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name="Footer"
-          data-height="400"
-          data-layout-iframe-id="inline-SO8up6ErSbXX2VnWL3BX"
-          data-form-id="SO8up6ErSbXX2VnWL3BX"
-          title="Footer"
-        ></iframe>
-        <script src="https://link.jbenquet.com/js/form_embed.js"></script>
-      </div>
-      <div className='bg-cover bg-center mt-[-100px] bg-[url("/img/footer-img.png")] w-full h-[102px]'></div>
-      <div className="w-full bg-[#666] sm:h-[632px] -mt-1 md:h-[342px] px-4">
-        <div className="py-4 sm:flex sm:flex-col sm:justify-center sm:items-center">
+    <div className='bg-[#666666]'>
+      <div className='bg-cover bg-center mt-[-100px] bg-[url("/img/footer-img.png")] w-full'></div>
+      <div className="w-full bg-[#666] sm:h-[500px] -mt-1 md:h-[500px] px-4">
+        <div className="bg-[#666666] h-[300px]">
+          <iframe
+            src="https://link.jbenquet.com/widget/form/SO8up6ErSbXX2VnWL3BX"
+            // style="width:100%;height:100%;border:none;border-radius:36px"
+            className="w-full h-full border-none border-radius-[36px]"
+            id="inline-SO8up6ErSbXX2VnWL3BX"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Footer"
+            data-height="400"
+            data-layout-iframe-id="inline-SO8up6ErSbXX2VnWL3BX"
+            data-form-id="SO8up6ErSbXX2VnWL3BX"
+            title="Footer"
+          ></iframe>
+          <script src="https://link.jbenquet.com/js/form_embed.js"></script>
+        </div>
+        <div className="py-4 sm:flex sm:flex-col sm:justify-center sm:items-center mt-4">
           {/* <p className="text-white text-center font-sergio-trendy text-2xl sm:text-4xl leading-[120%] font-extrabold mb-4 sm:mb-0">
             Sign up for our <br className="block sm:hidden" /> mailer
           </p>
@@ -212,7 +212,7 @@ const Footer = () => {
         </div>
       </div>
       {/* <SignUpModal isClose={handleCloseModal} isOpen={isModalOpen} /> */}
-    </>
+    </div>
   );
 };
 
