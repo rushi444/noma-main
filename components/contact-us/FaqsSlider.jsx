@@ -52,7 +52,7 @@ export const FaqsSlider = ({ faqs }) => {
                 alt="basic image"
                 width={358}
                 height={328}
-                className="rounded-[8px]"
+                className="rounded-[8px] h-[328px] w-[358px] mx-auto object-cover"
               />
               <p className="pt-4 text-center font-Montserrat font-extrabold text-[24px] sm:text-[32px] text-carbon-Black">
                 {item?.title}
