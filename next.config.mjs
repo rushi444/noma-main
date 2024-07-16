@@ -26,6 +26,12 @@ const nextConfig = {
         destination: 'https://www.noma-collective-bookings.com/SocialImpact',
         permanent: true,
         basePath: false,
+      },
+      {
+        source: '/socialimpact',
+        destination: 'https://www.noma-collective-bookings.com/SocialImpact',
+        permanent: true,
+        basePath: false,
       }
     ];
   }
