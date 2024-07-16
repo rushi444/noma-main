@@ -35,7 +35,7 @@ const Navbar = () => {
             onClick={() =>
               window.open(
                 "https://lp.noma-collective.com/schedule-your-meeting-page",
-                "_blank"
+                "_self"
               )
             }
           >
@@ -61,7 +61,7 @@ const Navbar = () => {
               onClick={() =>
                 window.open(
                   "https://lp.noma-collective.com/schedule-your-meeting-page",
-                  "_blank"
+                  "_self"
                 )
               }
             >

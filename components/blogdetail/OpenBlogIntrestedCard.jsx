@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { featuredBlogsBgs } from "../utils/Functions";
 export const colorLookup = {
   'Location Lowdowns': '#BBE4D7',
@@ -20,7 +21,7 @@ const OpenBlogIntrestedCard = ({ item }) => {
           {item?.category}
         </button>
         <div className={`w-[328px] ${item?.cardImage?.url ? '' : 'invisible'}`}>
-          <img
+          <Image
             className="rounded-lg mt-2 object-fit h-[328px] w-[328px] object-cover"
             src={item?.cardImage?.url}
             alt={item?.cardImage?.title}

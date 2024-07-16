@@ -50,7 +50,7 @@ const AccomodationCard = ({ item }) => {
               zeroSpots
                 ? "https://www.noma-collective-bookings.com/waitlist"
                 : "https://lp.noma-collective.com/schedule-your-meeting-page",
-              "_blank"
+              "_self"
             )
           }
         >

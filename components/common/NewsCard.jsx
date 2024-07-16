@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { colorLookup } from "../blogdetail/OpenBlogIntrestedCard";
 import { featuredBlogsBgs } from "../utils/Functions";
 
@@ -13,10 +14,12 @@ const NewsCard = ({ item }) => {
         >
           {item.category}
         </button>
-        <img
+        <Image
           className="rounded-lg mt-2 object-fit h-[328px] w-[328px] object-cover"
           src={item?.cardImage?.url}
           alt={item?.cardImage?.title}
+          width={328}
+          height={328}
         />
         <h1 className="text-carbon-Black font-Montserrat text-lg font-extrabold mt-2 leading-normal line-clamp-3">
           {item.title}

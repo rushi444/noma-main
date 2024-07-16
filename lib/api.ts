@@ -227,6 +227,28 @@ const GET_ALL_FAQS = `
 }
 `;
 
+const GET_ALL_PREFERRED_PARTNERS = `
+{
+  preferredPartnersCollection {
+    items {
+      sys {
+        id
+      }
+      name
+      oneLiner
+      description {
+        json
+      }
+      picture {
+        title
+        url
+      }
+      link
+      category
+    }
+  }
+}`;
+
 async function fetchGraphQL(query, preview = false) {
   return fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID}`,
@@ -286,5 +308,10 @@ export const getBlogById = async ({ blogId }: { blogId: string }) => {
 
 export const getAllFaqs = async () => {
   const data = await fetchGraphQL(GET_ALL_FAQS);
+  return data?.data;
+};
+
+export const getAllPreferredPartners = async () => {
+  const data = await fetchGraphQL(GET_ALL_PREFERRED_PARTNERS);
   return data?.data;
 };

@@ -12,34 +12,22 @@ import { useMemo, useState } from "react";
 import uniq from "lodash/uniq";
 
 export const getLocationCardColor = (color) => {
-  switch (color) {
-    case "light-blue":
-      return "#D9E4FC";
-    case "yellow":
-      return "#FFC300";
-    case "bone":
-      return "#DFD4AD";
-    case "purple":
-      return "#D5D1EA";
-    case "light-purple":
-      return "#ECECFD";
-    case "light-yellow":
-      return "#FFDA7F";
-    case "light-green":
-      return "#BBE4D7";
-    case "green":
-      return "#80CEB7";
-    case "deep-purple":
-      return "#8196CC";
-    case "orange":
-      return "#FF9500";
-    case "pink":
-      return "#FC8B99";
-    case "brown":
-      return "#C68443";
-    default:
-      return "#FFC300";
-  }
+  const color_map = {
+    "light-blue": "#D9E4FC",
+    yellow: "#FFC300",
+    bone: "#DFD4AD",
+    purple: "#D5D1EA",
+    "light-purple": "#ECECFD",
+    "light-yellow": "#FFDA7F",
+    "light-green": "#BBE4D7",
+    green: "#80CEB7",
+    orange: "#FF9500",
+    brown: "#C68443",
+    pink: "#FC8B99",
+    "deep-purple": "#8196CC",
+  };
+
+  return color_map[color] || color_map.yellow;
 };
 
 export const getServerSideProps = async () => {
@@ -90,7 +78,6 @@ const locations = ({ locations }) => {
   const filteredItems = useMemo(() => {
     const filtered =
       locationItems?.filter((item) => {
-
         // Filter out if endDate has passed today
         const isValidDate =
           item?.endDate && new Date(item.endDate) > new Date();

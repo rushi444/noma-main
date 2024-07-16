@@ -42,7 +42,7 @@ const ConnectWithUs = () => {
             onClick={() =>
               window.open(
                 "https://lp.noma-collective.com/schedule-your-meeting-page",
-                "_blank"
+                "_self"
               )
             }
           >
@@ -54,7 +54,7 @@ const ConnectWithUs = () => {
             onClick={() =>
               window.open(
                 "https://lp.noma-collective.com/schedule-your-meeting-page",
-                "_blank"
+                "_self"
               )
             }
           >

@@ -1,4 +1,3 @@
-import { faqList } from "@/components/common/Helper";
 import { SelectDownArrow } from "@/components/common/Icons";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import React from "react";

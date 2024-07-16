@@ -2,6 +2,40 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { FooterLine, LogoIcon } from "./Icons";
 import SignUpModal from "./SignUpModal";
+import Image from "next/image";
+
+const socialLinks = [
+  {
+    href: "https://www.instagram.com/nomacollectivehq",
+    src: "/img/socials/instagram.png",
+    alt: "Instagram",
+  },
+  {
+    href: "https://www.facebook.com/nomacollectiveHQ/",
+    src: "/img/socials/facebook.png",
+    alt: "Facebook",
+  },
+  {
+    href: "https://twitter.com/noma_collective?lang=en",
+    src: "/img/socials/twitter.png",
+    alt: "Twitter",
+  },
+  {
+    href: "https://www.linkedin.com/company/nomacollective",
+    src: "/img/socials/linkedin.png",
+    alt: "LinkedIn",
+  },
+  {
+    href: "https://www.tiktok.com/@nomacollective",
+    src: "/img/socials/tiktok.png",
+    alt: "TikTok",
+  },
+  {
+    href: "https://www.youtube.com/channel/UCi_aI11Tz4u8JZMLoF2UMGQ",
+    src: "/img/socials/youtube.png",
+    alt: "YouTube",
+  },
+];
 
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,7 +46,7 @@ const Footer = () => {
     setIsModalOpen(false);
   };
   return (
-    <div className='bg-[#666666]'>
+    <div className="bg-[#666666]">
       <div className='bg-cover bg-center mt-[-100px] bg-[url("/img/footer-img.png")] w-full'></div>
       <div className="w-full bg-[#666] sm:h-[500px] -mt-1 md:h-[500px] px-4">
         <div className="bg-[#666666] h-[300px]">
@@ -92,42 +126,17 @@ const Footer = () => {
                 />
               </Link>
               <div className="flex gap-2 mb-2 -mt-8">
-                <Link href="https://www.instagram.com/nomacollectivehq">
-                  <img
-                    src="/img/socials/instagram.png"
-                    style={{ height: "16px", width: "16px" }}
-                  />
-                </Link>
-                <Link href="https://www.facebook.com/nomacollectiveHQ/">
-                  <img
-                    src="/img/socials/facebook.png"
-                    style={{ height: "16px", width: "16px" }}
-                  />
-                </Link>
-                <Link href="https://twitter.com/noma_collective?lang=en">
-                  <img
-                    src="/img/socials/twitter.png"
-                    style={{ height: "16px", width: "16px" }}
-                  />
-                </Link>
-                <Link href="https://www.linkedin.com/company/nomacollective">
-                  <img
-                    src="/img/socials/linkedin.png"
-                    style={{ height: "16px", width: "16px" }}
-                  />
-                </Link>
-                <Link href="https://www.tiktok.com/@nomacollective">
-                  <img
-                    src="/img/socials/tiktok.png"
-                    style={{ height: "16px", width: "16px" }}
-                  />
-                </Link>
-                <Link href="https://www.youtube.com/channel/UCi_aI11Tz4u8JZMLoF2UMGQ">
-                  <img
-                    src="/img/socials/youtube.png"
-                    style={{ height: "16px", width: "16px" }}
-                  />
-                </Link>
+                {socialLinks.map(({ href, src, alt }) => (
+                  <Link key={href} href={href}>
+                    <Image
+                      src={src}
+                      alt={alt}
+                      height={16}
+                      width={16}
+                      className="h-[16px] w-[16px]"
+                    />
+                  </Link>
+                ))}
               </div>
             </div>
 
@@ -137,7 +146,6 @@ const Footer = () => {
               <Link href="/news">WHAT'S NEW</Link>
               <Link
                 href="https://lp.noma-collective.com/schedule-your-meeting-page"
-                target="_blank"
                 className="font-bold"
               >
                 BOOK A CALL
@@ -156,7 +164,6 @@ const Footer = () => {
                 <Link href="/news">WHAT'S NEW</Link>
                 <Link
                   href="https://lp.noma-collective.com/schedule-your-meeting-page"
-                  target="_blank"
                   className="font-bold"
                 >
                   BOOK A CALL
@@ -171,42 +178,17 @@ const Footer = () => {
             </div>
 
             <div className="sm:hidden flex justify-center items-center gap-8 mt-8 mb-5">
-              <Link href="https://www.instagram.com/nomacollectivehq">
-                <img
-                  src="/img/socials/instagram.png"
-                  style={{ height: "16px", width: "16px" }}
-                />
-              </Link>
-              <Link href="https://www.facebook.com/nomacollectiveHQ/">
-                <img
-                  src="/img/socials/facebook.png"
-                  style={{ height: "16px", width: "16px" }}
-                />
-              </Link>
-              <Link href="https://twitter.com/noma_collective?lang=en">
-                <img
-                  src="/img/socials/twitter.png"
-                  style={{ height: "16px", width: "16px" }}
-                />
-              </Link>
-              <Link href="https://www.linkedin.com/company/nomacollective">
-                <img
-                  src="/img/socials/linkedin.png"
-                  style={{ height: "16px", width: "16px" }}
-                />
-              </Link>
-              <Link href="https://www.tiktok.com/@nomacollective">
-                <img
-                  src="/img/socials/tiktok.png"
-                  style={{ height: "16px", width: "16px" }}
-                />
-              </Link>
-              <Link href="https://www.youtube.com/channel/UCi_aI11Tz4u8JZMLoF2UMGQ">
-                <img
-                  src="/img/socials/youtube.png"
-                  style={{ height: "16px", width: "16px" }}
-                />
-              </Link>
+              {socialLinks.map(({ href, src, alt }) => (
+                <Link key={href} href={href}>
+                  <Image
+                    src={src}
+                    alt={alt}
+                    height={16}
+                    width={16}
+                    className="h-[16px] w-[16px]"
+                  />
+                </Link>
+              ))}
             </div>
           </div>
         </div>
