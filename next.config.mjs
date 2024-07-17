@@ -10,31 +10,25 @@ const nextConfig = {
   redirects: async () => {
     return [
       {
-        source: "/products/desination-reinvention-candice-denise",
-        destination: "https://www.noma-collective-bookings.com/products/desination-reinvention-candice-denise",
+        source: "/products/:path*",
+        destination: "https://www.noma-collective-bookings.com/products/:path*",
         permanent: true,
         basePath: false,
       },
       {
-        source: "/products/shuffle-dance-edition",
-        destination: "https://www.noma-collective-bookings.com/products/shuffle-dance-edition",
+        source: "/SocialImpact",
+        destination: "https://www.noma-collective-bookings.com/SocialImpact",
         permanent: true,
         basePath: false,
       },
       {
-        source: '/SocialImpact',
-        destination: 'https://www.noma-collective-bookings.com/SocialImpact',
+        source: "/socialimpact",
+        destination: "https://www.noma-collective-bookings.com/SocialImpact",
         permanent: true,
         basePath: false,
       },
-      {
-        source: '/socialimpact',
-        destination: 'https://www.noma-collective-bookings.com/SocialImpact',
-        permanent: true,
-        basePath: false,
-      }
     ];
-  }
+  },
 };
 
 export default nextConfig;
