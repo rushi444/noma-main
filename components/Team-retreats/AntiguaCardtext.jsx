@@ -13,7 +13,7 @@ const AntiguaCardtext = () => {
         views of the unbelievable Volcan Acatenango and end the day with a
         refreshing dip in the pool.
       </p>
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-5 md:gap-10 xl:gap-[63px] w-full">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-5 lg:gap-10 xl:gap-[63px] w-full">
         {belizeChart.map((item, index) => (
           <>
             <Chart

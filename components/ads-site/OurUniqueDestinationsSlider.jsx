@@ -78,7 +78,7 @@ export default function OurUniqueDestinationsSlider({ locations }) {
         ref={swiperRef}
       >
         {featured.map((items, index) => (
-          <SwiperSlide>
+          <SwiperSlide key={index}>
             <section
               key={index}
               className="max-w-[328px] pt-8 pb-16  w-full  mx-auto  "
