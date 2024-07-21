@@ -93,6 +93,28 @@ export const whatWeOfferCardData = [
     text: "Our support extends far beyond the Edition - we always have your back. From ensuring an integrated and unique experience from our on-site and local community managers to our specialized alumni Slack channel, offering guidance and recommendations whenever you need them..",
   },
 ];
+export const whatYourExpectData = [
+  {
+    heading: "Location",
+    src: "/img/comunity-card-img.jpg",
+    text: "All our locations are hand-picked, stunning accommodations with private spaces for all the team. Plus you’ll be supported by a local community manager to make sure all logistics are handled expertly and quickly.",
+  },
+  {
+    heading: "Work",
+    src: "/img/experiences-card-img.jpg",
+    text: "Working spaces on-site are always picked with high speed wifi, as well as inbuilt opportunities for skill sharing, such as  workshops and team activities. Whatever your group needs, we’ll work to facilitate.",
+  },
+  {
+    heading: "Community",
+    src: "/img/plugandplay-card-img.jpg",
+    text: "Expect to be connected to the locals through community outreach and unique experiences during your trip. Plus, your team will have access to our global Slack channel 800+ alumni - a lifelong business network.",
+  },
+  {
+    heading: "Adventure",
+    src: "/img/hugging.png",
+    text: "We adapt your event schedule to suit your group, baking in perfect activities outside of your work hours to make the most of your trip. With insider local knowledge, it’s the best way to explore these amazing places, without lifting a finger.",
+  },
+];
 export const newsCardsData = [
   {
     btn: "Locations Lowdowns",
@@ -583,16 +605,16 @@ export const getWhatsIncludedImage = (title) => {
     return "/img/what-included-7.png";
   }
 
-  if(title?.toLowerCase().includes('airport')){
+  if (title?.toLowerCase().includes("airport")) {
     return "/img/what-included-10.png";
   }
-  if(title?.toLowerCase().includes('guest lead')){
+  if (title?.toLowerCase().includes("guest lead")) {
     return "/img/what-included-11.png";
   }
-  if(title?.toLowerCase().includes('private apartment')){
+  if (title?.toLowerCase().includes("private apartment")) {
     return "/img/what-included-12.png";
   }
-  if(title?.toLowerCase().includes('other inclusions')){
+  if (title?.toLowerCase().includes("other inclusions")) {
     return "/img/what-included-10.png";
   }
 };
@@ -848,5 +870,96 @@ export const faqList = [
   {
     question: "What are the downsides of being a digital nomad?",
     answer: `We explore these topics further on our blog, LinkedIn and other social media platforms. There are also some great online materials and YouTube vlogs that can provide some insight into this.`,
+  },
+];
+export const WhatToExpectCardData = [
+  {
+    heading: "Location",
+    src: "/img/Aesthetic-Modern.png",
+    text: "All our locations are hand-picked, stunning accommodations with private spaces for all the team. Plus you'll be supported by a local community manager to make sure all logistics are handled expertly and quickly.",
+  },
+  {
+    heading: "Work",
+    src: "/img/Aesthetic-Modern2.png",
+    text: "Working spaces on-site are always picked with high speed wifi, as well as inbuilt opportunities for skill sharing, such as  workshops and team activities. Whatever your group needs, we'll work to facilitate.",
+  },
+  {
+    heading: "Community",
+    src: "/img/Aesthetic-Modern3.png",
+    text: "Expect to be connected to the locals through community outreach and unique experiences during your trip. Plus, your team will have access to our global Slack channel 800+ alumni - a lifelong business network.",
+  },
+  {
+    heading: "Adventure",
+    src: "/img/Aesthetic-Modern4.png",
+    text: "We adapt your event schedule to suit your group, baking in perfect activities outside of your work hours to make the most of your trip. With insider local knowledge, it's the best way to explore these amazing places, without lifting a finger.",
+  },
+];
+export const belizeChart = [
+  {
+    color: "#FC5B67",
+    text: "Foodie",
+    textb: "heaven",
+    img: "/img/foodie-heaven.png",
+    percent: "70",
+  },
+  {
+    color: "#8196CC",
+    text: "Wellness &  ",
+    textb: "relaxation",
+    img: "/img/wellness-relaxation.png",
+    percent: "40",
+  },
+  {
+    color: "#FFC300",
+    text: "Nightlife & ",
+    textb: "partying",
+    img: "/img/nightlife-partying.png",
+    percent: "50",
+  },
+  {
+    color: "#80CEB7",
+    text: "Nature & ",
+    textb: "wildlife",
+    img: "/img/nature-wildlife.png",
+    percent: "80",
+  },
+  {
+    color: "#FF9500",
+    text: "Activity &  ",
+    textb: "fitness",
+    img: "/img/activity-fitness.png",
+    percent: "60",
+  },
+];
+export const BasicFaqsMapData = [
+  {
+    bg: "bg-[#ECECFD]",
+    title: "Is Belize the only available destination?",
+    description:
+      "No - we can offer other destinations for smaller group sizes of 8-10 people.",
+  },
+  {
+    bg: "bg-[#FCD9DF]",
+    title: "Do you book our flights?",
+    description:
+      "No - we can offer other destinations for smaller group sizes of 8-10 people.",
+  },
+  {
+    bg: "bg-[#BBE4D7]",
+    title: "How long should our retreat last?",
+    description:
+      "No - we can offer other destinations for smaller group sizes of 8-10 people.",
+  },
+  {
+    bg: "bg-[#D9E4FC]",
+    title: "How many people can you accommodate comfortably?",
+    description:
+      "No - we can offer other destinations for smaller group sizes of 8-10 people.",
+  },
+  {
+    bg: "bg-[#FCD9DF]",
+    title: "How far in advance do we need to book? ",
+    description:
+      "No - we can offer other destinations for smaller group sizes of 8-10 people. ",
   },
 ];
