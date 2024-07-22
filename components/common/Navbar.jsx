@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaqsIcons, LogoIcon, MenuIcon } from "./Icons";
 import Link from "next/link";
 import { navLinksData } from "./Helper";
@@ -16,7 +16,6 @@ const Navbar = () => {
       document.body.classList.remove("sidebar-open");
     }
 
-    // Clean up the effect
     return () => {
       document.body.classList.remove("sidebar-open");
     };
@@ -80,11 +79,17 @@ const Navbar = () => {
               </div>
               {showInfoDropdown && (
                 <div className="absolute -bottom-[105px] right-0 p-4 w-[150px] bg-white rounded shadow-2xl z-50 flex items-center flex-col justify-center gap-4 text-base text-[#313131] font-Montserrat leading-normal">
-                  <Link href="#" className="hover:font-bold duration-300">
-                    Info 1
+                  <Link
+                    href="/team-retreats"
+                    className="hover:font-bold duration-300"
+                  >
+                    Team retreats
                   </Link>
-                  <Link href="#" className="hover:font-bold duration-300">
-                    Info 2
+                  <Link
+                    href="/adssite"
+                    className="hover:font-bold duration-300"
+                  >
+                    Ads site
                   </Link>
                 </div>
               )}

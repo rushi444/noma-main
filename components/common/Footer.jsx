@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { useState } from "react";
-import { FooterLine } from "./Icons";
+import React, { useState } from "react";
+import { FooterLine, LogoIcon } from "./Icons";
+import SignUpModal from "./SignUpModal";
 import Image from "next/image";
 
 const socialLinks = [
@@ -38,63 +39,79 @@ const socialLinks = [
 
 const Footer = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
   const handleOpenModal = () => {
     setIsModalOpen(true);
   };
-
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
-
   return (
-    <>
-      <div className='bg-cover bg-right lg:bg-center h-[100px] bg-[url("/img/footer-img.png")] w-full'></div>
-      <div className="w-full bg-[#666] px-4">
-        <div className="pt-10 md:pt-20 lg:pt-[100px] pb-[46px] sm:flex sm:flex-col sm:justify-center sm:items-center">
-          <p className="text-white text-center font-sergio-trendy text-2xl sm:text-4xl md:text-5xl leading-[120%] font-extrabold mb-5 md:mb-10">
+    <div className="bg-[#666666]">
+      <div className='bg-cover bg-center mt-[-100px] bg-[url("/img/footer-img.png")] w-full'></div>
+      <div className="w-full bg-[#666] sm:h-[500px] -mt-1 md:h-[500px] px-4">
+        <div className="bg-[#666666] h-[300px]">
+          <iframe
+            src="https://link.jbenquet.com/widget/form/SO8up6ErSbXX2VnWL3BX"
+            // style="width:100%;height:100%;border:none;border-radius:36px"
+            className="w-full h-full border-none border-radius-[36px]"
+            id="inline-SO8up6ErSbXX2VnWL3BX"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Footer"
+            data-height="400"
+            data-layout-iframe-id="inline-SO8up6ErSbXX2VnWL3BX"
+            data-form-id="SO8up6ErSbXX2VnWL3BX"
+            title="Footer"
+          ></iframe>
+          <script src="https://link.jbenquet.com/js/form_embed.js"></script>
+        </div>
+        <div className="py-4 sm:flex sm:flex-col sm:justify-center sm:items-center mt-4">
+          {/* <p className="text-white text-center font-sergio-trendy text-2xl sm:text-4xl leading-[120%] font-extrabold mb-4 sm:mb-0">
             Sign up for our <br className="block sm:hidden" /> mailer
           </p>
-          {/* Mail input */}
-          <div className="mb-4 sm:mb-8 md:mb-[10] lg:mb-[82px]">
+          <div className="mb-4 sm:mb-8">
             <div className="sm:hidden flex justify-between items-center gap-3">
               <input
                 type="text"
                 placeholder="Name"
-                className="px-4 py-2 border rounded-full text-gray-700 focus:outline-none focus:border-blue-500 max-w-[550px] w-full"
+                className=" px-4 py-2 border rounded-full text-gray-700 focus:outline-none focus:border-blue-500 max-w-[550px] w-full"
               />
               <input
                 type="text"
                 placeholder="Last name"
-                className="px-4 py-2 border rounded-full text-gray-700 focus:outline-none focus:border-blue-500 max-w-[550px] w-full"
+                className=" px-4 py-2 border rounded-full text-gray-700 focus:outline-none focus:border-blue-500 max-w-[550px] w-full"
               />
             </div>
-            <div className="flex justify-center gap-4 md:gap-6 mt-2">
+            <div className="flex justify-center gap-2 mt-2">
               <input
                 type="text"
                 placeholder="Email"
-                className="max-w-[595px] w-full px-4 py-2 border rounded-full text-gray-700 focus:outline-none focus:border-blue-500"
+                className=" px-4 py-2 border rounded-full text-gray-700 focus:outline-none focus:border-blue-500 max-w-[550px] w-full"
               />
               <button
                 onClick={handleOpenModal}
-                className="hidden sm:flex p-2 max-w-[217px] w-full h-[42px] items-center justify-center bg-main-orange rounded-[28px] text-white text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
+                className="hidden sm:flex p-2 max-w-[182px] w-full h-[42px] items-center justify-center bg-main-orange rounded-[28px] text-white text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
               >
                 LET'S CONNECT
               </button>
             </div>
-            <p className="max-w-[837px] text-xs sm:text-base mt-2 px-2 text-[#C4C4C4]">
+            <p className="text-xs mt-2 px-2" style={{ color: "#C4C4C4" }}>
               Submitting this forms means you opt in to receive communication
               from us and read about our latest updates. You can unsubscribe at
               any time.
-            </p>
+            </p>{" "}
           </div>
-          {/* Submit button for small screens */}
           <button
             onClick={handleOpenModal}
             className="flex sm:hidden m-auto p-2 w-[182px] h-[42px] items-center justify-center bg-main-orange rounded-[28px] text-white text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange mb-6"
           >
             SUBMIT
-          </button>
+          </button> */}
 
           <span className=" max-w-full block sm:hidden py-6">
             <FooterLine />
@@ -176,7 +193,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </>
+      {/* <SignUpModal isClose={handleCloseModal} isOpen={isModalOpen} /> */}
+    </div>
   );
 };
 
