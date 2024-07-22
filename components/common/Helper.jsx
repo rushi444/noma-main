@@ -1,5 +1,3 @@
-import OurUniqueDestinationsSlider2 from "../ads-site/OurUniqueDestinationsSlider2";
-
 export const highLightCardsData = [
   {
     btn: "Hike",
@@ -1068,5 +1066,216 @@ export const belizeChart = [
     textb: "fitness",
     img: "/img/activity-fitness.png",
     percent: "60",
+  },
+];
+
+export const suggestedLocationsData = [
+  {
+    id: 0,
+    timezone: "GMT + 3",
+    tempInCelsius: 30,
+    tempInFahrenheit: 86,
+    cardImages: [
+      { id: 0, src: "/img/loctionswiper-img.png" },
+      { id: 1, src: "/img/loctionswiper-img.png" },
+      { id: 2, src: "/img/loctionswiper-img.png" },
+      { id: 3, src: "/img/loctionswiper-img.png" },
+    ],
+    cardText: "Placencia, <br /> Belize",
+    detailText:
+      "Embark on an unforgettable journey to paradise at our Noma HQ in Umaya Resort. Your team will flourish in this idyllic beachfront location as they get inspired by the breathtaking surroundings. After work, rejuvenate with our carefully curated activities – paddleboarding, kayaking, catamaran trips, snorkeling, and waterfall hikes.",
+    chartsData: [
+      {
+        id: 0,
+        chartName: "Foodie <br /> heaven",
+        chartPercent: 70,
+        chartColor: "#FC5B67",
+        img: "/img/foodie-heaven.png",
+      },
+      {
+        id: 1,
+        chartName: "Wellness & <br /> relaxation",
+        chartPercent: 40,
+        chartColor: "#8196CC",
+        img: "/img/wellness-relaxation.png",
+      },
+      {
+        id: 2,
+        chartName: "Nightlife & <br /> partying",
+        chartPercent: 50,
+        chartColor: "#FFC300",
+        img: "/img/nightlife-partying.png",
+      },
+      {
+        id: 3,
+        chartName: "Nature & <br /> wildlife",
+        chartPercent: 80,
+        chartColor: "#80CEB7",
+        img: "/img/nature-wildlife.png",
+      },
+      {
+        id: 4,
+        chartName: "Activity & <br /> fitness",
+        chartPercent: 60,
+        chartColor: "#FF9500",
+        img: "/img/activity-fitness.png",
+      },
+    ],
+  },
+  {
+    id: 1,
+    timezone: "GMT",
+    tempInCelsius: 25,
+    tempInFahrenheit: 77,
+    cardImages: [
+      { id: 0, src: "/img/loctionswiper-img2.png" },
+      { id: 1, src: "/img/loctionswiper-img2.png" },
+      { id: 2, src: "/img/loctionswiper-img2.png" },
+      { id: 3, src: "/img/loctionswiper-img2.png" },
+    ],
+    cardText: "Bocas Del Toro, <br /> Panama",
+    detailText:
+      "Escape to Bocas Del Toro, Panama a stunning archipelago featuring stunning beaches and tropical rainforests. You'll live in breathtaking eco-friendly domes in the heart of the tropical jungle, the perfect location to recharge as a team. This resort is purpose-built for nomads and its dedicated co-working space is designed to ensure a productive and motivating work environment.",
+    chartsData: [
+      {
+        id: 0,
+        chartName: "Foodie <br /> heaven",
+        chartPercent: 70,
+        chartColor: "#FC5B67",
+        img: "/img/foodie-heaven.png",
+      },
+      {
+        id: 1,
+        chartName: "Wellness & <br /> relaxation",
+        chartPercent: 40,
+        chartColor: "#8196CC",
+        img: "/img/wellness-relaxation.png",
+      },
+      {
+        id: 2,
+        chartName: "Nightlife & <br /> partying",
+        chartPercent: 50,
+        chartColor: "#FFC300",
+        img: "/img/nightlife-partying.png",
+      },
+      {
+        id: 3,
+        chartName: "Nature & <br /> wildlife",
+        chartPercent: 80,
+        chartColor: "#80CEB7",
+        img: "/img/nature-wildlife.png",
+      },
+      {
+        id: 4,
+        chartName: "Activity & <br /> fitness",
+        chartPercent: 60,
+        chartColor: "#FF9500",
+        img: "/img/activity-fitness.png",
+      },
+    ],
+  },
+  {
+    id: 2,
+    timezone: "GMT - 6",
+    tempInCelsius: 24,
+    tempInFahrenheit: 76,
+    cardImages: [
+      { id: 0, src: "/img/loctionswiper-img3.png" },
+      { id: 1, src: "/img/loctionswiper-img3.png" },
+      { id: 2, src: "/img/loctionswiper-img3.png" },
+      { id: 3, src: "/img/loctionswiper-img3.png" },
+    ],
+    cardText: "Antigua, <br /> Guatemala",
+    detailText:
+      "Our explosive Edition in Antigua, Guatemala, has you exploring everything this hidden beauty has to offer. Join your team to kick off the workday with some yoga on the rooftop terrace as you take in the views of the unbelievable Volcan Acatenango and end the day with a refreshing dip in the pool.",
+    chartsData: [
+      {
+        id: 0,
+        chartName: "Foodie <br /> heaven",
+        chartPercent: 70,
+        chartColor: "#FC5B67",
+        img: "/img/foodie-heaven.png",
+      },
+      {
+        id: 1,
+        chartName: "Wellness & <br /> relaxation",
+        chartPercent: 40,
+        chartColor: "#8196CC",
+        img: "/img/wellness-relaxation.png",
+      },
+      {
+        id: 2,
+        chartName: "Nightlife & <br /> partying",
+        chartPercent: 50,
+        chartColor: "#FFC300",
+        img: "/img/nightlife-partying.png",
+      },
+      {
+        id: 3,
+        chartName: "Nature & <br /> wildlife",
+        chartPercent: 80,
+        chartColor: "#80CEB7",
+        img: "/img/nature-wildlife.png",
+      },
+      {
+        id: 4,
+        chartName: "Activity & <br /> fitness",
+        chartPercent: 60,
+        chartColor: "#FF9500",
+        img: "/img/activity-fitness.png",
+      },
+    ],
+  },
+  {
+    id: 3,
+    timezone: "GMT - 6",
+    tempInCelsius: 31,
+    tempInFahrenheit: 89,
+    cardImages: [
+      { id: 0, src: "/img/loctionswiper-img4.png" },
+      { id: 1, src: "/img/loctionswiper-img4.png" },
+      { id: 2, src: "/img/loctionswiper-img4.png" },
+      { id: 3, src: "/img/loctionswiper-img4.png" },
+    ],
+    cardText: "Playa Grande, <br /> Costa Rica",
+    detailText:
+      "Located in the laid-back surfer town of Playa Grande, ONDA merges the community feel of a hostel with the luxuries of a hotel. Their dedicated co-work space allows for a peaceful and comfortable working environment. Your team will be living the pura vida dream as they recharge in this digital nomad paradise.",
+    chartsData: [
+      {
+        id: 0,
+        chartName: "Foodie <br /> heaven",
+        chartPercent: 70,
+        chartColor: "#FC5B67",
+        img: "/img/foodie-heaven.png",
+      },
+      {
+        id: 1,
+        chartName: "Wellness & <br /> relaxation",
+        chartPercent: 40,
+        chartColor: "#8196CC",
+        img: "/img/wellness-relaxation.png",
+      },
+      {
+        id: 2,
+        chartName: "Nightlife & <br /> partying",
+        chartPercent: 50,
+        chartColor: "#FFC300",
+        img: "/img/nightlife-partying.png",
+      },
+      {
+        id: 3,
+        chartName: "Nature & <br /> wildlife",
+        chartPercent: 80,
+        chartColor: "#80CEB7",
+        img: "/img/nature-wildlife.png",
+      },
+      {
+        id: 4,
+        chartName: "Activity & <br /> fitness",
+        chartPercent: 60,
+        chartColor: "#FF9500",
+        img: "/img/activity-fitness.png",
+      },
+    ],
   },
 ];

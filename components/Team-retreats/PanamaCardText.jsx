@@ -14,8 +14,8 @@ const PanamaCardtext = () => {
         and its dedicated co-working space is designed to ensure a productive
         and motivating work environment.
       </p>
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-5 lg:gap-10 xl:gap-[63px] w-full">
-        {belizeChart.map((item, index) => (
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5  gap-5 md:gap-10 xl:gap-[63px] w-full">
+      {belizeChart.map((item, index) => (
           <>
             <Chart
               color={item.color}

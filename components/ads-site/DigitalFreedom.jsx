@@ -41,7 +41,6 @@ const DigitalFreedom = () => {
             src="/img/digital-freedom.png"
             width={618}
             height={488}
-            alt="digital freedom img"
           />
         </article>
       </div>
