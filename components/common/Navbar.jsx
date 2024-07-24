@@ -59,7 +59,7 @@ const Navbar = () => {
             ))}
 
             {/* Info dropdown */}
-            <button
+            {/* <button
               onClick={() => setShowInfoDropdown(!showInfoDropdown)}
               className="flex items-center justify-center gap-[10px] group relative"
             >
@@ -76,7 +76,7 @@ const Navbar = () => {
                 }`}
               >
                 <FaqsIcons />
-              </div>
+              </div> */}
               {/* {showInfoDropdown && (
                 <div className="absolute -bottom-[105px] right-0 p-4 w-[150px] bg-white rounded shadow-2xl z-50 flex items-center flex-col justify-center gap-4 text-base text-[#313131] font-Montserrat leading-normal">
                   <Link
@@ -93,8 +93,8 @@ const Navbar = () => {
                   </Link>
                 </div>
               )} */}
-            </button>
-          </div>
+            {/* </button>
+          </div> */}
 
           {/* Book your call */}
           <div>
