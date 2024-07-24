@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { featuredBlogsBgs } from "../utils/Functions";
 export const colorLookup = {
-  'Location Lowdowns': '#BBE4D7',
-  'Travel Tips': '#FFDA7F',
-  'Remote Life': '#D5D1EA',
-  'Alum-News': '#BBE4D7'
-}
+  "Location Lowdowns": "#BBE4D7",
+  "Travel Tips": "#FFDA7F",
+  "Remote Life": "#D5D1EA",
+  "Alum-News": "#BBE4D7",
+};
 
 const OpenBlogIntrestedCard = ({ item }) => {
   const BgColor = featuredBlogsBgs({ item });
@@ -20,8 +20,8 @@ const OpenBlogIntrestedCard = ({ item }) => {
         >
           {item?.category}
         </button>
-        <div className={`w-[328px] ${item?.cardImage?.url ? '' : 'invisible'}`}>
-          <Image
+        <div className={`w-[328px] ${item?.cardImage?.url ? "" : "invisible"}`}>
+          <img
             className="rounded-lg mt-2 object-fit h-[328px] w-[328px] object-cover"
             src={item?.cardImage?.url}
             alt={item?.cardImage?.title}
@@ -31,7 +31,7 @@ const OpenBlogIntrestedCard = ({ item }) => {
         <h1 className="text-carbon-Black font-Montserrat text-2xl lg:text-2xl font-extrabold mt-2">
           {item.title}
         </h1>
-        <p>{item?.excerpt || ''}</p>
+        <p>{item?.excerpt || ""}</p>
       </div>
     </>
   );
