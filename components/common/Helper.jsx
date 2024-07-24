@@ -583,16 +583,16 @@ export const getWhatsIncludedImage = (title) => {
     return "/img/what-included-7.png";
   }
 
-  if(title?.toLowerCase().includes('airport')){
+  if (title?.toLowerCase().includes("airport")) {
     return "/img/what-included-10.png";
   }
-  if(title?.toLowerCase().includes('guest lead')){
+  if (title?.toLowerCase().includes("guest lead")) {
     return "/img/what-included-11.png";
   }
-  if(title?.toLowerCase().includes('private apartment')){
+  if (title?.toLowerCase().includes("private apartment")) {
     return "/img/what-included-12.png";
   }
-  if(title?.toLowerCase().includes('other inclusions')){
+  if (title?.toLowerCase().includes("other inclusions")) {
     return "/img/what-included-10.png";
   }
 };
@@ -848,5 +848,434 @@ export const faqList = [
   {
     question: "What are the downsides of being a digital nomad?",
     answer: `We explore these topics further on our blog, LinkedIn and other social media platforms. There are also some great online materials and YouTube vlogs that can provide some insight into this.`,
+  },
+];
+export const BasicFaqsMapData = [
+  {
+    bg: "bg-[#ECECFD]",
+    title: "Is Belize the only available destination?",
+    description:
+      "No - we can offer other destinations for smaller group sizes of 8-10 people.",
+  },
+  {
+    bg: "bg-[#FCD9DF]",
+    title: "Do you book our flights?",
+    description:
+      "No - we can offer other destinations for smaller group sizes of 8-10 people.",
+  },
+  {
+    bg: "bg-[#BBE4D7]",
+    title: "How long should our retreat last?",
+    description:
+      "No - we can offer other destinations for smaller group sizes of 8-10 people.",
+  },
+  {
+    bg: "bg-[#D9E4FC]",
+    title: "How many people can you accommodate comfortably?",
+    description:
+      "No - we can offer other destinations for smaller group sizes of 8-10 people.",
+  },
+  {
+    bg: "bg-[#FCD9DF]",
+    title: "How far in advance do we need to book? ",
+    description:
+      "No - we can offer other destinations for smaller group sizes of 8-10 people. ",
+  },
+];
+
+export const whatWeOfferCardData2 = [
+  {
+    heading: "Community",
+    src: "/img/Aesthetic-Modern.png",
+    text: "Our community is what makes us truly unique. You'll connect with a network of like-minded individuals, forging lifelong friendships and unlocking a world of personal and professional growth. Tap into the alumni network for career opportunities, skill sharing and invaluable connections.",
+  },
+  {
+    heading: "Experiences",
+    src: "/img/Aesthetic-Modern2.png",
+    text: "Experience the extraordinary with Noma Collective - immerse yourself in unique cultural journeys led by those who know them best. Discover hidden gems, bucket-list opportunities and create memories that will last forever in truly unforgettable locations all over the world.",
+  },
+  {
+    heading: "Plug & Play",
+    src: "/img/Aesthetic-Modern3.png",
+    text: "Our carefully curated Editions seamlessly blend remote work with endless adventure. Our beautiful locations are equipped with reliable Wi-Fi and co-working spaces. Be inspired by your surroundings and never miss a meeting - ensuring that work-from-anywhere is as efficient as it is picturesque.",
+  },
+  {
+    heading: "Support",
+    src: "/img/Aesthetic-Modern4.png",
+    text: "Our support extends far beyond the Edition - we always have your back. From ensuring an integrated and unique experience from our on-site and local community managers to our specialized alumni Slack channel, offering guidance and recommendations whenever you need them..",
+  },
+];
+export const WhatToExpectCardData = [
+  {
+    heading: "Location",
+    src: "/img/Aesthetic-Modern.png",
+    text: "All our locations are hand-picked, stunning accommodations with private spaces for all the team. Plus you'll be supported by a local community manager to make sure all logistics are handled expertly and quickly.",
+  },
+  {
+    heading: "Work",
+    src: "/img/Aesthetic-Modern2.png",
+    text: "Working spaces on-site are always picked with high speed wifi, as well as inbuilt opportunities for skill sharing, such as  workshops and team activities. Whatever your group needs, we'll work to facilitate.",
+  },
+  {
+    heading: "Community",
+    src: "/img/Aesthetic-Modern3.png",
+    text: "Expect to be connected to the locals through community outreach and unique experiences during your trip. Plus, your team will have access to our global Slack channel 800+ alumni - a lifelong business network.",
+  },
+  {
+    heading: "Adventure",
+    src: "/img/Aesthetic-Modern4.png",
+    text: "We adapt your event schedule to suit your group, baking in perfect activities outside of your work hours to make the most of your trip. With insider local knowledge, it's the best way to explore these amazing places, without lifting a finger.",
+  },
+];
+export const featured = [
+  {
+    bgcolor: "#DDDDDD",
+    bg_colour_second: "#ffc300",
+    btn_1: "Time zone: (GMT+3)",
+    btn_2: "28°C | 83°F",
+
+    content_bg: "#DFD4AD",
+    name: "Watamu, Kenya",
+    date: "Mar 3 - Mar 24, 2024",
+    day: "21 days",
+    price: "From $2,150",
+  },
+  {
+    bgcolor: "#FFDA7F",
+    bg_colour_second: "#ECECFD",
+    btn_1: "Time zone: (GMT)",
+    btn_2: "25°C | 77°F",
+
+    content_bg: "#FFDA7F",
+    name: "Lisbon, Portugal",
+    date: "Mar 2 - Mar 31, 2024",
+    day: "21 days",
+    price: "From $2,450",
+  },
+  {
+    bgcolor: "#ECECFD",
+    bg_colour_second: "#D9E4FC",
+    btn_1: "Time zone: (GMT-6)",
+    btn_2: "24°C | 76°F",
+
+    content_bg: "#ECECFD",
+    name: "Antigua, Guatemala",
+    date: "Feb 4 - Feb 25, 2024",
+    day: "21 days",
+    price: "From $2,450",
+  },
+  {
+    bgcolor: "#ddb892",
+    bg_colour_second: "#ffc300",
+    btn_1: "Time zone: (GMT+3)",
+    btn_2: "30°C | 86°F",
+
+    content_bg: "#DFD4AD",
+    name: "Placencia, Belize",
+    date: "May 5 - May 26, 2024",
+    day: "21 days",
+    price: "From $2,150",
+  },
+  {
+    bgcolor: "#FFDA7F",
+    bg_colour_second: "#ECECFD",
+    btn_1: "Time zone: (GMT)",
+    btn_2: "21°C | 70°F",
+
+    content_bg: "#FFDA7F",
+    name: "London,England Festival Edition",
+    date: "May 19 - Jun 3, 2024",
+    day: "15 days",
+    price: "From $500",
+  },
+];
+export const Carmelcardmap = [
+  {
+    img: "/img/Carmellacard-img1.png",
+    text1: "Carmella",
+    paragraph:
+      "As an entrepreneur focused onwellbeing, finding a place that offers a calm, grounded and creative environment is essential to unlocking your inner potential. Thanks Noma Collective for being just that.As an entrepreneur focused on wellbeing, finding a place that offers a calm, grounded and creative environment is essential to unlocking your inner potential. Thanks Noma Collective for being just that.",
+  },
+  {
+    img: "/img/Carmellacard-img2.png",
+    text1: "Adam",
+    paragraph:
+      "Noma Collective was my first step into remote work. As a digital event producer I was nervous but I facilitated events viewed by 1m+ people across 50+ countries. I now have more freelance work than ever before.",
+  },
+  {
+    img: "/img/Carmellacard-img3.png",
+    text1: "Little Boots",
+    paragraph:
+      "I wrote my 4th album at Noma. I've never been so productive. Everyone was supportive and friendly which made the atmosphere electric.",
+  },
+];
+export const whatWeOfferCardData3 = [
+  {
+    heading: "Community",
+    src: "/img/Aesthetic-Modern.png",
+    text: "Our community is what makes us truly unique. You'll connect with a network of like-minded individuals, forging lifelong friendships and unlocking a world of personal and professional growth. Tap into the alumni network for career opportunities, skill sharing and invaluable connections.",
+  },
+  {
+    heading: "Experiences",
+    src: "/img/Aesthetic-Modern2.png",
+    text: "Experience the extraordinary with Noma Collective - immerse yourself in unique cultural journeys led by those who know them best. Discover hidden gems, bucket-list opportunities and create memories that will last forever in truly unforgettable locations all over the world.",
+  },
+  {
+    heading: "Plug & Play",
+    src: "/img/Aesthetic-Modern3.png",
+    text: "Our carefully curated Editions seamlessly blend remote work with endless adventure. Our beautiful locations are equipped with reliable Wi-Fi and co-working spaces. Be inspired by your surroundings and never miss a meeting - ensuring that work-from-anywhere is as efficient as it is picturesque.",
+  },
+  {
+    heading: "Support",
+    src: "/img/Aesthetic-Modern4.png",
+    text: "Our support extends far beyond the Edition - we always have your back. From ensuring an integrated and unique experience from our on-site and local community managers to our specialized alumni Slack channel, offering guidance and recommendations whenever you need them..",
+  },
+];
+export const belizeChart = [
+  {
+    color: "#FC5B67",
+    text: "Foodie",
+    textb: "heaven",
+    img: "/img/foodie-heaven.png",
+    percent: "70",
+  },
+  {
+    color: "#8196CC",
+    text: "Wellness &  ",
+    textb: "relaxation",
+    img: "/img/wellness-relaxation.png",
+    percent: "40",
+  },
+  {
+    color: "#FFC300",
+    text: "Nightlife & ",
+    textb: "partying",
+    img: "/img/nightlife-partying.png",
+    percent: "50",
+  },
+  {
+    color: "#80CEB7",
+    text: "Nature & ",
+    textb: "wildlife",
+    img: "/img/nature-wildlife.png",
+    percent: "80",
+  },
+  {
+    color: "#FF9500",
+    text: "Activity &  ",
+    textb: "fitness",
+    img: "/img/activity-fitness.png",
+    percent: "60",
+  },
+];
+
+export const suggestedLocationsData = [
+  {
+    id: 0,
+    timezone: "GMT + 3",
+    tempInCelsius: 30,
+    tempInFahrenheit: 86,
+    cardImages: [
+      { id: 0, src: "/img/loctionswiper-img.png" },
+      { id: 1, src: "/img/loctionswiper-img.png" },
+      { id: 2, src: "/img/loctionswiper-img.png" },
+      { id: 3, src: "/img/loctionswiper-img.png" },
+    ],
+    cardText: "Placencia, <br /> Belize",
+    detailText:
+      "Embark on an unforgettable journey to paradise at our Noma HQ in Umaya Resort. Your team will flourish in this idyllic beachfront location as they get inspired by the breathtaking surroundings. After work, rejuvenate with our carefully curated activities – paddleboarding, kayaking, catamaran trips, snorkeling, and waterfall hikes.",
+    chartsData: [
+      {
+        id: 0,
+        chartName: "Foodie <br /> heaven",
+        chartPercent: 70,
+        chartColor: "#FC5B67",
+        img: "/img/foodie-heaven.png",
+      },
+      {
+        id: 1,
+        chartName: "Wellness & <br /> relaxation",
+        chartPercent: 40,
+        chartColor: "#8196CC",
+        img: "/img/wellness-relaxation.png",
+      },
+      {
+        id: 2,
+        chartName: "Nightlife & <br /> partying",
+        chartPercent: 50,
+        chartColor: "#FFC300",
+        img: "/img/nightlife-partying.png",
+      },
+      {
+        id: 3,
+        chartName: "Nature & <br /> wildlife",
+        chartPercent: 80,
+        chartColor: "#80CEB7",
+        img: "/img/nature-wildlife.png",
+      },
+      {
+        id: 4,
+        chartName: "Activity & <br /> fitness",
+        chartPercent: 60,
+        chartColor: "#FF9500",
+        img: "/img/activity-fitness.png",
+      },
+    ],
+  },
+  {
+    id: 1,
+    timezone: "GMT",
+    tempInCelsius: 25,
+    tempInFahrenheit: 77,
+    cardImages: [
+      { id: 0, src: "/img/loctionswiper-img2.png" },
+      { id: 1, src: "/img/loctionswiper-img2.png" },
+      { id: 2, src: "/img/loctionswiper-img2.png" },
+      { id: 3, src: "/img/loctionswiper-img2.png" },
+    ],
+    cardText: "Bocas Del Toro, <br /> Panama",
+    detailText:
+      "Escape to Bocas Del Toro, Panama a stunning archipelago featuring stunning beaches and tropical rainforests. You'll live in breathtaking eco-friendly domes in the heart of the tropical jungle, the perfect location to recharge as a team. This resort is purpose-built for nomads and its dedicated co-working space is designed to ensure a productive and motivating work environment.",
+    chartsData: [
+      {
+        id: 0,
+        chartName: "Foodie <br /> heaven",
+        chartPercent: 70,
+        chartColor: "#FC5B67",
+        img: "/img/foodie-heaven.png",
+      },
+      {
+        id: 1,
+        chartName: "Wellness & <br /> relaxation",
+        chartPercent: 40,
+        chartColor: "#8196CC",
+        img: "/img/wellness-relaxation.png",
+      },
+      {
+        id: 2,
+        chartName: "Nightlife & <br /> partying",
+        chartPercent: 50,
+        chartColor: "#FFC300",
+        img: "/img/nightlife-partying.png",
+      },
+      {
+        id: 3,
+        chartName: "Nature & <br /> wildlife",
+        chartPercent: 80,
+        chartColor: "#80CEB7",
+        img: "/img/nature-wildlife.png",
+      },
+      {
+        id: 4,
+        chartName: "Activity & <br /> fitness",
+        chartPercent: 60,
+        chartColor: "#FF9500",
+        img: "/img/activity-fitness.png",
+      },
+    ],
+  },
+  {
+    id: 2,
+    timezone: "GMT - 6",
+    tempInCelsius: 24,
+    tempInFahrenheit: 76,
+    cardImages: [
+      { id: 0, src: "/img/loctionswiper-img3.png" },
+      { id: 1, src: "/img/loctionswiper-img3.png" },
+      { id: 2, src: "/img/loctionswiper-img3.png" },
+      { id: 3, src: "/img/loctionswiper-img3.png" },
+    ],
+    cardText: "Antigua, <br /> Guatemala",
+    detailText:
+      "Our explosive Edition in Antigua, Guatemala, has you exploring everything this hidden beauty has to offer. Join your team to kick off the workday with some yoga on the rooftop terrace as you take in the views of the unbelievable Volcan Acatenango and end the day with a refreshing dip in the pool.",
+    chartsData: [
+      {
+        id: 0,
+        chartName: "Foodie <br /> heaven",
+        chartPercent: 70,
+        chartColor: "#FC5B67",
+        img: "/img/foodie-heaven.png",
+      },
+      {
+        id: 1,
+        chartName: "Wellness & <br /> relaxation",
+        chartPercent: 40,
+        chartColor: "#8196CC",
+        img: "/img/wellness-relaxation.png",
+      },
+      {
+        id: 2,
+        chartName: "Nightlife & <br /> partying",
+        chartPercent: 50,
+        chartColor: "#FFC300",
+        img: "/img/nightlife-partying.png",
+      },
+      {
+        id: 3,
+        chartName: "Nature & <br /> wildlife",
+        chartPercent: 80,
+        chartColor: "#80CEB7",
+        img: "/img/nature-wildlife.png",
+      },
+      {
+        id: 4,
+        chartName: "Activity & <br /> fitness",
+        chartPercent: 60,
+        chartColor: "#FF9500",
+        img: "/img/activity-fitness.png",
+      },
+    ],
+  },
+  {
+    id: 3,
+    timezone: "GMT - 6",
+    tempInCelsius: 31,
+    tempInFahrenheit: 89,
+    cardImages: [
+      { id: 0, src: "/img/loctionswiper-img4.png" },
+      { id: 1, src: "/img/loctionswiper-img4.png" },
+      { id: 2, src: "/img/loctionswiper-img4.png" },
+      { id: 3, src: "/img/loctionswiper-img4.png" },
+    ],
+    cardText: "Playa Grande, <br /> Costa Rica",
+    detailText:
+      "Located in the laid-back surfer town of Playa Grande, ONDA merges the community feel of a hostel with the luxuries of a hotel. Their dedicated co-work space allows for a peaceful and comfortable working environment. Your team will be living the pura vida dream as they recharge in this digital nomad paradise.",
+    chartsData: [
+      {
+        id: 0,
+        chartName: "Foodie <br /> heaven",
+        chartPercent: 70,
+        chartColor: "#FC5B67",
+        img: "/img/foodie-heaven.png",
+      },
+      {
+        id: 1,
+        chartName: "Wellness & <br /> relaxation",
+        chartPercent: 40,
+        chartColor: "#8196CC",
+        img: "/img/wellness-relaxation.png",
+      },
+      {
+        id: 2,
+        chartName: "Nightlife & <br /> partying",
+        chartPercent: 50,
+        chartColor: "#FFC300",
+        img: "/img/nightlife-partying.png",
+      },
+      {
+        id: 3,
+        chartName: "Nature & <br /> wildlife",
+        chartPercent: 80,
+        chartColor: "#80CEB7",
+        img: "/img/nature-wildlife.png",
+      },
+      {
+        id: 4,
+        chartName: "Activity & <br /> fitness",
+        chartPercent: 60,
+        chartColor: "#FF9500",
+        img: "/img/activity-fitness.png",
+      },
+    ],
   },
 ];

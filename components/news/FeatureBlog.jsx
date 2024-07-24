@@ -23,7 +23,7 @@ const FeatureBlog = ({ blogs }) => {
       <div className="max-w-[1120px] pb-[100px] w-full mx-auto px-4 xl:px-0">
         <div className="py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 lg:gap-9 xl:gap-[68px] ">
           {blogs.map((item, index) => (
-            <Link href={`/blog/${item?.sys?.id}`}>
+            <Link key={index} href={`/blog/${item?.sys?.id}`}>
               <OpenBlogIntrestedCard item={item} key={index} />
             </Link>
           ))}
