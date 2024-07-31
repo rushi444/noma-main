@@ -59,7 +59,7 @@ const Navbar = () => {
             ))}
 
             {/* Info dropdown */}
-            {/* <button
+            <button
               onClick={() => setShowInfoDropdown(!showInfoDropdown)}
               className="flex items-center justify-center gap-[10px] group relative"
             >
@@ -76,50 +76,61 @@ const Navbar = () => {
                 }`}
               >
                 <FaqsIcons />
-              </div> */}
-            {/* {showInfoDropdown && (
-                <div className="absolute -bottom-[105px] right-0 p-4 w-[150px] bg-white rounded shadow-2xl z-50 flex items-center flex-col justify-center gap-4 text-base text-[#313131] font-Montserrat leading-normal">
+              </div>
+              {showInfoDropdown && (
+                <div className="absolute -bottom-[200px] p-4 w-[200px] bg-[#F4F1E6] rounded-lg shadow-2xl z-50 flex items-start flex-col justify-center gap-4 text-base text-[#313131] font-Montserrat leading-normal">
                   <Link
                     href="/team-retreats"
                     className="hover:font-bold duration-300"
                   >
                     Team retreats
                   </Link>
-                  <Link
-                    href="/adssite"
+                  {/* <Link
+                    href="/preferred-partners"
                     className="hover:font-bold duration-300"
                   >
-                    Ads site
+                    Preferred Partners
+                  </Link> */}
+                  <Link
+                    href="/faqs"
+                    className="hover:font-bold duration-300"
+                  >
+                    FAQs
+                  </Link>
+                  <Link
+                    href="/contact-us"
+                    className="hover:font-bold duration-300"
+                  >
+                    Contact us
                   </Link>
                 </div>
-              )} */}
-            {/* </button>
-          </div> */}
+              )}
+            </button>
+          </div>
 
-            {/* Book your call */}
-            <div>
-              <button
-                type="submit"
-                className="p-2 w-[182px] h-[42px] flex items-center justify-center bg-main-orange rounded-[28px] text-white text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
-                onClick={() =>
-                  window.open(
-                    "https://lp.noma-collective.com/schedule-your-meeting-page",
-                    "_self"
-                  )
-                }
-              >
-                BOOK YOUR CALL
-              </button>
-            </div>
+          {/* Book your call */}
+          <div>
+            <button
+              type="submit"
+              className="p-2 w-[182px] h-[42px] flex items-center justify-center bg-main-orange rounded-[28px] text-white text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
+              onClick={() =>
+                window.open(
+                  "https://lp.noma-collective.com/schedule-your-meeting-page",
+                  "_self"
+                )
+              }
+            >
+              BOOK YOUR CALL
+            </button>
           </div>
         </div>
-        <div
-          className={`absolute top-[81px] block lg:hidden ${
-            sidebar ? "left-0 " : "left-[-150%]"
-          } bg-light-purple w-full h-screen  duration-300 z-[99999] overflow-hidden `}
-        >
-          <Sidebar />
-        </div>
+      </div>
+      <div
+        className={`absolute top-[81px] block lg:hidden ${
+          sidebar ? "left-0 " : "left-[-150%]"
+        } bg-light-purple w-full h-screen  duration-300 z-[99999] overflow-hidden `}
+      >
+        <Sidebar />
       </div>
     </div>
   );

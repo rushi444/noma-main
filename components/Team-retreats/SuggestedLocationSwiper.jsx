@@ -11,19 +11,18 @@ const SuggestedLocationSwiper = ({ images }) => {
       autoplay={{
         delay: 1000,
       }}
-      modules={[Pagination, Autoplay]}
-      className="mySwiper  h-[300px] rounded-t-[16px]"
+      modules={[Pagination]}
+      className="mySwiper h-[328px] w-[328px]"
     >
-      {images.map((image) => (
-        <SwiperSlide key={image.id}>
-          <Image
-            src={image.src}
-            alt="suggested location"
-            width={328}
-            height={328}
-          />
-        </SwiperSlide>
-      ))}
+      <SwiperSlide key={images[0]?.id}>
+        <Image
+          src={images[0]?.src}
+          alt="suggested location"
+          width={328}
+          height={328}
+          className='h-[328px] w-[328px] object-cover rounded-t-[16px]'
+        />
+      </SwiperSlide>
     </Swiper>
   );
 };
