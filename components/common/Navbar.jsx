@@ -30,7 +30,6 @@ const Navbar = () => {
         </div>
         <div>
           <button
-            // type="submit"
             className="p-2 w-[158px] h-[33px] flex items-center justify-center bg-main-orange rounded-[28px] text-white text-sm font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
             onClick={() =>
               window.open(
@@ -91,10 +90,7 @@ const Navbar = () => {
                   >
                     Preferred Partners
                   </Link> */}
-                  <Link
-                    href="/faqs"
-                    className="hover:font-bold duration-300"
-                  >
+                  <Link href="/faqs" className="hover:font-bold duration-300">
                     FAQs
                   </Link>
                   <Link
