@@ -60,7 +60,8 @@ const Navbar = () => {
 
             {/* Info dropdown */}
             <button
-              onClick={() => setShowInfoDropdown(!showInfoDropdown)}
+              onMouseEnter={() => setShowInfoDropdown(!showInfoDropdown)}
+              onMouseLeave={() => setShowInfoDropdown(!showInfoDropdown)}
               className="flex items-center justify-center gap-[10px] group relative"
             >
               <span
@@ -91,10 +92,7 @@ const Navbar = () => {
                   >
                     Preferred Partners
                   </Link> */}
-                  <Link
-                    href="/faqs"
-                    className="hover:font-bold duration-300"
-                  >
+                  <Link href="/faqs" className="hover:font-bold duration-300">
                     FAQs
                   </Link>
                   <Link
