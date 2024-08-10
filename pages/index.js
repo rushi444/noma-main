@@ -31,7 +31,7 @@ export const getServerSideProps = async () => {
 
 export default function Home({ locations, blogs }) {
   const locationItems = locations.contentTypeLocationCollection.items;
-  const [isOpened, setIsOpened] = useState(true);
+  const [isOpened, setIsOpened] = useState(false);
   const handleButtonClick = () => {
     setIsOpened(prev => !prev);
     console.log(isOpened)
