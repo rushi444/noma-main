@@ -172,8 +172,11 @@ const TermsConditions = () => {
         <h2>Cancellation Policy</h2>
         <p>
           Any cancellation of reservations or portions of reservations MUST be
-          received in writing. Bookings made prior to August 19th, 2024:
+          received in writing.   
         </p>
+        <ul>
+          Bookings made prior to August 19th, 2024:
+        <ul>
         <ul>
           <li>
             60 days or more prior to arrival = The amount of the deposit made, 
@@ -183,7 +186,8 @@ const TermsConditions = () => {
           <li>0 - 60 days prior to arrival = No refund</li>
           <li>No show = No refund</li>
           <li>All shared accommodation is non-transferable</li>
-        <p>
+        <ul>
+        <ul>      
           Bookings made after August 19th, 2024:
         <ul>
           <li>
