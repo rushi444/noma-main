@@ -4,8 +4,8 @@ import React from "react";
 const TermsConditions = () => {
   return (
     <Layout>
-      <div className='max-w-[1000px] m-auto terms-conditions px-4'>
-        <h1 className='text-center'>Terms & Conditions</h1>
+      <div className="max-w-[1000px] m-auto terms-conditions px-4">
+        <h1 className="text-center">Terms & Conditions</h1>
 
         <h2>Background</h2>
         <p>
@@ -172,160 +172,42 @@ const TermsConditions = () => {
         <h2>Cancellation Policy</h2>
         <p>
           Any cancellation of reservations or portions of reservations MUST be
-          received in writing.   
+          received in writing.
         </p>
         <ul>
-          Bookings made prior to August 19th, 2024:
-        <ul>
-        <ul>
-          <li>
-            60 days or more prior to arrival = The amount of the deposit made, 
-            minus 20% cancellation fee of total trip price (before discounts) + US$100 processing 
-            fee.
-          </li>
-          <li>0 - 60 days prior to arrival = No refund</li>
-          <li>No show = No refund</li>
-          <li>All shared accommodation is non-transferable</li>
-        <ul>
-        <ul>      
-          Bookings made after August 19th, 2024:
-        <ul>
-          <li>
-            90 days or more prior to arrival = The amount of the deposit made, 
-            minus 20% cancellation fee of total trip price (before discounts) + US$100 processing 
-            fee.
-          </li>
-          <li>0 - 90 days prior to arrival = No refund</li>
-          <li>No show = No refund</li>
-          <li>All shared accommodation is non-transferable</li>
+          <li>Bookings made prior to August 19th, 2024:</li>
+          <ul>
+            <li>
+              60 days or more prior to arrival = The amount of the deposit made,
+              minus 20% cancellation fee of total trip price (before discounts)
+              + US$100 processing fee.
+            </li>
+            <li>0 - 60 days prior to arrival = No refund</li>
+            <li>No show = No refund</li>
+            <li>All shared accommodation is non-transferable</li>
+          </ul>
+          <li>Bookings made after August 19th, 2024:</li>
+          <ul>
+            <li>
+              90 days or more prior to arrival = The amount of the deposit made,
+              minus 20% cancellation fee of total trip price (before discounts)
+              + US$100 processing fee.
+            </li>
+            <li>0 - 90 days prior to arrival = No refund</li>
+            <li>No show = No refund</li>
+            <li>All shared accommodation is non-transferable</li>
+          </ul>
         </ul>
         <p>
           Due to the above it is HIGHLY recommended that all clients purchase
           “trip cancellation insurance” in order to cover a possible
           cancellation of 60 days or less of your itinerary.
-        <p>
-          Noma Collective reserves the right to cancel your booking or reject a booking 
-          request based on a person's ability to remote work or value misalignment with 
-          Noma's strong values of community, kindness, optimism, adventure and understanding. 
-          This is not only important to our thriving community but also to our dedicated team, 
-          who work hard to provide the best experience for all of our Noma community.
-        </p>
-
-        <h2>Changes by You & Transfer of Booking</h2>
-        <p>
-          If you wish to change any part of your booking arrangements after the
-          confirmation invoice has been issued, you must inform Noma as soon as
-          possible.
         </p>
         <p>
-          Whilst we will do our best to assist, we cannot guarantee that we will
-          be able to meet your requested change. Where we can meet a request,
-          all changes will be subject to any applicable rate changes or extra
-          costs incurred. You should be aware that these costs could increase
-          the closer to the departure date that changes are made and you should
-          contact us as soon as possible. Where we are unable to assist you and
-          you do not wish to proceed with the original booking we will treat
-          this as a cancellation and subject to the cancellation policy above.
-        </p>
-        <p>
-          If any member of your party is prevented from travelling, that
-          person(s) may transfer their place to someone else (introduced by you
-          and satisfying all the conditions applicable to the arrangements). If
-          they are not able to proceed with the original booking we will treat
-          this as a cancellation and subject to the cancellation policy above.
-        </p>
-
-        <h2>Events Beyond Our Reasonable Control</h2>
-        <p>
-          We will not be held responsible for any delay or failure to comply
-          with our obligations under these conditions if the delay or failure
-          arises from any cause which is beyond our reasonable control. This
-          condition does not affect your statutory rights.
-        </p>
-
-        <h2>Special Requests</h2>
-        <p>
-          If you have any special requests (for example dietary requirements,
-          cots or room location), please let us know at the time of booking. We
-          will make our best good faith efforts to ensure all requests are taken
-          into account.
-        </p>
-
-        <h2>Jurisdiction and Applicable Law</h2>
-        <p>
-          These Booking Conditions and any agreement to which they apply are
-          governed in all respects by the country in which the Property is
-          located. We both agree that any dispute, claim or other matter which
-          arises between us out of or in connection with your contract or
-          booking will be dealt with by the local governing body.
-        </p>
-
-        <h2>Force Majeure</h2>
-        <p>
-          Except where otherwise expressly stated in these booking conditions we
-          will not be liable or pay you compensation if our contractual
-          obligations to you are affected by any event which we or the
-          supplier(s) of the service(s) in question could not, even with all due
-          care, foresee or avoid. These events can include, but are not limited
-          to war, threat of war, civil strife, terrorist activity and its
-          consequences or the threat of such activity, riot, the act of any
-          government or other national or local authority including port or
-          river authorities, industrial dispute, lock closure, natural or
-          nuclear disaster, fire, chemical or biological disaster and adverse
-          weather, sea, ice and river conditions and all similar events outside
-          our or the supplier(s) concerned’s control.
-        </p>
-
-        <h2>Disabilities and Medical Problems</h2>
-        <p>
-          We are not a specialist disabled holiday company, but we will do our
-          utmost to cater for any special requirements you may have. If you or
-          any member of your party has any medical problem or disability which
-          may affect your stay, please provide us with full details before you
-          make your booking so that we can try to advise you as to the
-          suitability of your chosen arrangements. It is your responsibility to
-          provide us with full and accurate details on any special assistance
-          you may require. We may require you to produce a doctor’s certificate
-          certifying that you are fit to participate in your chosen
-          arrangements. Acting reasonably, if we are unable to properly
-          accommodate the needs of the person(s) concerned, we will not confirm
-          your booking or if you did not give us full details at the time of
-          booking, we will cancel it and impose applicable cancellation charges
-          when we become aware of these details.
-        </p>
-
-        <h2>Your Behaviour</h2>
-        <p>
-          All guests staying with us are expected to conduct themselves in an
-          orderly and acceptable manner and not to disrupt the enjoyment of
-          other guests. If in our opinion, or in the opinion of any other person
-          in authority, your behaviour or that of any member of your party is
-          causing or is likely to cause distress, danger or unreasonable
-          annoyance to any of our other guests or any third party or damage to
-          property, or to cause a delay or diversion to transportation, we
-          reserve the right to terminate your booking arrangements immediately.
-        </p>
-        <p>
-          In the event of such termination our liability to you and/or your
-          party will cease and you and/or your party will be required to leave
-          your accommodation or other service immediately. We will have no
-          further obligations to you and/or your party. No refunds for lost
-          accommodation or any other service will be made and we will not pay
-          any expenses or costs incurred as a result of termination.
-        </p>
-        <p>
-          You and/or your party may also be required to pay for loss and/or
-          damage caused by your actions and we will hold you and each member of
-          your party jointly and individually liable for any damage or losses
-          caused by you or any member of your party. Full payment for any such
-          damage or losses must be paid directly to the Property or other
-          supplier prior to departure. If you fail to make payment, you will be
-          responsible for meeting any claims (including legal costs)
-          subsequently made against us as a result of your actions together with
-          all costs we incur in pursuing any claim against you. We cannot be
-          held responsible for the actions or behaviour of other guests or
-          individuals who have no connection with your booking arrangements or
-          with us.
+          Noma Collective reserves the right to cancel your booking or reject a
+          booking request based on a person's ability to remote work or value
+          misalignment with Noma's strong values of community, cultural
+          immersion, respect and professionalism.
         </p>
       </div>
     </Layout>
