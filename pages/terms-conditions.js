@@ -1,6 +1,8 @@
 import Layout from "@/components/common/Layout";
 import React from "react";
 
+// test
+
 const TermsConditions = () => {
   return (
     <Layout>
