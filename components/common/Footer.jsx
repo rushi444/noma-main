@@ -72,7 +72,7 @@ const Footer = () => {
         </div>
         <div className="py-4 sm:flex sm:flex-col sm:justify-center sm:items-center mt-4">
           {/* <p className="text-white text-center font-sergio-trendy text-2xl sm:text-4xl leading-[120%] font-extrabold mb-4 sm:mb-0">
-            Sign up for our <br className="block sm:hidden" /> mailer
+            Sign up for our mailer
           </p>
           <div className="mb-4 sm:mb-8">
             <div className="sm:hidden flex justify-between items-center gap-3">
