@@ -14,7 +14,7 @@ const BasicFaqs = () => {
         <h1 className="text-[#313131] font-sergio-trendy text-[26px] md:text-[36px] lg:text-5xl font-normal leading-normal capitalize text-center">
           FAQs The Basics
         </h1>
-        <div className="lg:mt-[104px] mt-4 sm:mt-8 md:mt-12 flex flex-col gap-4">
+        <div className="lg:mt-[85px] mt-4 sm:mt-8 md:mt-12 flex flex-col gap-4">
           {" "}
           {BasicFaqsMapData.map((item, index) => (
             <TheBasicFaqs
