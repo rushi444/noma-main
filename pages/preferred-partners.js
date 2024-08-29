@@ -29,12 +29,12 @@ const PreferredPartners = ({ preferredPartners }) => {
     <Layout>
       <PageSEO title="Noma - Preferred Partners" />
       <HeroImage bg='url("/img/contact-us-cover.png")' />
-      <div className="mb-[300px] sm:mb-[100px]">
+      <div className="mb-[400px] sm:mb-[150px]">
         <div className="my-4">
-          <Heading heading="Daily Edition" />
+          <Heading heading="Our Preferred Partners" />
         </div>
         <h4 className="font-Montserrat my-4 font-bold text-2xl text-center px-4">
-          Tips and guides for nomads
+          Tools, Resources, and Guides for Nomads
         </h4>
         <div className="m-auto max-w-[1000px]">
           {Object.entries(groupedPartners).map(
