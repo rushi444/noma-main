@@ -1,11 +1,11 @@
 import Layout from "@/components/common/Layout";
 import PageSEO from "@/components/common/PageSEO";
 import ReadOurReviews from "@/components/home/ReadOurReviews";
-import BasicFaqs from "@/components/Team-retreats/BasicFaqs";
-import SuggestedLocations from "@/components/Team-retreats/SuggestedLocations";
-import Teamhero from "@/components/Team-retreats/Teamhero";
-import WhatToExpect from "@/components/Team-retreats/WhatToExpect";
-import WhyNoma from "@/components/Team-retreats/WhyNoma";
+import BasicFaqs from "@/components/Powered-By-Noma/BasicFaqs";
+import SuggestedLocations from "@/components/Powered-By-Noma/SuggestedLocations";
+import Teamhero from "@/components/Powered-By-Noma/Teamhero";
+import WhatToExpect from "@/components/Powered-By-Noma/WhatToExpect";
+import WhyNoma from "@/components/Powered-By-Noma/WhyNoma";
 
 const TeamRetreats = () => {
   return (
