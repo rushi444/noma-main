@@ -24,7 +24,6 @@ const PoweredByNoma = () => {
           <ReadOurReviews />
         </section>
         <BasicFaqs />
-        public/img/footer-img.png
       </main>
     </Layout>
   );
