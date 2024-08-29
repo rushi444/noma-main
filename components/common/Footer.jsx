@@ -95,7 +95,7 @@ const Footer = () => {
               />
               <button
                 onClick={handleOpenModal}
-                className="hidden sm:flex p-2 max-w-[182px] w-full h-[42px] items-center justify-center bg-main-orange rounded-[28px] text-white text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
+                className="hidden sm:flex p-2 max-w-[141px] w-full h-[42px] items-center justify-center bg-main-orange rounded-[28px] text-white text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
               >
                 LET'S CONNECT
               </button>
