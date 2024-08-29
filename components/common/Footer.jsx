@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { FooterLine, LogoIcon } from "./Icons";
 import SignUpModal from "./SignUpModal";
 import Image from "next/image";
+import Image1 from "footer-img.png";
 
 const socialLinks = [
   {
