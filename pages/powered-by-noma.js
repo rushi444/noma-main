@@ -14,7 +14,7 @@ const PoweredByNoma = () => {
       <main className="mb-28">
         <Teamhero
           heading="Powered by Noma"
-          text="Become a Noma Partner and Bring Our Trips to your audience."
+          text="We specialize in curating unique and bespoke in-person retreats for online communities to meet, learn and grow together in beautiful locations around the world."
           btn="Talk To Us"
         />
         <WhatToExpect />
