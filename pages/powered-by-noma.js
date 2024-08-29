@@ -7,7 +7,7 @@ import Teamhero from "@/components/Powered-By-Noma/Teamhero";
 import WhatToExpect from "@/components/Powered-By-Noma/WhatToExpect";
 import WhyNoma from "@/components/Powered-By-Noma/WhyNoma";
 
-const TeamRetreats = () => {
+const PoweredByNoma = () => {
   return (
     <Layout>
       <PageSEO title="Powered by Noma" />
