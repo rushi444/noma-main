@@ -14,6 +14,7 @@ import WhatIncluded from "@/components/editions/WhatIncluded";
 import { getLocationById } from "@/lib/api";
 import { parseISO, format } from "date-fns";
 import React from "react";
+import { useState } from "react";
 
 export const monthNames = [
   "January",
@@ -57,7 +58,10 @@ export const CustomText = ({ text }) => {
         // Check if the part is a comma or parenthesis
         if (part === "," || part === "(" || part === ")") {
           return (
-            <span key={index + 'custom-text'} className="font-serif font-extrabold">
+            <span
+              key={index + "custom-text"}
+              className="font-serif font-extrabold"
+            >
               {part}
             </span>
           );
@@ -97,14 +101,21 @@ const Editions = ({ location }) => {
     whatsIncluded: location?.contentTypeLocation?.facilitiesCollection?.items,
     manager: location?.contentTypeLocation?.managerCollection?.items?.[0],
     highlights: location?.contentTypeLocation?.highlightsCollection?.items,
-    accomodation: location?.contentTypeLocation?.accomodationsCollection?.items.sort((a, b) => a?.price - b?.price),
+    accomodation:
+      location?.contentTypeLocation?.accomodationsCollection?.items.sort(
+        (a, b) => a?.price - b?.price
+      ),
     guestGallery:
       location?.contentTypeLocation?.guestgalleryCollection?.items || [],
     alumniReviews: location?.contentTypeLocation?.alumniReviewCollection?.items,
   };
+  const [isPopUpOpened, setisPopUpOpened] = useState(false);
+  const handleButtonClick = () => {
+    setisPopUpOpened((prev) => !prev);
+  };
 
   return (
-    <Layout>
+    <Layout isPopUpOpenPage={isPopUpOpened}>
       <PageSEO title="Location" />
       <div
         style={{
@@ -140,6 +151,7 @@ const Editions = ({ location }) => {
       <WhatIncluded
         d={locationMapped?.description2}
         items={locationMapped?.whatsIncluded}
+        onClick={handleButtonClick}
       />
       {!!locationMapped?.manager && (
         <ProfileMeet manager={locationMapped?.manager} />

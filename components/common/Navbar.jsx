@@ -4,8 +4,9 @@ import Link from "next/link";
 import { navLinksData } from "./Helper";
 import Sidebar from "./Sidebar";
 import NavbarLinks from "./NavbarLinks";
+import CommonButton from "@/components/common/CommonButton";
 
-const Navbar = () => {
+const Navbar = ({ onClickBookCall }) => {
   const [sidebar, setSidebar] = useState(false);
   const [showInfoDropdown, setShowInfoDropdown] = useState(false);
 
@@ -29,17 +30,11 @@ const Navbar = () => {
           </button>
         </div>
         <div>
-          <button
+          <CommonButton
+            text="BOOK YOUR CALL"
             className="p-2 w-[158px] h-[33px] flex items-center justify-center bg-main-orange rounded-[28px] text-white text-sm font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
-            onClick={() =>
-              window.open(
-                "https://lp.noma-collective.com/schedule-your-meeting-page",
-                "_self"
-              )
-            }
-          >
-            BOOK YOUR CALL
-          </button>
+            onClick={onClickBookCall}
+          />
         </div>
       </div>
       <div className="flex items-center justify-between gap-6 max-lg:hidden">
@@ -109,12 +104,7 @@ const Navbar = () => {
             <button
               type="submit"
               className="p-2 w-[182px] h-[42px] flex items-center justify-center bg-main-orange rounded-[28px] text-white text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
-              onClick={() =>
-                window.open(
-                  "https://lp.noma-collective.com/schedule-your-meeting-page",
-                  "_self"
-                )
-              }
+              onClick={onClickBookCall}
             >
               BOOK YOUR CALL
             </button>
