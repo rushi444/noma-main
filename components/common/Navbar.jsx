@@ -63,7 +63,6 @@ const Navbar = () => {
             <div>
               <button
                 onMouseEnter={() => setShowInfoDropdown(!showInfoDropdown)}
-                // onMouseLeave={() => setShowInfoDropdown(!showInfoDropdown)}
                 className="flex items-center justify-center gap-[10px] group relative"
               >
                 <span
