@@ -17,7 +17,7 @@ const TeamRetreats = () => {
           text="Give your team a break and let us shoulder the burden of planning a memorable and inspiring corporate getaway"
           btn"REQUEST A QUOTE"
          
-<button OnClick=" location.href='https://link.jbenquet.com/widget/form/grwh9ONk3HO0CoIeJZYH' ">Visit Page Now</button>
+<button onclick="visitPage();">Visit Page Now</button>        
         />
         <WhatToExpect />
         <WhyNoma />
