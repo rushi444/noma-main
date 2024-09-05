@@ -53,26 +53,32 @@ const Navbar = ({ onClickBookCall }) => {
             ))}
 
             {/* Info dropdown */}
-            <button
-              onClick={() => setShowInfoDropdown(!showInfoDropdown)}
-              className="flex items-center justify-center gap-[10px] group relative"
-            >
-              <span
-                className={`text-sm lg:text-base text-[#313131] font-Montserrat leading-normal hidden md:block group-hover:font-bold ${
-                  showInfoDropdown ? "font-bold" : "font-normal"
-                }  transition-all duration-300`}
+
+            <div>
+              <button
+                onMouseEnter={() => setShowInfoDropdown(!showInfoDropdown)}
+                className="flex items-center justify-center gap-[10px] group relative"
               >
-                Info
-              </span>
-              <div
-                className={`flex items-center justify-center w-4 transition-all duration-300 ${
-                  showInfoDropdown ? "rotate-180" : "rotate-0"
-                }`}
-              >
-                <FaqsIcons />
-              </div>
+                <span
+                  className={`text-sm lg:text-base text-[#313131] font-Montserrat leading-normal hidden md:block group-hover:font-bold ${
+                    showInfoDropdown ? "font-bold" : "font-normal"
+                  }  transition-all duration-300`}
+                >
+                  Info
+                </span>
+                <div
+                  className={`flex items-center justify-center w-4 transition-all duration-300 ${
+                    showInfoDropdown ? "rotate-180" : "rotate-0"
+                  }`}
+                >
+                  <FaqsIcons />
+                </div>
+              </button>
               {showInfoDropdown && (
-                <div className="absolute -bottom-[200px] p-4 w-[200px] bg-[#F4F1E6] rounded-lg shadow-2xl z-50 flex items-start flex-col justify-center gap-4 text-base text-[#313131] font-Montserrat leading-normal">
+                <div
+                  onMouseLeave={() => setShowInfoDropdown(!showInfoDropdown)}
+                  className="absolute -bottom-[100px] right-[280px] p-4 w-[200px] bg-[#F4F1E6] rounded-lg drop-shadow-[0_0_15px_rgba(0,0,0,0.25)] z-50 flex items-start flex-col justify-center gap-4 text-base text-[#313131] font-Montserrat leading-normal"
+                >
                   <Link
                     href="/team-retreats"
                     className="hover:font-bold duration-300"
@@ -96,7 +102,7 @@ const Navbar = ({ onClickBookCall }) => {
                   </Link>
                 </div>
               )}
-            </button>
+            </div>
           </div>
 
           {/* Book your call */}
