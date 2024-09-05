@@ -3,6 +3,7 @@ import Heading from "@/components/common/Heading";
 import HeroImage from "@/components/common/HeroImage";
 import Layout from "@/components/common/Layout";
 import PageSEO from "@/components/common/PageSEO";
+import ContactUsPopUp from "@/components/common/pop-ups/ContactUsPopUp";
 import Subheading from "@/components/common/Subheading";
 import VideoComponent from "@/components/common/Videocomponent";
 import FeaturedEditionSection from "@/components/home/FeaturedEditionSection";
@@ -13,6 +14,7 @@ import WhatWeOffer from "@/components/home/WhatWeOffer";
 import Steps from "@/components/how-it-work/Steps";
 import { getAllBlogs, getFeaturedEditions } from "@/lib/api";
 import dynamic from "next/dynamic";
+import { useState } from "react";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export const getServerSideProps = async () => {
@@ -29,8 +31,13 @@ export const getServerSideProps = async () => {
 
 export default function Home({ locations, blogs }) {
   const locationItems = locations.contentTypeLocationCollection.items;
+  const [isPopUpOpened, setisPopUpOpened] = useState(false);
+  const handleButtonClick = () => {
+    setisPopUpOpened(prev => !prev);
+  };
+
   return (
-    <Layout>
+    <Layout isPopUpOpenPage={isPopUpOpened}>
       <PageSEO title="Home" />
 
       {/* <HeroImage bg="url('/img/hero-bg.png')" /> */}
@@ -56,15 +63,16 @@ export default function Home({ locations, blogs }) {
       <div className="sm:max-w-[900px] w-full mx-auto pb-3 sm:pb-0">
         <Subheading
           paragraph="Your remote work, done differently. We curate extraordinary 2-4 week
-          trips for remote workers, building a community of like-minded
-          professionals. Whether you work fully remotely or you can take time
-          away from the office, why not embrace the world with us, and redefine
-          your work-life balance."
+        trips for remote workers, building a community of like-minded
+        professionals. Whether you work fully remotely or you can take time
+        away from the office, why not embrace the world with us, and redefine
+        your work-life balance."
         />
       </div>
       {/* <VideoComponent video="/video/sample-video.mp4" /> */}
+
       <div className="sm:mt-8">
-        <CommonButton text="BOOK YOUR CALL" />
+        <CommonButton text="BOOK YOUR CALL" onClick={handleButtonClick} />
       </div>
       <div className="max-sm:mt-[7px]">
         <Steps />
