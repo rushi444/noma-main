@@ -19,8 +19,7 @@ const getStylesWhatsIncludedImage = (title) => {
   return "";
 };
 
-const WhatIncluded = ({ d, items }) => {
-
+const WhatIncluded = ({ d, items, onClick }) => {
   return (
     <>
       <div className="bg-[#FFDA7F]">
@@ -60,12 +59,7 @@ const WhatIncluded = ({ d, items }) => {
               <button
                 type="submit"
                 className="md:max-w-[370px] max-w-[250px] mb-5 w-full py-2 md:py-4 mt-4  rounded-full bg-[#FC5B67] border-[2px] border-[#FC5B67] hover:bg-transparent transition duration-300 ease-in-out  text-[#F7F7F7] font-Montserrat lg:text-[32px] md:text-2xl text-base  font-extrabold leading-normal hover:text-[#FC5B67] "
-                onClick={() =>
-                  window.open(
-                    "https://lp.noma-collective.com/schedule-your-meeting-page",
-                    "_self"
-                  )
-                }
+                onClick={onClick}
               >
                 BOOK YOUR CALL
               </button>

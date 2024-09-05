@@ -4,8 +4,9 @@ import Link from "next/link";
 import { navLinksData } from "./Helper";
 import Sidebar from "./Sidebar";
 import NavbarLinks from "./NavbarLinks";
+import CommonButton from "@/components/common/CommonButton";
 
-const Navbar = () => {
+const Navbar = ({ onClickBookCall }) => {
   const [sidebar, setSidebar] = useState(false);
   const [showInfoDropdown, setShowInfoDropdown] = useState(false);
 
@@ -29,18 +30,11 @@ const Navbar = () => {
           </button>
         </div>
         <div>
-          <button
-            // type="submit"
+          <CommonButton
+            text="BOOK YOUR CALL"
             className="p-2 w-[158px] h-[33px] flex items-center justify-center bg-main-orange rounded-[28px] text-white text-sm font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
-            onClick={() =>
-              window.open(
-                "https://lp.noma-collective.com/schedule-your-meeting-page",
-                "_self"
-              )
-            }
-          >
-            BOOK YOUR CALL
-          </button>
+            onClick={onClickBookCall}
+          />
         </div>
       </div>
       <div className="flex items-center justify-between gap-6 max-lg:hidden">
@@ -59,26 +53,32 @@ const Navbar = () => {
             ))}
 
             {/* Info dropdown */}
-            <button
-              onClick={() => setShowInfoDropdown(!showInfoDropdown)}
-              className="flex items-center justify-center gap-[10px] group relative"
-            >
-              <span
-                className={`text-sm lg:text-base text-[#313131] font-Montserrat leading-normal hidden md:block group-hover:font-bold ${
-                  showInfoDropdown ? "font-bold" : "font-normal"
-                }  transition-all duration-300`}
+
+            <div>
+              <button
+                onMouseEnter={() => setShowInfoDropdown(!showInfoDropdown)}
+                className="flex items-center justify-center gap-[10px] group relative"
               >
-                Info
-              </span>
-              <div
-                className={`flex items-center justify-center w-4 transition-all duration-300 ${
-                  showInfoDropdown ? "rotate-180" : "rotate-0"
-                }`}
-              >
-                <FaqsIcons />
-              </div>
+                <span
+                  className={`text-sm lg:text-base text-[#313131] font-Montserrat leading-normal hidden md:block group-hover:font-bold ${
+                    showInfoDropdown ? "font-bold" : "font-normal"
+                  }  transition-all duration-300`}
+                >
+                  Info
+                </span>
+                <div
+                  className={`flex items-center justify-center w-4 transition-all duration-300 ${
+                    showInfoDropdown ? "rotate-180" : "rotate-0"
+                  }`}
+                >
+                  <FaqsIcons />
+                </div>
+              </button>
               {showInfoDropdown && (
-                <div className="absolute -bottom-[150px] p-4 w-[200px] bg-[#F4F1E6] rounded-lg shadow-2xl z-50 flex items-start flex-col justify-center gap-4 text-base text-[#313131] font-Montserrat leading-normal">
+                <div
+                  onMouseLeave={() => setShowInfoDropdown(!showInfoDropdown)}
+                  className="absolute -bottom-[100px] right-[280px] p-4 w-[200px] bg-[#F4F1E6] rounded-lg drop-shadow-[0_0_15px_rgba(0,0,0,0.25)] z-40 flex items-start flex-col justify-center gap-4 text-base text-[#313131] font-Montserrat leading-normal"
+                >
                   <Link
                     href="/team-retreats"
                     className="hover:font-bold duration-300"
@@ -91,10 +91,7 @@ const Navbar = () => {
                   >
                     Preferred Partners
                   </Link> */}
-                  <Link
-                    href="/faqs"
-                    className="hover:font-bold duration-300"
-                  >
+                  <Link href="/faqs" className="hover:font-bold duration-300">
                     FAQs
                   </Link>
                   <Link
@@ -105,7 +102,7 @@ const Navbar = () => {
                   </Link>
                 </div>
               )}
-            </button>
+            </div>
           </div>
 
           {/* Book your call */}
@@ -113,12 +110,7 @@ const Navbar = () => {
             <button
               type="submit"
               className="p-2 w-[182px] h-[42px] flex items-center justify-center bg-main-orange rounded-[28px] text-white text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
-              onClick={() =>
-                window.open(
-                  "https://lp.noma-collective.com/schedule-your-meeting-page",
-                  "_self"
-                )
-              }
+              onClick={onClickBookCall}
             >
               BOOK YOUR CALL
             </button>

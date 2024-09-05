@@ -163,9 +163,13 @@ const locations = ({ locations }) => {
     const randomId = Math.floor(Math.random() * ids.length);
     router.push(`/location/${ids[randomId]}`);
   };
+  const [isPopUpOpened, setisPopUpOpened] = useState(false);
+  const handleButtonClick = () => {
+    setisPopUpOpened(prev => !prev);
+  };
 
   return (
-    <Layout>
+    <Layout isPopUpOpenPage={isPopUpOpened}>
       <PageSEO title="Locations" />
       <HeroImage
         bg="url('/img/locations_cover.png')"
@@ -202,7 +206,7 @@ const locations = ({ locations }) => {
       </div>
       <TimeZoneSwiper locations={filteredItems} />
       <div className="mb-36">
-        <CommonButton text="BOOK YOUR CALL" />
+        <CommonButton text="BOOK YOUR CALL" onClick={handleButtonClick} />
       </div>
     </Layout>
   );

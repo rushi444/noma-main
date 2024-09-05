@@ -1,4 +1,4 @@
-import { getLocationCardColor } from "@/pages/location";
+import { getLocationCardColor } from "@/pages/locations";
 import Chart from "./ChartSuggested";
 import SuggestedLocationSwiper from "./SuggestedLocationSwiper";
 
