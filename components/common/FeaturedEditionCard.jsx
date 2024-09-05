@@ -1,7 +1,7 @@
 import React from "react";
 import ImageSwiper from "./Imageswiper";
 import { featuredEditionCardBgs } from "../utils/Functions";
-import { getLocationCardColor } from "@/pages/locations";
+import { getLocationCardColor } from "@/pages/location";
 
 const FeaturedEditionCard = ({ item, value }) => {
   const { BgColor1, BgColor2 } = featuredEditionCardBgs({
