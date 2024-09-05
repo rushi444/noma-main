@@ -77,7 +77,7 @@ const Navbar = ({ onClickBookCall }) => {
               {showInfoDropdown && (
                 <div
                   onMouseLeave={() => setShowInfoDropdown(!showInfoDropdown)}
-                  className="absolute -bottom-[100px] right-[280px] p-4 w-[200px] bg-[#F4F1E6] rounded-lg drop-shadow-[0_0_15px_rgba(0,0,0,0.25)] z-50 flex items-start flex-col justify-center gap-4 text-base text-[#313131] font-Montserrat leading-normal"
+                  className="absolute -bottom-[100px] right-[280px] p-4 w-[200px] bg-[#F4F1E6] rounded-lg drop-shadow-[0_0_15px_rgba(0,0,0,0.25)] z-40 flex items-start flex-col justify-center gap-4 text-base text-[#313131] font-Montserrat leading-normal"
                 >
                   <Link
                     href="/team-retreats"
