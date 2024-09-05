@@ -5,19 +5,17 @@ import BasicFaqs from "@/components/Team-retreats/BasicFaqs";
 import SuggestedLocations from "@/components/Team-retreats/SuggestedLocations";
 import Teamhero from "@/components/Team-retreats/Teamhero";
 import WhatToExpect from "@/components/Team-retreats/WhatToExpect";
-import WhyNoma from "@/components/Team-retreats/WhyNoma";
+import WhyNoma from "@/components/Team-retreats/PoweredByNoma";
 
-const TeamRetreats = () => {
+const PoweredByNoma = () => {
   return (
     <Layout>
-      <PageSEO title="Team Retreats" />
+      <PageSEO title="Powered by Noma" />
       <main className="mb-28">
         <Teamhero
-          heading="Team Retreats"
-          text="Give your team a break and let us shoulder the burden of planning a memorable and inspiring corporate getaway"
-          btn"REQUEST A QUOTE"
-         
-<button onclick="visitPage();">Visit Page Now</button>        
+          heading="Powered by Noma"
+          text="We specialize in curating unique and bespoke in-person retreats for online communities to meet, learn and grow together in beautiful locations around the world."
+          btn="Talk To Us"
         />
         <WhatToExpect />
         <WhyNoma />
@@ -31,4 +29,4 @@ const TeamRetreats = () => {
   );
 };
 
-export default TeamRetreats;
+export default PoweredByNoma;

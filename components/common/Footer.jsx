@@ -72,7 +72,7 @@ const Footer = () => {
         </div>
         <div className="py-4 sm:flex sm:flex-col sm:justify-center sm:items-center mt-4">
           {/* <p className="text-white text-center font-sergio-trendy text-2xl sm:text-4xl leading-[120%] font-extrabold mb-4 sm:mb-0">
-            Sign up for our <br className="block sm:hidden" /> mailer
+            Sign up for our mailer
           </p>
           <div className="mb-4 sm:mb-8">
             <div className="sm:hidden flex justify-between items-center gap-3">
@@ -95,7 +95,7 @@ const Footer = () => {
               />
               <button
                 onClick={handleOpenModal}
-                className="hidden sm:flex p-2 max-w-[182px] w-full h-[42px] items-center justify-center bg-main-orange rounded-[28px] text-white text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
+                className="hidden sm:flex p-2 max-w-[141px] w-full h-[42px] items-center justify-center bg-main-orange rounded-[28px] text-white text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
               >
                 LET'S CONNECT
               </button>

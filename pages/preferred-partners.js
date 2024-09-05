@@ -29,12 +29,12 @@ const PreferredPartners = ({ preferredPartners }) => {
     <Layout>
       <PageSEO title="Noma - Preferred Partners" />
       <HeroImage bg='url("/img/contact-us-cover.png")' />
-      <div className="mb-[300px] sm:mb-[100px]">
+      <div className="mb-[400px] sm:mb-[150px]">
         <div className="my-4">
-          <Heading heading="Daily Edition" />
+          <Heading heading="Our Preferred Partners" />
         </div>
         <h4 className="font-Montserrat my-4 font-bold text-2xl text-center px-4">
-          Tips and guides for nomads
+          Tools, Resources, and Guides for Nomads
         </h4>
         <div className="m-auto max-w-[1000px]">
           {Object.entries(groupedPartners).map(
@@ -127,12 +127,12 @@ const PreferredPartners = ({ preferredPartners }) => {
           )}
         </div>{" "}
         <div className="h-[450px] bg-[#ECECFD]">
-          <h4 className="font-Montserrat my-4 font-bold text-2xl text-center px-4 pt-2">
+          <h4 className="font-Montserrat my-4 font-bold text-2xl text-center px-3 pt-2">
             Want to share your product with our community? Contact us below
           </h4>
           <iframe
             src="https://link.jbenquet.com/widget/form/00dE96FQ6mW7pPN6oRpe"
-            className="w-full h-full border-none rounded-[36px]"
+            className="w-full h-full border-none rounded-[40px]"
             id="inline-00dE96FQ6mW7pPN6oRpe"
             data-layout="{'id':'INLINE'}"
             data-trigger-type="alwaysShow"
@@ -142,7 +142,7 @@ const PreferredPartners = ({ preferredPartners }) => {
             data-deactivation-type="neverDeactivate"
             data-deactivation-value=""
             data-form-name="contact us"
-            data-height="400"
+            data-height="500"
             data-layout-iframe-id="inline-00dE96FQ6mW7pPN6oRpe"
             data-form-id="00dE96FQ6mW7pPN6oRpe"
             title="contact us"

@@ -4,8 +4,8 @@ import React from "react";
 const TermsConditions = () => {
   return (
     <Layout>
-      <div className='max-w-[1000px] m-auto terms-conditions px-4'>
-        <h1 className='text-center'>Terms & Conditions</h1>
+      <div className="max-w-[1000px] m-auto terms-conditions px-4">
+        <h1 className="text-center">Terms & Conditions</h1>
 
         <h2>Background</h2>
         <p>
@@ -175,12 +175,37 @@ const TermsConditions = () => {
           received in writing.
         </p>
         <ul>
+          Bookings made prior to August 19th, 2024:
+          <ul>
+            <li>
+              60 days or more prior to arrival = The amount of the deposit made,
+              minus 20% cancellation fee of total trip price (before discounts)
+              + US$100 processing fee.
+            </li>
+            <li>0 - 60 days prior to arrival = No refund</li>
+            <li>No show = No refund</li>
+            <li>All shared accommodation is non-transferable</li>
+          </ul>
+          Bookings made after August 19th, 2024:
+          <ul>
+            <li>
+              90 days or more prior to arrival = The amount of the deposit made,
+              minus 20% cancellation fee of total trip price (before discounts)
+              + US$100 processing fee.
+            </li>
+            <li>0 - 90 days prior to arrival = No refund</li>
+            <li>No show = No refund</li>
+            <li>All shared accommodation is non-transferable</li>
+          </ul>
+        </ul>
+        <ul>Bookings made after August 19th, 2024:</ul>
+        <ul>
           <li>
-            60 days or more prior to arrival = The amount of the deposit made,
-            minus 20% cancellation fee (of total trip price) + US$100 processing
-            fee.
+            90 days or more prior to arrival = The amount of the deposit made,
+            minus 20% cancellation fee of total trip price (before discounts) +
+            US$100 processing fee.
           </li>
-          <li>0 - 60 days prior to arrival = No refund</li>
+          <li>0 - 90 days prior to arrival = No refund</li>
           <li>No show = No refund</li>
           <li>All shared accommodation is non-transferable</li>
         </ul>
@@ -188,6 +213,14 @@ const TermsConditions = () => {
           Due to the above it is HIGHLY recommended that all clients purchase
           “trip cancellation insurance” in order to cover a possible
           cancellation of 60 days or less of your itinerary.
+        </p>
+        <p>
+          Noma Collective reserves the right to cancel your booking or reject a
+          booking request based on a person's ability to remote work or value
+          misalignment with Noma's strong values of community, kindness,
+          optimism, adventure and understanding. This is not only important to
+          our thriving community but also to our dedicated team, who work hard
+          to provide the best experience for all of our Noma community.
         </p>
 
         <h2>Changes by You & Transfer of Booking</h2>
