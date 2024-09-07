@@ -33,7 +33,7 @@ export default function Home({ locations, blogs }) {
   const locationItems = locations.contentTypeLocationCollection.items;
   const [isPopUpOpened, setisPopUpOpened] = useState(false);
   const handleButtonClick = () => {
-    setisPopUpOpened(prev => !prev);
+    setisPopUpOpened((prev) => !prev);
   };
 
   return (

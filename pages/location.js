@@ -165,7 +165,7 @@ const locations = ({ locations }) => {
   };
   const [isPopUpOpened, setisPopUpOpened] = useState(false);
   const handleButtonClick = () => {
-    setisPopUpOpened(prev => !prev);
+    setisPopUpOpened((prev) => !prev);
   };
 
   return (

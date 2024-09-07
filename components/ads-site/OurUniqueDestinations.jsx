@@ -4,10 +4,10 @@ import OurUniqueDestinationsSlider from "./OurUniqueDestinationsSlider";
 
 const OurUniqueDestinations = ({ locations }) => {
   return (
-    <section className="w-full bg-pastel-yellow px-4 pb-12">
+    <section className="w-full bg-noma px-4 pb-12">
       <div className="w-full pt-6 sm:pt-[48px] pb-1 sm:pb-[18px] px-1 sm:px-2.5">
         <div className="">
-          <Heading heading="Our unique destinations " />
+          <Heading heading="Our best Selling Destinations " />
         </div>
       </div>
       <OurUniqueDestinationsSlider locations={locations} />

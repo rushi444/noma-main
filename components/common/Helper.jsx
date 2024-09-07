@@ -929,6 +929,30 @@ export const WhatToExpectCardData = [
 ];
 export const featured = [
   {
+    bgcolor: "#FFDA7F",
+    bg_colour_second: "#ffc300",
+    btn_1: "Time zone: (GMT-3)",
+    btn_2: "25°C | 77°F - 30°C | 86°F",
+
+    content_bg: "#FFDA7F",
+    name: "Buenos Aires, Argentina",
+    date: "Jan 26 - Feb 16 2025",
+    day: "21 days",
+    price: "From $1715",
+  },
+  {
+    bgcolor: "#ddb892",
+    bg_colour_second: "#ffc300",
+    btn_1: "Time zone: (GMT+3)",
+    btn_2: "30°C | 86°F",
+
+    content_bg: "#DFD4AD",
+    name: "Placencia, Belize",
+    date: "May 5 - May 26, 2024",
+    day: "21 days",
+    price: "From $2,150",
+  },
+  {
     bgcolor: "#DDDDDD",
     bg_colour_second: "#ffc300",
     btn_1: "Time zone: (GMT+3)",
@@ -964,18 +988,7 @@ export const featured = [
     day: "21 days",
     price: "From $2,450",
   },
-  {
-    bgcolor: "#ddb892",
-    bg_colour_second: "#ffc300",
-    btn_1: "Time zone: (GMT+3)",
-    btn_2: "30°C | 86°F",
 
-    content_bg: "#DFD4AD",
-    name: "Placencia, Belize",
-    date: "May 5 - May 26, 2024",
-    day: "21 days",
-    price: "From $2,150",
-  },
   {
     bgcolor: "#FFDA7F",
     bg_colour_second: "#ECECFD",
