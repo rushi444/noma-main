@@ -4,7 +4,7 @@ import React from "react";
 const DigitalFreedom = () => {
   return (
     <section className="bg-[#BBE4D7] py-12">
-      <div className="grid grid-cols-2 gap-10 max-w-[1450px] px-4 w-full mx-auto">
+      <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 gap-10 max-w-[1450px] px-4 w-full mx-auto">
         <div className="col-span-1">
           <iframe
             src="https://link.jbenquet.com/widget/form/H7JLnG7Yp5NzB9ZvQdKX"
@@ -30,10 +30,10 @@ const DigitalFreedom = () => {
         <div className="grid-span-2">
           {" "}
           <article className="w-full mt-4">
-            <h3 className="text-[#070707] font-sergio-trendy text-[48px] sm:text-4xl lg:text-5xl font-normal leading-[106%] capitalize">
+            <h3 className="text-[#070707] font-sergio-trendy 2xl:text-[48px] xl:text-[48px] text-3xl lg:text-5xl 2xl:text-start xl:text-start lg:text-start md:text-center text-center font-normal leading-[106%] capitalize">
               Experience Digital Freedom
             </h3>
-            <p className="text-[#070707] w-[90%] font-Montserrat text-xs lg:text-base font-normal leading-[115%] flex flex-col gap-1 pt-4 lg:pt-6">
+            <p className="text-[#070707] w-[90%] font-Montserrat lg:text-base font-normal leading-[115%] flex flex-col gap-1 pt-4 lg:pt-6 ммм2xl:text-start xl:text-start lg:text-start md:text-center text-center">
               <span>
                 We specialize in curating exceptional experiences for remote
                 workers across the globe, complete with a like-minded community
@@ -45,25 +45,25 @@ const DigitalFreedom = () => {
           <article>
             {" "}
             <Image
-              className="mt-7"
+              className="mt-7 2xl:mx-0 xl:mx-0 lg:mx-0 mx-auto"
               src="/img/digital-freedom.png"
               width={618}
               height={380}
             />
           </article>
           <article className="w-[95%] mt-10">
-            <h3 className="text-[#070707] font-sergio-trendy text-[48px] sm:text-4xl lg:text-5xl font-normal leading-[106%] capitalize">
+            <h3 className="text-[#070707] font-sergio-trendy 2xl:text-[48px] xl:text-[48px] text-3xl lg:text-5xl font-normal leading-[106%] capitalize 2xl:text-start xl:text-start lg:text-start md:text-center text-center">
               Embrace the nomadic way to life
             </h3>
-            <p className="text-[#070707] w-[95%] font-Montserrat text-base font-normal leading-[115%] flex flex-col gap-1 pt-4 lg:pt-6">
-              <span className="w-[90%]">
+            <p className="text-[#070707] 2xl:w-[95%] xl:w-[95%] lg:w-[95%] w-full font-Montserrat text-base font-normal leading-[115%] flex flex-col gap-1 pt-4 lg:pt-6 2xl:text-start xl:text-start lg:text-start md:text-center text-center">
+              <span className="2xl:w-[90%] xl:w-[90%] lg:w-[90%] w-full">
                 At Noma Collective, we make the nomadic lifestyle achievable and
                 enjoyable. Join us and discover the perfect blend of work,
                 travel, and global community.
               </span>
             </p>
             <div>
-              <ul className="text-[#070707] w-[80%] font-Montserrat text-base font-normal leading-[115%] flex flex-col gap-6 pt-4 pl-3 lg:pt-6">
+              <ul className="text-[#070707] 2xl:w-[80%] xl:w-[80%] lg:w-[80%] w-full flex 2xl:justify-start xl:justify-start lg:justify-start justify-center font-Montserrat text-base font-normal leading-[115%] flex flex-col gap-6 pt-4 pl-3 lg:pt-6">
                 <li className="list-disc">
                   <b>Live Freely, Work Effectively:</b> At Noma Collective, we
                   provide everything you need to embrace the nomadic lifestyle.
@@ -89,7 +89,7 @@ const DigitalFreedom = () => {
           <article>
             {" "}
             <Image
-              className="mt-7 w-[608px] h-[390px]"
+              className="mt-7 2xl:w-[608px] 2xl:h-[390px] xl:w-[608px] xl:h-[390px] lg:w-[608px] lg:h-[360px] w-[380px] h-[300px] 2xl:mx-0 xl:mx-0 lg:mx-0 mx-auto"
               src="/img/WayToLiveCard.png"
               width={608}
               height={400}
