@@ -18,18 +18,24 @@ export const getServerSideProps = async () => {
 };
 
 const AdsSite = ({ locations }) => {
-  const locationItems2 = locations.contentTypeLocationCollection.items;
-  console.log(locationItems2)
-  const validCities = ['Buenos Aires', 'Belize', 'Barcelona', 'Brazil', 'Lisbon'];
-
+  const locationlist = locations.contentTypeLocationCollection.items;
+  const validCities = [
+    "Buenos Aires",
+    "Belize",
+    "Barcelona",
+    "Brazil",
+    "Lisbon",
+  ];
   const uniqueCities = new Set();
-  const locationItems = locationItems2.filter(location => {
+  const locationItems = locationlist.filter((location) => {
     if (!uniqueCities.has(location.city)) {
-      if (validCities.includes(location.city) || validCities.includes(location.country)) {
+      if (
+        validCities.includes(location.city) ||
+        validCities.includes(location.country)
+      ) {
         uniqueCities.add(location.city);
         return true;
       }
-
     }
     return false;
   });
