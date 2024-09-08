@@ -33,7 +33,7 @@ const DigitalFreedom = () => {
             <h3 className="text-[#070707] font-sergio-trendy 2xl:text-[48px] xl:text-[48px] text-3xl lg:text-5xl 2xl:text-start xl:text-start lg:text-start md:text-center text-center font-normal leading-[106%] capitalize">
               Experience Digital Freedom
             </h3>
-            <p className="text-[#070707] w-[90%] font-Montserrat lg:text-base font-normal leading-[115%] flex flex-col gap-1 pt-4 lg:pt-6 ммм2xl:text-start xl:text-start lg:text-start md:text-center text-center">
+            <p className="text-[#070707] w-[90%] font-Montserrat lg:text-base font-normal leading-[115%] flex flex-col gap-1 pt-4 lg:pt-6 2xl:text-start xl:text-start lg:text-start md:text-center text-center">
               <span>
                 We specialize in curating exceptional experiences for remote
                 workers across the globe, complete with a like-minded community

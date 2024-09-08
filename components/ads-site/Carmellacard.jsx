@@ -6,13 +6,8 @@ import ProfileDataCardBtn from "../editions/ProfileDataCardBtn";
 
 const Carmellacard = () => {
   return (
-<<<<<<< HEAD
-    <div className="bg-pastel-yellow h-full w-full pt-1 pb-1  -mb-64 ">
-      <div className="md:mb-10 mb-10 pt-20">
-=======
-    <div className="bg-pastel-yellow w-full pt-1 pb-1 mb-[-250px]">
+    <div className="bg-pastel-yellow h-full w-full pt-1 pb-1  -mb-64">
       <div className="2xl:mb-10 xl:mb-10 lg:mb-10 md:mb-10 mb-5 2xl:pt-10 xl:pt-10 lg:pt-10 pt-5">
->>>>>>> dc2f3f3fc7f7d425443c25cc7076d517f565a2db
         <Heading heading="Read Our Reviews " />
       </div>
       <article className="max-w-[1140px] w-full mx-auto p-3 sm:p-7  mb-[200px] ">
