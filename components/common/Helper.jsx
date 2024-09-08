@@ -1004,22 +1004,28 @@ export const featured = [
 ];
 export const Carmelcardmap = [
   {
-    img: "/img/Carmellacard-img1.png",
-    text1: "Carmella",
+    img: "/img/guest-galler-2.png",
+    name: "Sachit Michra",
+    numberOfTrips: "1 edition done",
+    jobTitle: "PM at a startup",
     paragraph:
-      "As an entrepreneur focused onwellbeing, finding a place that offers a calm, grounded and creative environment is essential to unlocking your inner potential. Thanks Noma Collective for being just that.As an entrepreneur focused on wellbeing, finding a place that offers a calm, grounded and creative environment is essential to unlocking your inner potential. Thanks Noma Collective for being just that.",
+      "Logistically, Noma handles things extremely well. The communication, accommodation, and excursions were impeccable and professionally handled. But more than that, this was an incredibly well curated experience of connection, friendship, and adventure. And that was in no small part thanks to our extremely reliable and friendly community manager, Mariela, who set the tone for the whole trip. I will never forget my Noma experience and you can be sure I'll be booking another.",
   },
   {
-    img: "/img/Carmellacard-img2.png",
-    text1: "Adam",
+    img: "/img/Michele_Khan.jpg",
+    name: "Michele Khan",
+    numberOfTrips: "2 edition done",
+    jobTitle: "Research Manager",
     paragraph:
-      "Noma Collective was my first step into remote work. As a digital event producer I was nervous but I facilitated events viewed by 1m+ people across 50+ countries. I now have more freelance work than ever before.",
+      "I had an absolutely amazing time in Antigua. The accommodations were lovely, spacious and clean! The best part, by far, was our Noma crew. We had a blast and everything was so well organized and thought out. From family dinners, crazy weekend adventures (including hiking a volcano and releasing baby sea turtles into the ocean), to cozy nights in, I had an incredible time and met some of the coolest people. I can say that I made some wonderful, life-long friends as well.",
   },
   {
-    img: "/img/Carmellacard-img3.png",
-    text1: "Little Boots",
+    img: "/img/Michelle_Jean.jpg",
+    name: "Michelle Jean",
+    numberOfTrips: "3 edition done",
+    jobTitle: "UI/ UX designer",
     paragraph:
-      "I wrote my 4th album at Noma. I've never been so productive. Everyone was supportive and friendly which made the atmosphere electric.",
+      "I recently did two Noma trips (Guatemala and Panama) and these experiences changed my perspective on travel. It’s not just about visiting beautiful places, but most importantly the connections you make along the way. Traveling with Noma gives you community and a more authentic traveling experience. There was a perfect balance of work, free time, and planned activities for the group. I highly recommend booking with Noma for your next trip!",
   },
 ];
 export const whatWeOfferCardData3 = [

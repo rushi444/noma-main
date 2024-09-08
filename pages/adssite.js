@@ -5,8 +5,35 @@ import OurUniqueDestinations from "@/components/ads-site/OurUniqueDestinations";
 import Layout from "@/components/common/Layout";
 import PageSEO from "@/components/common/PageSEO";
 import React from "react";
+import { getAllEditions } from "@/lib/api";
 
-const AdsSite = () => {
+export const getServerSideProps = async () => {
+  const locations = await getAllEditions();
+  return {
+    props: {
+      title: "Locations",
+      locations: locations || [],
+    },
+  };
+};
+
+const AdsSite = ({ locations }) => {
+  const locationItems2 = locations.contentTypeLocationCollection.items;
+  console.log(locationItems2)
+  const validCities = ['Buenos Aires', 'Belize', 'Barcelona', 'Brazil', 'Lisbon'];
+
+  const uniqueCities = new Set();
+  const locationItems = locationItems2.filter(location => {
+    if (!uniqueCities.has(location.city)) {
+      if (validCities.includes(location.city) || validCities.includes(location.country)) {
+        uniqueCities.add(location.city);
+        return true;
+      }
+
+    }
+    return false;
+  });
+
   return (
     <Layout>
       <PageSEO title="Ads Site" />
@@ -16,7 +43,7 @@ const AdsSite = () => {
           adstext="Bring your job, we’ll do the rest."
         />
         <DigitalFreedom />
-        <OurUniqueDestinations />
+        <OurUniqueDestinations locations={locationItems} />
         <Carmellacard />
       </main>
     </Layout>

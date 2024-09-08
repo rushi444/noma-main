@@ -2,19 +2,72 @@ import Image from "next/image";
 import React from "react";
 import Heading from "../common/Heading";
 import { Carmelcardmap } from "../common/Helper";
+import ProfileDataCardBtn from "../editions/ProfileDataCardBtn";
 
 const Carmellacard = () => {
   return (
-    <div className="bg-pastel-yellow w-full pt-1 pb-14">
-      <div className="md:mb-14 mb-10 pt-20">
-      <Heading heading="Read Our Reviews "/>
+    <div className="bg-pastel-yellow w-full pt-1 pb-1 mb-[-250px]">
+      <div className="md:mb-10 mb-10 pt-20">
+        <Heading heading="Read Our Reviews " />
       </div>
-      <article className="max-w-[1140px] bg-white w-full mx-auto p-3 sm:p-7  mb-[200px] ">
+      <article className="max-w-[1140px] w-full mx-auto p-3 sm:p-7  mb-[200px] ">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 lg:gap-x-7 gap-5 ">
-          {Carmelcardmap.map((item, index) => (
-            <div
+          {Carmelcardmap.map((item) => (
+            <div className="max-w-[328px] w-full cursor-pointer hover:scale-[1.02] transition duration-300 ease-in-out  mx-auto flex flex-col gap-2">
+              <span className="text-[#313131] font-Montserrat text-[24px] sm:text-[32px] font-extrabold leading-normal">
+                {item.name}
+              </span>
+              <div className="flex gap-2">
+                <ProfileDataCardBtn
+                  item={{ btn1: `${item.numberOfTrips}` }}
+                  value={0}
+                />
+                <ProfileDataCardBtn item={{ btn1: item.jobTitle }} value={1} />
+              </div>
+              <div>
+                <Image
+                  src={item.img}
+                  width={328}
+                  height={412}
+                  alt="item.img.png"
+                  className="rounded-2xl"
+                />
+              </div>
+              <p className="text-[#313131] font-Montserrat text-sm sm:text-base font-normal !leading-5">
+                {item.paragraph}
+              </p>
+            </div>
+          ))}
+        </div>
+      </article>
+    </div>
+  );
+};
+
+export default Carmellacard;
+
+{
+  /* <div className="max-w-[328px] w-full cursor-pointer hover:scale-[1.02] transition duration-300 ease-in-out  mx-auto flex flex-col gap-2">
+      <span className="text-[#313131] font-Montserrat text-[24px] sm:text-[32px] font-extrabold leading-normal">
+        {items.alumniName}
+      </span>
+      <div className="flex gap-2">
+        <ProfileDataCardBtn
+          item={{ btn1: `${items?.numberOfTrips} x Editions` }}
+          value={0}
+        />
+        <ProfileDataCardBtn item={{btn1: items?.jobTitle}} value={1} />
+      </div>
+      <p className="text-[#313131] font-Montserrat text-sm sm:text-base font-normal !leading-5">
+        {documentToReactComponents(items?.review?.json || {})}
+      </p>
+    </div> */
+}
+
+{
+  /* <div
               key={index}
-              className="max-w-[390px] w-full mx-auto bg-[rgba(255,255,255,0.00)] shadow-[0px_1px_5px_0px_rgba(0,0,0,0.20)] p-[30px_30px_20px_30px] "
+              className="max-w-[328px] w-full cursor-pointer hover:scale-[1.02] transition duration-300 ease-in-out  mx-auto flex flex-col gap-2"
             >
               <div>
                 <Image
@@ -40,12 +93,5 @@ const Carmellacard = () => {
                   {item.paragraph}
                 </p>
               </div>
-            </div>
-          ))}
-        </div>
-      </article>
-    </div>
-  );
-};
-
-export default Carmellacard;
+            </div> */
+}

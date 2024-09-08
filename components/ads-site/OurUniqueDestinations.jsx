@@ -1,6 +1,6 @@
 import React from "react";
 import Heading from "../common/Heading";
-import OurUniqueDestinationsSlider from "./OurUniqueDestinationsSlider";
+import FeaturedEditionSectionSlider from "../home/FeaturedEditionSectionSlider";
 
 const OurUniqueDestinations = ({ locations }) => {
   return (
@@ -10,7 +10,7 @@ const OurUniqueDestinations = ({ locations }) => {
           <Heading heading="Our best Selling Destinations " />
         </div>
       </div>
-      <OurUniqueDestinationsSlider locations={locations} />
+      <FeaturedEditionSectionSlider locations={locations} />
     </section>
   );
 };
