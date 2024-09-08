@@ -37,9 +37,6 @@ const Sidebar = () => {
           <Link href="/team-retreats" className="hover:font-bold duration-300">
             Team retreats
           </Link>
-          <Link href="/adssite" className="hover:font-bold duration-300">
-            Ads site
-          </Link>
         </div>
       )}
     </div>
