@@ -853,7 +853,7 @@ export const faqList = [
 export const BasicFaqsMapData = [
   {
     bg: "bg-[#ECECFD]",
-    title: "Are there more destinations available??",
+    title: "Are there more destinations available?",
     description:
       "Absolutely! The world is at your fingertips. While our listed destinations are proven favorites among our digital nomad community, we’re eager to help you discover new ones. Whether you're dreaming of Portugal, New Zealand, or anywhere in between, our expert logistics team will work closely with you to find the perfect retreat spot tailored to your team’s vision.
 ",
