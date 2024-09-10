@@ -9,7 +9,6 @@ import Basics from "@/components/how-it-work/Basics";
 import Steps from "@/components/how-it-work/Steps";
 import { getFaqs } from "@/lib/api";
 import React from "react";
-import { useState } from "react";
 
 export const getServerSideProps = async () => {
   const faqs = await getFaqs();
@@ -23,12 +22,8 @@ export const getServerSideProps = async () => {
 
 const HowItWork = ({ faqs }) => {
   const faq = faqs.faqCollection.items;
-  const [isPopUpOpened, setisPopUpOpened] = useState(false);
-  const handleButtonClick = () => {
-    setisPopUpOpened(prev => !prev);
-  };
   return (
-    <Layout isPopUpOpenPage={isPopUpOpened}>
+    <Layout>
       <PageSEO title="How It Works" />
       <HeroImage bg="url(/img/hero-water.png)" />
       <div className="pt-8">
@@ -58,7 +53,7 @@ const HowItWork = ({ faqs }) => {
       </h4>
 
       <div className="mb-24">
-        <CommonButton text="BOOK YOUR CALL" onClick={handleButtonClick} />
+        <CommonButton text="BOOK YOUR CALL" />
       </div>
     </Layout>
   );

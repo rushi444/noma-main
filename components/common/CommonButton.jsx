@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const CommonButton = ({ text, link, onClick }) => {
+const CommonButton = ({ text, link }) => {
   if (link) {
     return (
       <Link href={link}>
@@ -22,7 +22,12 @@ const CommonButton = ({ text, link, onClick }) => {
       <button
         type="submit"
         className="sm:px-8 px-3 p-2 sm:py-4 max-sm:h-[33px] flex items-center bg-main-orange rounded-[28px] text-white text-center text-sm sm:text-base font-extrabold leading-normal hover:text-main-orange hover:bg-transparent transition duration-300 ease-in-out  border border-main-orange"
-        onClick={onClick}
+        onClick={() =>
+          window.open(
+            "https://lp.noma-collective.com/schedule-your-meeting-page",
+            "_self"
+          )
+        }
       >
         {text}
       </button>
