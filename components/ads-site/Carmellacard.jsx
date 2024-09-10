@@ -24,15 +24,7 @@ const Carmellacard = () => {
                 />
                 <ProfileDataCardBtn item={{ btn1: item.jobTitle }} value={1} />
               </div>
-              <div>
-                <Image
-                  src={item.img}
-                  width={328}
-                  height={412}
-                  alt="item.img.png"
-                  className="rounded-2xl"
-                />
-              </div>
+
               <p className="text-[#313131] font-Montserrat text-sm sm:text-base font-normal !leading-5">
                 {item.paragraph}
               </p>
