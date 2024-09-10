@@ -53,7 +53,7 @@ const DigitalFreedom = () => {
           </article>
           <article className="w-[95%] mt-10">
             <h3 className="text-[#070707] font-sergio-trendy 2xl:text-[48px] xl:text-[48px] text-3xl lg:text-5xl font-normal leading-[106%] capitalize 2xl:text-start xl:text-start lg:text-start md:text-center text-center">
-              Embrace the nomadic way to life
+              Embrace the nomadic Way Of Life
             </h3>
             <p className="text-[#070707] 2xl:w-[95%] xl:w-[95%] lg:w-[95%] w-full font-Montserrat text-base font-normal leading-[115%] flex flex-col gap-1 pt-4 lg:pt-6 2xl:text-start xl:text-start lg:text-start md:text-center text-center">
               <span className="2xl:w-[90%] xl:w-[90%] lg:w-[90%] w-full">
