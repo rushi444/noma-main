@@ -21,10 +21,9 @@ const TimeZoneSwiper = ({ locations }) => {
   const locationsMapped = locations?.map((l) => {
     const start = l?.startDate?.split("T")[0];
     const [year, month, date] = start?.split("-");
-    const formattedStartDate = `${monthNames[parseInt(month, 10) - 1]} ${parseInt(
-      date,
-      10
-    )}`;
+    const formattedStartDate = `${
+      monthNames[parseInt(month, 10) - 1]
+    } ${parseInt(date, 10)}`;
     const end = l?.endDate?.split("T")[0];
     const [endYear, endMonth, endDay] = end?.split("-");
     const endDayMonth = `${monthNames[parseInt(endMonth, 10) - 1]} ${parseInt(
