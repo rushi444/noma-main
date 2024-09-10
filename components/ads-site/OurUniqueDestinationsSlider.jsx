@@ -77,7 +77,7 @@ export default function OurUniqueDestinationsSlider({ locations }) {
         className="mySwiper sm:py-8 py-5   w-full"
         ref={swiperRef}
       >
-        {featured.map((items, index) => (
+        {locations.map((items, index) => (
           <SwiperSlide>
             <section
               key={index}
