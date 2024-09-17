@@ -198,17 +198,6 @@ const TermsConditions = () => {
             <li>All shared accommodation is non-transferable</li>
           </ul>
         </ul>
-        <ul>Bookings made after August 19th, 2024:</ul>
-        <ul>
-          <li>
-            90 days or more prior to arrival = The amount of the deposit made,
-            minus 20% cancellation fee of total trip price (before discounts) +
-            US$100 processing fee.
-          </li>
-          <li>0 - 90 days prior to arrival = No refund</li>
-          <li>No show = No refund</li>
-          <li>All shared accommodation is non-transferable</li>
-        </ul>
         <p>
           Due to the above it is HIGHLY recommended that all clients purchase
           “trip cancellation insurance” in order to cover a possible
