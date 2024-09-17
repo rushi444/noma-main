@@ -339,6 +339,8 @@ const TermsConditions = () => {
           individuals who have no connection with your booking arrangements or
           with us.
         </p>
+
+            
       </div>
     </Layout>
   );
