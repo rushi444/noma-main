@@ -319,7 +319,7 @@ const filterByMonth = (
   });
 };
 
-export const getLocationById = async (
+export const getLocationByCity = async (
   { city }: { city: string },
   { month, year }: { month: string; year: string }
 ) => {
@@ -337,6 +337,15 @@ export const getLocationById = async (
   const data = dataResponse.data;
 
   return data;
+};
+
+export const getLocationById = async ({
+  locationId,
+}: {
+  locationId: string;
+}) => {
+  const data = await fetchGraphQL(GET_LOCATION_BY_ID(locationId));
+  return data?.data;
 };
 
 export const getBlogById = async ({ blogId }: { blogId: string }) => {

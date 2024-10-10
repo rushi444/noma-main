@@ -11,7 +11,7 @@ import HighLights from "@/components/editions/HighLights";
 import ProfileMeet from "@/components/editions/ProfileMeet";
 import ProgressCircle from "@/components/editions/ProgressCircle";
 import WhatIncluded from "@/components/editions/WhatIncluded";
-import { getLocationById } from "@/lib/api";
+import { getLocationByCity, getLocationById } from "@/lib/api";
 import { parseISO, format } from "date-fns";
 import React from "react";
 
@@ -73,14 +73,21 @@ export const CustomText = ({ text }) => {
 };
 
 export const getServerSideProps = async ({ params }) => {
-  const city = params.id.substring(0, params.id.length - 9);
-  const monthRegex = /-(\w{3})-\d{4}$/;
-  const month = params.id.match(monthRegex)[1];
-  const year = params.id.match(/-\d{4}$/);
-  const location = await getLocationById(
-    { city: city },
-    { month: month, year: year[0].slice(1) }
-  );
+  let location;
+  const idPattern = /^[a-zA-Z0-9]+$/;
+  console.log("test", idPattern.test(params.id));
+  if (idPattern.test(params.id)) {
+    location = await getLocationById({ locationId: params.id });
+  } else {
+    const city = params.id.substring(0, params.id.length - 9);
+    const monthRegex = /-(\w{3})-\d{4}$/;
+    const month = params.id.match(monthRegex)[1];
+    const year = params.id.match(/-\d{4}$/);
+    location = await getLocationByCity(
+      { city: city },
+      { month: month, year: year[0].slice(1) }
+    );
+  }
   return {
     props: {
       location,
